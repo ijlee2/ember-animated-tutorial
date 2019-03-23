@@ -10,7 +10,7 @@ Router.map(function() {
     this.route('search');
 
     this.route('students', function() {
-        this.route('student');
+        this.route('student', { path: '/:id' });
     });
 });
 

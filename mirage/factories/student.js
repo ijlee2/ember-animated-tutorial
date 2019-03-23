@@ -28,4 +28,14 @@ export default Factory.extend({
         // Create an image 80% of the time
         return Math.random() >= 0.2 ? faker.image.avatar() : '';
     },
+
+
+    /*************************************************************************************
+
+        Model relationships
+
+    *************************************************************************************/
+    afterCreate(student, server) {
+        server.create('resume', { student });
+    },
 });

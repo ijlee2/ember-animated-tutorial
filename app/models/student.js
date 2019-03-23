@@ -1,7 +1,8 @@
 import { computed } from '@ember/object';
 import DS from 'ember-data';
+import LoadableModel from 'ember-data-storefront/mixins/loadable-model';
 
-export default DS.Model.extend({
+export default DS.Model.extend(LoadableModel, {
     /*************************************************************************************
 
         Personal information
@@ -19,8 +20,7 @@ export default DS.Model.extend({
         Model relationships
 
     *************************************************************************************/
-    resume: DS.belongsTo('resume'),
-    skills: DS.hasMany('skill'),
+    resumes: DS.hasMany('resume', { async: false }),
 
 
     /*************************************************************************************

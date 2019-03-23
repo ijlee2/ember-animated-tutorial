@@ -23,6 +23,13 @@ body {
         letter-spacing: 0.125rem;
     }
 
+    h2 {
+        margin-bottom: 0.4rem;
+
+        font-size: $font-size-lg;
+        font-weight: 700;
+    }
+
     .my-nav {
         border-bottom: 0.075rem solid $color-silver;
         padding: 1rem;
@@ -60,3 +67,4 @@ body {
 
 /* Route templates */
 @import "templates/students";
+@import "templates/students/student";
