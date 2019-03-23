@@ -35,13 +35,31 @@
 </div>
 
 <div class="student__section">
-    <h2>Experiences</h2>
+    <h2>Education</h2>
 
     <ul>
-        {{#each model.resumes.firstObject.experiences as |experience|}}
-            <li>{{experience}}</li>
+        {{#each model.resumes.firstObject.degrees as |degree|}}
+            <li>{{degree}}</li>
         {{/each}}
     </ul>
+</div>
+
+<div class="student__section">
+    <h2>Experiences</h2>
+
+    <ol>
+        {{#each model.resumes.firstObject.experiences as |experience|}}
+            <li>
+                <h3>{{experience.position}} at {{experience.company}}</h3>
+
+                <ul>
+                    {{#each experience.achievements as |achievement|}}
+                        <li>{{achievement}}</li>
+                    {{/each}}
+                </ul>
+            </li>
+        {{/each}}
+    </ol>
 </div>
 
 <div class="student__section">

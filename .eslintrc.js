@@ -5,17 +5,17 @@ module.exports = {
     root: true,
     parserOptions: {
         ecmaVersion: 2017,
-        sourceType: 'module'
+        sourceType: 'module',
     },
     plugins: [
-        'ember'
+        'ember',
     ],
     extends: [
         'eslint:recommended',
-        'plugin:ember/recommended'
+        'plugin:ember/recommended',
     ],
     env: {
-        browser: true
+        browser: true,
     },
     rules: {
         // For AirBnB style
@@ -141,16 +141,26 @@ module.exports = {
                 'blueprints/*/index.js',
                 'config/**/*.js',
                 'lib/*/index.js',
-                'server/**/*.js'
+                'server/**/*.js',
             ],
             parserOptions: {
                 sourceType: 'script',
-                ecmaVersion: 2015
+                ecmaVersion: 2015,
             },
             env: {
                 browser: false,
-                node: true
-            }
-        }
-    ]
+                node: true,
+            },
+        },
+
+        // Mirage files
+        {
+            files: [
+                'mirage/mirage/factories/resume.js',
+            ],
+            rules: {
+                'max-len': 'off',
+            },
+        },
+    ],
 };
