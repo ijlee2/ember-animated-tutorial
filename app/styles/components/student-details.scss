@@ -1,0 +1,55 @@
+.student-details {
+    &__section {
+        margin-bottom: 1.5rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__experiences {
+        &__experience {
+            line-height: 2rem;
+            list-style: decimal inside;
+
+            margin-bottom: 1rem;
+
+            &__title {
+                display: inline;
+            }
+
+            &__achievement {
+                list-style: disc inside;
+                margin-left: 2rem;
+            }
+        }
+    }
+
+    &__skills {
+        &__skill {
+            display: inline-block;
+
+            margin-right: 0.25rem;
+            border-radius: 0.75rem;
+            padding: 0.33rem 1rem;
+
+            font-size: $font-size-sm;
+
+            &--backend {
+                background-color: $color-amber;
+            }
+
+            &--frontend {
+                background-color: $color-cyan;
+            }
+
+            &--miscellaneous {
+                background-color: $color-green;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}

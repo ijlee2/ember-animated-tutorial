@@ -1,6 +1,6 @@
 <div class="student-card__image">
     {{#if failedToLoadImage}}
-        {{material-icon icon="person"}}
+        <MaterialIcon @icon="person" />
 
     {{else}}
         <img
@@ -23,7 +23,7 @@
     </div>
 
     <div class="student-card__data__email">
-        {{material-icon icon="email"}}
+        <MaterialIcon @icon="email" />
 
         <a
             data-test-email
@@ -35,7 +35,7 @@
     </div>
 
     <div class="student-card__data__phone">
-        {{material-icon icon="phone"}}
+        <MaterialIcon @icon="phone" />
 
         <a
             data-test-phone

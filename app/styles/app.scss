@@ -24,15 +24,19 @@ body {
     }
 
     h2 {
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.8rem;
 
         font-size: $font-size-lg;
         font-weight: 700;
     }
 
     .my-nav {
+        display: flex;
+        align-items: center;
+
+        height: calc(4rem - 0.075rem);
         border-bottom: 0.075rem solid $color-silver;
-        padding: 1rem;
+        padding: 0 1rem;
 
         a {
             margin-right: 1rem;
@@ -57,14 +61,16 @@ body {
     }
 
     .my-main {
+        height: calc(100vh - 6rem);
         padding: 1rem;
+        overflow-y: auto;
     }
 }
 
-/* Reusable components */
+/* Components */
 @import "components/material-icon";
 @import "components/student-card";
+@import "components/student-details";
 
-/* Route templates */
+/* Route Templates */
 @import "templates/students";
-@import "templates/students/student";

@@ -3,9 +3,7 @@
 <ul class="list-of-students">
     {{#each (sort-by "lastName" "firstName" model) as |student|}}
         <li>
-            {{student-card
-                student=student
-            }}
+            <StudentCard @student={{student}} />
         </li>
     {{/each}}
 </ul>

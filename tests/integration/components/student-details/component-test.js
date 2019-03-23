@@ -3,10 +3,10 @@ import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import { module, test } from 'qunit';
 
-module('Integration | Component | student-card', function(hooks) {
+module('Integration | Component | student-details', function(hooks) {
     setupRenderingTest(hooks);
 
-    test('We can create the card', async function(assert) {
+    test('We can create the details', async function(assert) {
         this.set('student', {
             fullName: 'Jane Smith',
             email: 'jane.smith@example.com',
@@ -14,7 +14,7 @@ module('Integration | Component | student-card', function(hooks) {
             internationalPhone: '+1-123-456-7890',
         });
 
-        await render(hbs`<StudentCard @student={{this.student}} />`);
+        await render(hbs`<StudentDetails @student={{this.student}} />`);
 
         assert.dom('[data-test-name]', this.element)
             .hasText('Jane Smith', 'We see the correct name.');

@@ -1,0 +1,71 @@
+<h1 data-test-name>{{student.fullName}}</h1>
+
+<div class="student-details__section student-details__email">
+    <h2>Email</h2>
+
+    <a
+        data-test-email
+        href="mailto:{{student.email}}"
+        title={{student.email}}
+    >
+        {{student.email}}
+    </a>
+</div>
+
+<div class="student-details__section student-details__phone">
+    <h2>Phone</h2>
+
+    <a
+        data-test-phone
+        href="tel:{{student.internationalPhone}}"
+        title={{student.phone}}
+    >
+        {{student.phone}}
+    </a>
+</div>
+
+<div class="student-details__section student-details__education">
+    <h2>Education</h2>
+
+    <ul>
+        {{#each this.resume.degrees as |degree|}}
+            <li data-test-degree>{{degree}}</li>
+        {{/each}}
+    </ul>
+</div>
+
+<div class="student-details__section student-details__experiences">
+    <h2>Experiences</h2>
+
+    <ol>
+        {{#each this.resume.experiences as |experience|}}
+            <li
+                data-test-experience
+                class="student-details__experiences__experience"
+            >
+                <h3 class="student-details__experiences__experience__title">{{experience.position}} at {{experience.company}}</h3>
+
+                <ul>
+                    {{#each experience.achievements as |achievement|}}
+                        <li class="student-details__experiences__experience__achievement">{{achievement}}</li>
+                    {{/each}}
+                </ul>
+            </li>
+        {{/each}}
+    </ol>
+</div>
+
+<div class="student-details__section student-details__skills">
+    <h2>Skills</h2>
+
+    <ul>
+        {{#each (sort-by "type" "name" this.resume.skills) as |skill|}}
+            <li
+                data-test-skill
+                class="student-details__skills__skill student-details__skills__skill--{{skill.type}}"
+            >
+                {{skill.name}}
+            </li>
+        {{/each}}
+    </ul>
+</div>
