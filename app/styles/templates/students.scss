@@ -1,0 +1,8 @@
+.my-main {
+    .list-of-students {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+        grid-gap: 1.5rem;
+    }
+}

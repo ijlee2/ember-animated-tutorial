@@ -1,0 +1,48 @@
+<div class="student-card__image">
+    {{#if failedToLoadImage}}
+        {{material-icon icon="person"}}
+
+    {{else}}
+        <img
+            data-test-image
+            src={{student.imageUrl}}
+            alt=""
+            onerror={{action "loadDefaultImage"}}
+        >
+
+    {{/if}}
+</div>
+
+<div class="student-card__data">
+    <div
+        data-test-name
+        class="student-card__data__name"
+        title={{student.fullName}}
+    >
+        {{student.fullName}}
+    </div>
+
+    <div class="student-card__data__email">
+        {{material-icon icon="email"}}
+
+        <a
+            data-test-email
+            href="mailto:{{student.email}}"
+            title={{student.email}}
+        >
+            {{student.email}}
+        </a>
+    </div>
+
+    <div class="student-card__data__phone">
+        {{material-icon icon="phone"}}
+
+        <a
+            data-test-phone
+            href="tel:{{student.internationalPhone}}"
+            title={{student.phone}}
+        >
+            {{student.phone}}
+        </a>
+    </div>
+</div>

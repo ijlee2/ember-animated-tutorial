@@ -1,3 +1,17 @@
-<h1>Hello world!</h1>
+<nav class="my-nav">
+    {{#link-to "index"}}
+        Home
+    {{/link-to}}
 
-{{outlet}}
+    {{#link-to "students"}}
+        Students
+    {{/link-to}}
+
+    {{#link-to "search"}}
+        Search
+    {{/link-to}}
+</nav>
+
+<main class="my-main">
+    {{outlet}}
+</main>

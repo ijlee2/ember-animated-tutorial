@@ -14,5 +14,6 @@ module.exports = {
         'no-inline-styles': false, // go against the recommended
         'no-trailing-dot-in-path-expression': true,
         'no-trailing-spaces': true,
+        'no-invalid-interactive': false,
     },
 };

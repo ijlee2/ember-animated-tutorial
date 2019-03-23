@@ -1,1 +1,62 @@
 @import "reset";
+@import "mixins";
+@import "variables";
+
+body {
+    color: $color-black;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.025rem;
+    line-height: 1.2;
+
+    a {
+        color: $color-blue;
+        text-decoration: none;
+    }
+
+    h1 {
+        margin-bottom: 1rem;
+
+        font-family: "PT Serif", serif;
+        font-size: $font-size-xl;
+        font-weight: 700;
+        letter-spacing: 0.125rem;
+    }
+
+    .my-nav {
+        border-bottom: 0.075rem solid $color-silver;
+        padding: 1rem;
+
+        a {
+            margin-right: 1rem;
+
+            color: $color-black;
+            font-size: $font-size-md;
+
+            &.active {
+                color: $color-orange;
+            }
+
+            &:hover {
+                color: $color-orange;
+
+                transition: color 0.17s;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .my-main {
+        padding: 1rem;
+    }
+}
+
+/* Reusable components */
+@import "components/material-icon";
+@import "components/student-card";
+
+/* Route templates */
+@import "templates/students";
