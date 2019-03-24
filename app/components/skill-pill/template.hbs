@@ -1,0 +1,13 @@
+{{input
+    id=skill.id
+    type="checkbox"
+    name="skills"
+    checked=skill.isSelected
+    change=onChangeHandler
+}}
+
+<label for={{skill.id}}>
+    <MaterialIcon @icon={{if skill.isSelected "remove_circle" "add_circle"}} />
+
+    <span data-test-name>{{skill.name}}</span>
+</label>

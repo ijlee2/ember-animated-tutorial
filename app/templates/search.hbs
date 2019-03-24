@@ -15,44 +15,19 @@
 
         <div class="selected-skills">
             {{#each (sort-by "type" "name" selectedSkills) as |skill|}}
-                <div
-                    class="my-skill my-skill--{{skill.type}} my-skill--selected"
-                    {{action "unSelectSkill" skill.id}}
-                >
-                    {{input
-                        id=skill.id
-                        type="checkbox"
-                        name="skills"
-                        checked=true
-                        change=(action "unSelectSkill" skill.id)
-                    }}
-
-                    <label for={{skill.id}}>
-                        {{material-icon icon="remove_circle"}} {{skill.name}}
-                    </label>
-                </div>
+                <SkillPill
+                    @skill={{skill}}
+                    @onChangeHandler={{action "unSelectSkill" skill.id}}
+                />
             {{/each}}
         </div>
 
         <div class="remaining-skills">
             {{#each (sort-by "type" "name" filteredRemainingSkills) as |skill|}}
-                <div
-                    class="my-skill my-skill--{{skill.type}}"
-                    {{action "selectSkill" skill.id}}
-                >
-                    {{input
-                        id=skill.id
-                        type="checkbox"
-                        name="skills"
-                        checked=false
-                        disabled=(gte selectedSkills.length MAX_NUM_SELECTED_SKILLS)
-                        change=(action "selectSkill" skill.id)
-                    }}
-
-                    <label for={{skill.id}}>
-                        {{material-icon icon="add_circle"}} {{skill.name}}
-                    </label>
-                </div>
+                <SkillPill
+                    @skill={{skill}}
+                    @onChangeHandler={{action "selectSkill" skill.id}}
+                />
             {{/each}}
         </div>
     </fieldset>

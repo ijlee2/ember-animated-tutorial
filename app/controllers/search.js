@@ -15,7 +15,21 @@ export default Controller.extend({
                 this.set('filteredRemainingSkills', this.remainingSkills.filter(skill => {
                     const name = (skill.name || '').trim().toLowerCase();
 
-                    return name.includes(query);
+                    if (name.includes(query)) {
+                        return true;
+                    }
+
+                    let synonymFound = false;
+
+                    skill.synonyms.forEach(synonym => {
+                        if (synonym.includes(query)) {
+                            synonymFound = true;
+
+                            return;
+                        }
+                    });
+
+                    return synonymFound;
                 }));
 
             } else {
@@ -34,6 +48,7 @@ export default Controller.extend({
             }
 
             let skill = this.selectedSkills.objectAt(index);
+            skill.set('isSelected', false);
 
             this.remainingSkills.pushObject(skill);
             this.selectedSkills.removeAt(index);
@@ -51,6 +66,7 @@ export default Controller.extend({
                 }
 
                 let skill = this.filteredRemainingSkills.objectAt(index);
+                skill.set('isSelected', true);
 
                 this.selectedSkills.pushObject(skill);
                 this.filteredRemainingSkills.removeAt(index);

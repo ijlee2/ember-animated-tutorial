@@ -28,7 +28,7 @@ export default function(server) {
     server.create('skill', {
         name: 'AI',
         type: 'miscellaneous',
-        synonyms: ['Artificial Intelligence'],
+        synonyms: ['A.I.', 'Artificial Intelligence'],
     });
 
     server.create('skill', {
@@ -40,6 +40,7 @@ export default function(server) {
     server.create('skill', {
         name: 'AWS',
         type: 'backend',
+        synonyms: ['Amazon Web Services'],
     });
 
     server.create('skill', {
@@ -102,7 +103,7 @@ export default function(server) {
     server.create('skill', {
         name: 'CSS',
         type: 'frontend',
-        synonyms: ['CSS3'],
+        synonyms: ['CSS3', 'CSS Flexbox', 'CSS Grid', 'Flexbox', 'Grid'],
     });
 
     server.create('skill', {
@@ -192,6 +193,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Go',
         type: 'backend',
+        synonyms: ['Golang'],
     });
 
     server.create('skill', {
@@ -255,6 +257,7 @@ export default function(server) {
     server.create('skill', {
         name: 'JSON:API',
         type: 'backend',
+        synonyms: ['JSON API'],
     });
 
     server.create('skill', {
@@ -291,7 +294,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Materialize',
         type: 'frontend',
-        synonyms: 'Material UI',
+        synonyms: ['Material UI'],
     });
 
     server.create('skill', {
@@ -307,6 +310,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Microsoft Suite',
         type: 'miscellaneous',
+        synonyms: ['Microsoft Excel', 'Microsoft Outlook', 'Microsoft PowerPoint', 'Microsoft Word'],
     });
 
     server.create('skill', {
@@ -378,6 +382,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Python',
         type: 'backend',
+        synonyms: ['Python3'],
     });
 
     server.create('skill', {
@@ -494,6 +499,12 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Three.js',
+        type: 'miscellaneous',
+        synonyms: ['3JS'],
+    });
+
+    server.create('skill', {
         name: 'VB.NET',
         type: 'miscellaneous',
         synonyms: ['Visual Basic .NET'],
@@ -508,6 +519,11 @@ export default function(server) {
     server.create('skill', {
         name: 'Webpack',
         type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'WebGL',
+        type: 'frontend',
     });
 
     server.create('skill', {

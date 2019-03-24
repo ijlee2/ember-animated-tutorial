@@ -19,7 +19,10 @@ export default Route.extend({
                     id: skill.id,
                     name: skill.name,
                     type: skill.type,
-                    synonyms: (skill.synonyms || []).slice(),
+                    synonyms: (skill.synonyms || []).map(synonym => {
+                        return (synonym || '').trim().toLowerCase();
+                    }),
+                    isSelected: false,
                 });
             }),
         });

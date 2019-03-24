@@ -11,57 +11,6 @@
         .selected-skills,
         .remaining-skills {
             margin-bottom: 1.5rem;
-
-            .my-skill {
-                cursor: pointer;
-                display: inline-block;
-
-                input {
-                    display: none;
-                }
-
-                label {
-                    cursor: pointer;
-
-                    display: flex;
-                    align-items: center;
-
-                    .material-icons {
-                        font-size: $font-size-md;
-                        margin-right: 0.25rem;
-                    }
-                }
-
-                margin-right: 0.25rem;
-                margin-bottom: 0.75rem;
-                border-radius: 0.75rem;
-                padding: 0.33rem 1rem;
-
-                font-size: $font-size-sm;
-
-                &--backend {
-                    background-color: $color-amber;
-                }
-
-                &--frontend {
-                    background-color: $color-cyan;
-                }
-
-                &--miscellaneous {
-                    background-color: $color-green;
-                }
-
-                &:hover {
-                    background-color: $color-navy;
-                    color: hsla(210, 100%, 75%, 1.0);
-
-                    transition: all 0.1s ease-in;
-                }
-
-                &:last-of-type {
-                    margin-right: 0;
-                }
-            }
         }
     }
 }
