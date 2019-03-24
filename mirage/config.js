@@ -35,6 +35,7 @@ export default function() {
 
             }, []);
 
+        // Find the students that meet the skills
         const students = schema.db.students
             .filter(student => {
                 let isStudentQualified = false;

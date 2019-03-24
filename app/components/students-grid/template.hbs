@@ -1,7 +1,9 @@
 {{#let (component "students-grid/card") as |Card|}}
     {{#each (sort-by "lastName" "firstName" students) as |student|}}
         <li>
-            <Card @student={{student}} />
+            {{#link-to "students.student" student.id}}
+                <Card @student={{student}} />
+            {{/link-to}}
         </li>
     {{/each}}
 {{/let}}

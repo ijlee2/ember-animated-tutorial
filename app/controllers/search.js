@@ -1,14 +1,14 @@
 import Controller from '@ember/controller';
-
+import { inject as service } from '@ember/service';
 import { parallel } from 'ember-animated';
 import { easeIn, easeOut } from 'ember-animated/easings/cosine';
 import move from 'ember-animated/motions/move';
 import { fadeIn, fadeOut } from 'ember-animated/motions/opacity';
-
 import { task } from 'ember-concurrency';
-import fetch from 'fetch';
 
 export default Controller.extend({
+    router: service(),
+
     init() {
         this._super(...arguments);
 
@@ -20,7 +20,10 @@ export default Controller.extend({
         insertedSprites.forEach(fadeIn);
 
         keptSprites.forEach(sprite => {
-            move(sprite, { easing: easeIn });
+            parallel(
+                fadeIn(sprite),
+                move(sprite, { easing: easeIn })
+            );
         });
 
         removedSprites.forEach(sprite => {
@@ -42,10 +45,11 @@ export default Controller.extend({
         const skillIds = this.selectedSkills.mapBy('id').join(',');
 
         if (skillIds) {
-            yield fetch(`/search?skillIds=${skillIds}`)
-                .then(response => {
-                    return response.json();
-                });
+            this.router.transitionTo('search.results', {
+                queryParams: {
+                    sid: skillIds,
+                },
+            });
         }
 
     }).drop(),
@@ -86,6 +90,10 @@ export default Controller.extend({
 
             // With animation on, the user can click on a skill multiple times.
             // We ensure that the state is correct by checking for uniqueness.
+            if (!this.filteredRemainingSkills.includes(skill)) {
+                this.filteredRemainingSkills.pushObject(skill);
+            }
+
             if (!this.remainingSkills.includes(skill)) {
                 this.remainingSkills.pushObject(skill);
             }
