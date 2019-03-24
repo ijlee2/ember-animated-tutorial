@@ -1,12 +1,12 @@
 {{input
-    id=skill.id
+    id=(concat elementId skill.id)
     type="checkbox"
     name="skills"
     checked=skill.isSelected
     change=onChangeHandler
 }}
 
-<label for={{skill.id}}>
+<label for={{concat elementId skill.id}}>
     <MaterialIcon @icon={{if skill.isSelected "remove_circle" "add_circle"}} />
 
     <span data-test-name>{{skill.name}}</span>

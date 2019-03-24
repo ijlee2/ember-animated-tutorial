@@ -1,3 +1,4 @@
+{{! template-lint-disable attribute-indentation }}
 <h1>Search</h1>
 
 {{input
@@ -11,22 +12,32 @@
 
 <form class="my-form" {{action (perform searchStudents) on="submit"}}>
     <fieldset>
-        <label>Select up to {{MAX_NUM_SELECTED_SKILLS}} skills that you believe are very important {{if selectedSkills (concat "(" selectedSkills.length " selected)")}}</label>
+        <label>Select up to {{MAX_NUM_SELECTED_SKILLS}} skills that you believe are very important. {{if selectedSkills (concat "(" selectedSkills.length " selected)")}}</label>
 
         <div class="selected-skills">
-            {{#each (sort-by "type" "name" selectedSkills) as |skill|}}
-                <SkillPill
-                    @skill={{skill}}
-                    @onChangeHandler={{action "unSelectSkill" skill.id}}
-                />
-            {{/each}}
+            <AnimatedContainer>
+                {{#animated-each
+                    (sort-by "type" "name" selectedSkills)
+                    use=transition
+                    duration=250
+                    as |skill|
+                }}
+                    <SkillPill
+                        @skill={{skill}}
+                        @onChangeHandler={{action "unSelectSkill" skill}}
+                    />
+                {{/animated-each}}
+            </AnimatedContainer>
         </div>
 
         <div class="remaining-skills">
-            {{#each (sort-by "type" "name" filteredRemainingSkills) as |skill|}}
+            {{#each
+                (sort-by "type" "name" filteredRemainingSkills)
+                as |skill|
+            }}
                 <SkillPill
                     @skill={{skill}}
-                    @onChangeHandler={{action "selectSkill" skill.id}}
+                    @onChangeHandler={{action "selectSkill" skill}}
                 />
             {{/each}}
         </div>

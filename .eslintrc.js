@@ -114,6 +114,7 @@ module.exports = {
                 'allowTemplateLiterals': true,
             },
         ],
+        'require-yield': 0,
         'semi': [
             'error',
             'always',

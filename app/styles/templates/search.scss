@@ -1,10 +1,10 @@
 .my-route__search {
     .my-input {
-        width: 100%;
+        width: calc(100% - 1.5rem);
 
-        font-size: $font-size-lg;
+        font-size: $font-size-md;
         margin-bottom: 1rem;
-        padding: 1rem;
+        padding: 0.75rem;
     }
 
     .my-form {

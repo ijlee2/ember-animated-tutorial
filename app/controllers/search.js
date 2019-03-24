@@ -1,4 +1,7 @@
 import Controller from '@ember/controller';
+import { easeIn } from 'ember-animated/easings/cosine';
+import move from 'ember-animated/motions/move';
+import { fadeIn, fadeOut } from 'ember-animated/motions/opacity';
 import { task } from 'ember-concurrency';
 import fetch from 'fetch';
 
@@ -9,7 +12,18 @@ export default Controller.extend({
         this.set('MAX_NUM_SELECTED_SKILLS', 10);
     },
 
-    searchStudents: task(function * () {
+    *transition({ insertedSprites, keptSprites, removedSprites }) {
+        // We can use point-free style
+        insertedSprites.forEach(fadeIn);
+
+        keptSprites.forEach(sprite => {
+            move(sprite, { easing: easeIn });
+        });
+
+        removedSprites.forEach(fadeOut);
+    },
+
+    searchStudents: task(function*() {
         const skillIds = this.selectedSkills.mapBy('id').join(',');
 
         if (skillIds) {
@@ -52,38 +66,19 @@ export default Controller.extend({
             }
         },
 
-        unSelectSkill(id) {
-            let index = 0;
-
-            for (index = 0; index < this.selectedSkills.length; index++) {
-                if (this.selectedSkills.objectAt(index).id === id) {
-                    break;
-                }
-            }
-
-            let skill = this.selectedSkills.objectAt(index);
+        unSelectSkill(skill) {
             skill.set('isSelected', false);
 
             this.remainingSkills.pushObject(skill);
-            this.selectedSkills.removeAt(index);
+            this.selectedSkills.removeObject(skill);
         },
 
-        selectSkill(id) {
+        selectSkill(skill) {
             if (this.selectedSkills.length < this.MAX_NUM_SELECTED_SKILLS) {
-                // Find the skill in the filtered list
-                let index = 0;
-
-                for (index = 0; index < this.filteredRemainingSkills.length; index++) {
-                    if (this.filteredRemainingSkills.objectAt(index).id === id) {
-                        break;
-                    }
-                }
-
-                let skill = this.filteredRemainingSkills.objectAt(index);
                 skill.set('isSelected', true);
 
                 this.selectedSkills.pushObject(skill);
-                this.filteredRemainingSkills.removeAt(index);
+                this.filteredRemainingSkills.removeObject(skill);
                 this.remainingSkills.removeObject(skill);
             }
         },
