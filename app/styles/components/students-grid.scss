@@ -40,6 +40,8 @@
             }
 
             .material-icons {
+                color: $color-gray;
+                opacity: 0.87;
                 font-size: 6rem;
             }
         }
@@ -63,7 +65,8 @@
                 align-items: center;
 
                 .material-icons {
-                    color: $color-navy;
+                    color: $color-black;
+                    opacity: 0.87;
                     margin-right: 0.5rem;
                 }
 
