@@ -15,7 +15,7 @@
         <label>Select up to {{MAX_NUM_SELECTED_SKILLS}} skills that you believe are very important.</label>
 
         <div class="selected-skills">
-            <span>Selected {{if selectedSkills (concat "(" selectedSkills.length ")")}}:</span>
+            <span>Selected{{if selectedSkills (concat " (" selectedSkills.length ")")}}:</span>
 
             <AnimatedContainer>
                 {{#animated-each

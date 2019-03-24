@@ -38,6 +38,16 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Aurelia',
+        type: 'frontend',
+    });
+
+    server.create('skill', {
+        name: 'AutoCAD',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
         name: 'AWS',
         type: 'backend',
         synonyms: ['Amazon Web Services'],
@@ -49,14 +59,9 @@ export default function(server) {
     });
 
     server.create('skill', {
-        name: 'AutoCAD',
-        type: 'miscellaneous',
-    });
-
-    server.create('skill', {
-        name: 'Authentication',
-        type: 'backend',
-        synonyms: ['User Authentication'],
+        name: 'Backbone',
+        type: 'frontend',
+        synonyms: ['Backbone.js'],
     });
 
     server.create('skill', {
@@ -73,6 +78,11 @@ export default function(server) {
         name: 'Bootstrap',
         type: 'frontend',
         synonyms: ['Bootstrap3', 'Bootstrap4'],
+    });
+
+    server.create('skill', {
+        name: 'Broccoli',
+        type: 'miscellaneous',
     });
 
     server.create('skill', {
@@ -175,7 +185,7 @@ export default function(server) {
 
     server.create('skill', {
         name: 'Fortran',
-        type: 'miscellaneous',
+        type: 'backend',
     });
 
     server.create('skill', {
@@ -188,6 +198,12 @@ export default function(server) {
         name: 'Git',
         type: 'miscellaneous',
         synonyms: ['GitHub'],
+    });
+
+    server.create('skill', {
+        name: 'Glimmer',
+        type: 'frontend',
+        synonyms: ['Glimmer.js'],
     });
 
     server.create('skill', {
@@ -374,9 +390,21 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Polymer',
+        type: 'frontend',
+        synonyms: ['Polymer.js'],
+    });
+
+    server.create('skill', {
         name: 'Postgres',
         type: 'backend',
         synonyms: ['PostgreSQL'],
+    });
+
+    server.create('skill', {
+        name: 'Preact',
+        type: 'frontend',
+        synonyms: ['Preact.js'],
     });
 
     server.create('skill', {
@@ -397,7 +425,7 @@ export default function(server) {
 
     server.create('skill', {
         name: 'R',
-        type: 'miscellaneous',
+        type: 'backend',
     });
 
     server.create('skill', {
@@ -434,13 +462,19 @@ export default function(server) {
     });
 
     server.create('skill', {
-        name: 'Ruby',
+        name: 'Rhinoceros',
         type: 'miscellaneous',
+        synonyms: ['Rhino', 'Rhino 3D', 'Rhinoceros 3D'],
+    });
+
+    server.create('skill', {
+        name: 'Ruby',
+        type: 'backend',
     });
 
     server.create('skill', {
         name: 'SAS',
-        type: 'miscellaneous',
+        type: 'backend',
     });
 
     server.create('skill', {
@@ -481,6 +515,17 @@ export default function(server) {
     server.create('skill', {
         name: 'SQLite',
         type: 'backend',
+    });
+
+    server.create('skill', {
+        name: 'Svelte',
+        type: 'frontend',
+    });
+
+    server.create('skill', {
+        name: 'SVN',
+        type: 'miscellaneous',
+        synonyms: ['Subversion'],
     });
 
     server.create('skill', {
