@@ -69,16 +69,18 @@ body {
     .my-main {
         height: calc(100vh - 6rem);
         padding: 1rem;
-        overflow-y: auto;
+        overflow-y: hidden;
     }
 }
 
 /* Components */
 @import "components/material-icon";
 @import "components/skill-pill";
-@import "components/student-card";
+@import "components/students-grid";
 @import "components/student-details";
 
 /* Route Templates */
+@import "templates/index";
 @import "templates/search";
 @import "templates/students";
+@import "templates/students/student";

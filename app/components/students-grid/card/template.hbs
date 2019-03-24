@@ -1,4 +1,4 @@
-<div class="student-card__image">
+<div class="students-grid__card__image">
     {{#if failedToLoadImage}}
         <MaterialIcon @icon="person" />
 
@@ -13,16 +13,16 @@
     {{/if}}
 </div>
 
-<div class="student-card__data">
+<div class="students-grid__card__data">
     <div
         data-test-name
-        class="student-card__data__name"
+        class="students-grid__card__data__name"
         title={{student.fullName}}
     >
         {{student.fullName}}
     </div>
 
-    <div class="student-card__data__email">
+    <div class="students-grid__card__data__email">
         <MaterialIcon @icon="email" />
 
         <a
@@ -34,7 +34,7 @@
         </a>
     </div>
 
-    <div class="student-card__data__phone">
+    <div class="students-grid__card__data__phone">
         <MaterialIcon @icon="phone" />
 
         <a

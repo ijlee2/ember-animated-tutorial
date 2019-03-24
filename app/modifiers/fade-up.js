@@ -1,7 +1,9 @@
 import { Modifier } from 'ember-oo-modifiers';
 
 const FadeUpModifier = Modifier.extend({
-    didInsertElement(args, options) {
+    // We pass an ID (something unique) so that fade-up can be triggered
+    // when we switch between child routes
+    didReceiveArguments(args, options) {
         this.element.animate(
             [
                 { opacity: 0, transform: 'translateY(60px)' },

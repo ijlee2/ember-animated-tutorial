@@ -1,9 +1,9 @@
-<h1>Students</h1>
+<div class="my-students">
+    {{#if isViewingParentRoute}}
+        <h1>Students</h1>
+    {{/if}}
 
-<ul class="list-of-students">
-    {{#each (sort-by "lastName" "firstName" model) as |student|}}
-        <li>
-            <StudentCard @student={{student}} />
-        </li>
-    {{/each}}
-</ul>
+    <StudentsGrid @students={{model}} />
+</div>
+
+{{outlet}}

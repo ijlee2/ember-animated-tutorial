@@ -4,7 +4,7 @@ import { inject as service } from '@ember/service';
 
 export default Component.extend({
     'data-test-card': readOnly('student.fullName'),
-    classNames: ['student-card'],
+    classNames: ['students-grid__card'],
 
     router: service(),
 

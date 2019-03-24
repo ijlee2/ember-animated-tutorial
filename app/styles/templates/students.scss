@@ -1,8 +1,14 @@
-.my-main {
-    .list-of-students {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 1fr;
-        grid-gap: 1.5rem;
+.my-route__students__index {
+    .my-students {
+        display: flex;
+        flex-direction: column;
+
+        height: 100%;
+        overflow-y: hidden;
+
+        .students-grid {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1.5rem;
+        }
     }
 }
