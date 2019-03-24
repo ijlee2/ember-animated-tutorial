@@ -65,6 +65,11 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'BASIC',
+        type: 'backend',
+    });
+
+    server.create('skill', {
         name: 'Big Data',
         type: 'miscellaneous',
     });
@@ -174,6 +179,12 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'FEA',
+        type: 'miscellaneous',
+        synonyms: ['Finite Element Analysis'],
+    });
+
+    server.create('skill', {
         name: 'Firebase',
         type: 'backend',
     });
@@ -266,6 +277,11 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'JSP',
+        type: 'backend',
+    });
+
+    server.create('skill', {
         name: 'jQuery',
         type: 'frontend',
     });
@@ -316,11 +332,6 @@ export default function(server) {
     server.create('skill', {
         name: 'Matlab',
         type: 'backend',
-    });
-
-    server.create('skill', {
-        name: 'Mentoring',
-        type: 'miscellaneous',
     });
 
     server.create('skill', {
@@ -518,6 +529,11 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Squarespace',
+        type: 'frontend',
+    });
+
+    server.create('skill', {
         name: 'Svelte',
         type: 'frontend',
     });
@@ -541,11 +557,17 @@ export default function(server) {
     server.create('skill', {
         name: 'Teaching',
         type: 'miscellaneous',
+        synonyms: ['Mentoring'],
+    });
+
+    server.create('skill', {
+        name: 'Team Building',
+        type: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Three.js',
-        type: 'miscellaneous',
+        type: 'frontend',
         synonyms: ['3JS'],
     });
 
@@ -568,6 +590,11 @@ export default function(server) {
 
     server.create('skill', {
         name: 'WebGL',
+        type: 'frontend',
+    });
+
+    server.create('skill', {
+        name: 'Weebly',
         type: 'frontend',
     });
 
