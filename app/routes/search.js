@@ -18,7 +18,8 @@ export default Route.extend({
                 return EmberObject.create({
                     id: skill.id,
                     name: skill.name,
-                    isSelected: false,
+                    type: skill.type,
+                    synonyms: (skill.synonyms || []).slice(),
                 });
             }),
         });

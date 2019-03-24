@@ -24,11 +24,11 @@ export default Controller.extend({
             }
         },
 
-        unSelectSkill(event) {
+        unSelectSkill(id) {
             let index = 0;
 
             for (index = 0; index < this.selectedSkills.length; index++) {
-                if (this.selectedSkills.objectAt(index).id === event.target.id) {
+                if (this.selectedSkills.objectAt(index).id === id) {
                     break;
                 }
             }
@@ -39,13 +39,13 @@ export default Controller.extend({
             this.selectedSkills.removeAt(index);
         },
 
-        selectSkill(event) {
+        selectSkill(id) {
             if (this.selectedSkills.length < this.MAX_NUM_SELECTED_SKILLS) {
                 // Find the skill in the filtered list
                 let index = 0;
 
                 for (index = 0; index < this.filteredRemainingSkills.length; index++) {
-                    if (this.filteredRemainingSkills.objectAt(index).id === event.target.id) {
+                    if (this.filteredRemainingSkills.objectAt(index).id === id) {
                         break;
                     }
                 }
