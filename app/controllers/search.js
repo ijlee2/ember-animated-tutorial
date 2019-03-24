@@ -1,4 +1,6 @@
 import Controller from '@ember/controller';
+import { task } from 'ember-concurrency';
+import fetch from 'fetch';
 
 export default Controller.extend({
     init() {
@@ -6,6 +8,18 @@ export default Controller.extend({
 
         this.set('MAX_NUM_SELECTED_SKILLS', 10);
     },
+
+    searchStudents: task(function * () {
+        const skillIds = this.selectedSkills.mapBy('id').join(',');
+
+        if (skillIds) {
+            yield fetch(`/search?skillIds=${skillIds}`)
+                .then(response => {
+                    return response.json();
+                });
+        }
+
+    }).drop(),
 
     actions: {
         searchSkills() {

@@ -9,7 +9,7 @@
     key-up=(action "searchSkills")
 }}
 
-<form class="my-form">
+<form class="my-form" {{action (perform searchStudents) on="submit"}}>
     <fieldset>
         <label>Select up to {{MAX_NUM_SELECTED_SKILLS}} skills that you believe are very important {{if selectedSkills (concat "(" selectedSkills.length " selected)")}}</label>
 
