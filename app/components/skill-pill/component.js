@@ -10,7 +10,10 @@ export default Component.extend({
         return `skill-pill--${this.skill.type}`;
     }),
 
-    click() {
+    click(event) {
+        event.preventDefault();
         this.onChangeHandler();
+
+        return false;
     },
 });

@@ -12,9 +12,11 @@
 
 <form class="my-form" {{action (perform searchStudents) on="submit"}}>
     <fieldset>
-        <label>Select up to {{MAX_NUM_SELECTED_SKILLS}} skills that you believe are very important. {{if selectedSkills (concat "(" selectedSkills.length " selected)")}}</label>
+        <label>Select up to {{MAX_NUM_SELECTED_SKILLS}} skills that you believe are very important.</label>
 
         <div class="selected-skills">
+            <span>Selected {{if selectedSkills (concat "(" selectedSkills.length ")")}}:</span>
+
             <AnimatedContainer>
                 {{#animated-each
                     (sort-by "type" "name" selectedSkills)
@@ -31,6 +33,8 @@
         </div>
 
         <div class="remaining-skills">
+            <span>Available:</span>
+
             {{#each
                 (sort-by "type" "name" filteredRemainingSkills)
                 as |skill|

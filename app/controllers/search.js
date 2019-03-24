@@ -69,7 +69,12 @@ export default Controller.extend({
         unSelectSkill(skill) {
             skill.set('isSelected', false);
 
-            this.remainingSkills.pushObject(skill);
+            // With animation on, the user can click on a skill multiple times.
+            // We ensure that the state is correct by checking for uniqueness.
+            if (!this.remainingSkills.includes(skill)) {
+                this.remainingSkills.pushObject(skill);
+            }
+
             this.selectedSkills.removeObject(skill);
         },
 
@@ -77,7 +82,10 @@ export default Controller.extend({
             if (this.selectedSkills.length < this.MAX_NUM_SELECTED_SKILLS) {
                 skill.set('isSelected', true);
 
-                this.selectedSkills.pushObject(skill);
+                if (!this.selectedSkills.includes(skill)) {
+                    this.selectedSkills.pushObject(skill);
+                }
+
                 this.filteredRemainingSkills.removeObject(skill);
                 this.remainingSkills.removeObject(skill);
             }

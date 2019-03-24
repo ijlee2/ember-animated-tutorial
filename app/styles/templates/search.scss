@@ -8,9 +8,19 @@
     }
 
     .my-form {
+        fieldset > label {
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
         .selected-skills,
         .remaining-skills {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
+
+            & > span {
+                display: block;
+                margin-bottom: 0.5rem;
+            }
         }
     }
 }
