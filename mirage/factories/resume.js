@@ -77,15 +77,15 @@ export default Factory.extend({
         const numSkills = getRandomNumber([
             {
                 value: 3,
-                probability: 0.10,
+                probability: 0.05,
             },
             {
                 value: 4,
-                probability: 0.10,
+                probability: 0.05,
             },
             {
                 value: 5,
-                probability: 0.15,
+                probability: 0.10,
             },
             {
                 value: 6,
@@ -93,7 +93,7 @@ export default Factory.extend({
             },
             {
                 value: 7,
-                probability: 0.20,
+                probability: 0.15,
             },
             {
                 value: 8,
@@ -101,10 +101,18 @@ export default Factory.extend({
             },
             {
                 value: 9,
-                probability: 0.05,
+                probability: 0.10,
             },
             {
                 value: 10,
+                probability: 0.10,
+            },
+            {
+                value: 11,
+                probability: 0.05,
+            },
+            {
+                value: 12,
                 probability: 0.05,
             },
         ]);

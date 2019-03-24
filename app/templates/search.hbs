@@ -1,3 +1,51 @@
 <h1>Search</h1>
 
-{{outlet}}
+{{input
+    value=query
+    autofocus=true
+    placeholder="Search for a skill"
+    key-up=(action "searchSkills")
+}}
+
+<form>
+    <fieldset>
+        <label>Select up to {{MAX_NUM_SELECTED_SKILLS}} skills that you believe are most important</label>
+
+        {{#each (sort-by "name" selectedSkills) as |skill|}}
+            <div class="my-skill">
+                {{input
+                    id=skill.id
+                    type="checkbox"
+                    name="skills"
+                    checked=true
+                    change=(action "unSelectSkill")
+                }}
+
+                <label for={{skill.id}}>
+                    {{skill.name}}
+                </label>
+            </div>
+        {{/each}}
+
+        <br>
+
+        {{#each (sort-by "name" filteredRemainingSkills) as |skill|}}
+            <div class="my-skill">
+                {{input
+                    id=skill.id
+                    type="checkbox"
+                    name="skills"
+                    checked=false
+                    disabled=(gte selectedSkills.length MAX_NUM_SELECTED_SKILLS)
+                    change=(action "selectSkill")
+                }}
+
+                <label for={{skill.id}}>
+                    {{skill.name}}
+                </label>
+            </div>
+        {{/each}}
+    </fieldset>
+
+    <button type="submit">Submit</button>
+</form>

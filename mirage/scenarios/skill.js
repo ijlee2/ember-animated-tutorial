@@ -1,7 +1,17 @@
 export default function(server) {
     server.create('skill', {
+        name: 'ActionScript',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
         name: 'Adobe Creative Suite',
         type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'AJAX',
+        type: 'backend',
     });
 
     server.create('skill', {
@@ -13,6 +23,18 @@ export default function(server) {
     server.create('skill', {
         name: 'AngularJS',
         type: 'frontend',
+    });
+
+    server.create('skill', {
+        name: 'AI',
+        type: 'miscellaneous',
+        synonyms: ['Artificial Intelligence'],
+    });
+
+    server.create('skill', {
+        name: 'ASP.NET',
+        type: 'backend',
+        synonyms: ['ASP'],
     });
 
     server.create('skill', {
@@ -34,6 +56,16 @@ export default function(server) {
         name: 'Authentication',
         type: 'backend',
         synonyms: ['User Authentication'],
+    });
+
+    server.create('skill', {
+        name: 'Big Data',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'Blockchain',
+        type: 'miscellaneous',
     });
 
     server.create('skill', {
@@ -84,9 +116,34 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Data Analysis',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'Data Mining',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'Data Visualization',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'Database Design',
+        type: 'backend',
+    });
+
+    server.create('skill', {
         name: 'D3',
         type: 'frontend',
         synonyms: ['D3.js'],
+    });
+
+    server.create('skill', {
+        name: 'Elixir',
+        type: 'backend',
     });
 
     server.create('skill', {
@@ -116,14 +173,20 @@ export default function(server) {
     });
 
     server.create('skill', {
-        name: 'Git',
+        name: 'Fortran',
         type: 'miscellaneous',
-        synonyms: ['GitHub'],
     });
 
     server.create('skill', {
-        name: 'GraphQL',
-        type: 'backend',
+        name: 'Foundation',
+        type: 'frontend',
+        synonyms: ['Foundation6'],
+    });
+
+    server.create('skill', {
+        name: 'Git',
+        type: 'miscellaneous',
+        synonyms: ['GitHub'],
     });
 
     server.create('skill', {
@@ -137,9 +200,19 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'GraphQL',
+        type: 'backend',
+    });
+
+    server.create('skill', {
         name: 'Handlebars',
         type: 'frontend',
         synonyms: ['Handlebars.js'],
+    });
+
+    server.create('skill', {
+        name: 'Haskell',
+        type: 'miscellaneous',
     });
 
     server.create('skill', {
@@ -180,6 +253,11 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'JSON:API',
+        type: 'backend',
+    });
+
+    server.create('skill', {
         name: 'Laravel',
         type: 'frontend',
     });
@@ -201,6 +279,11 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Lisp',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
         name: 'Markdown',
         type: 'miscellaneous',
     });
@@ -217,8 +300,19 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Mentoring',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
         name: 'Microsoft Suite',
         type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'ML',
+        type: 'miscellaneous',
+        synonyms: ['Machine Learning'],
     });
 
     server.create('skill', {
@@ -238,13 +332,40 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'NLG',
+        type: 'miscellaneous',
+        synonyms: ['Natural Language Generation'],
+    });
+
+    server.create('skill', {
+        name: 'NLP',
+        type: 'miscellaneous',
+        synonyms: ['Natural Language Processing'],
+    });
+
+    server.create('skill', {
         name: 'Node',
         type: 'backend',
         synonyms: ['Node.js'],
     });
 
     server.create('skill', {
+        name: 'Objective-C',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'Perl',
+        type: 'backend',
+    });
+
+    server.create('skill', {
         name: 'PHP',
+        type: 'backend',
+    });
+
+    server.create('skill', {
+        name: 'PL/SQL',
         type: 'backend',
     });
 
@@ -267,6 +388,17 @@ export default function(server) {
     server.create('skill', {
         name: 'QUnit',
         type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'R',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'Rails',
+        type: 'backend',
+        synonyms: ['Ruby on Rails'],
     });
 
     server.create('skill', {
@@ -297,8 +429,28 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Ruby',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'SAS',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
         name: 'Sass',
         type: 'frontend',
+    });
+
+    server.create('skill', {
+        name: 'Scala',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'Selenium',
+        type: 'miscellaneous',
     });
 
     server.create('skill', {
@@ -312,12 +464,32 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'SproutCore',
+        type: 'frontend',
+    });
+
+    server.create('skill', {
         name: 'SQL',
         type: 'backend',
     });
 
     server.create('skill', {
+        name: 'SQLite',
+        type: 'backend',
+    });
+
+    server.create('skill', {
+        name: 'Swift',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
         name: 'Tableau',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'Teaching',
         type: 'miscellaneous',
     });
 
@@ -328,8 +500,19 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Vue',
+        type: 'frontend',
+        synonyms: ['Vue.js'],
+    });
+
+    server.create('skill', {
         name: 'Webpack',
         type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'Wix',
+        type: 'frontend',
     });
 
     server.create('skill', {
@@ -338,7 +521,7 @@ export default function(server) {
     });
 
     server.create('skill', {
-        name: 'Writing',
-        type: 'miscellaneous',
+        name: 'XML',
+        type: 'backend',
     });
 }
