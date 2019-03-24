@@ -13,14 +13,14 @@ export default Route.extend({
         });
     },
 
-    model(params) {
+    async model(params) {
         const { sid: skillIds } = params;
 
         if (skillIds) {
-            return fetch(`/search?skillIds=${skillIds}`)
-                .then(response => {
-                    return response.json();
-                });
+            const response = await fetch(`/search?skillIds=${skillIds}`);
+            const payload = await response.json();
+
+            return payload;
         }
 
         return [];

@@ -1,0 +1,57 @@
+{{#let
+    student.fullName student.metadata.score student.metadata.experiences student.metadata.skills
+    as |fullName score experiences skills|
+}}
+    <div
+        data-test-name
+        class="results-grid__card__header"
+        title={{fullName}}
+    >
+        <span class="results-grid__card__header__score">
+            {{score}}
+        </span>
+
+        <span class="results-grid__card__header__name">
+            {{fullName}}
+        </span>
+    </div>
+
+    <div class="results-grid__card__body">
+        {{#if experiences}}
+            <div class="results-grid__card__body__experiences">
+                <ul>
+                    {{#each experiences as |experience|}}
+                        <li
+                            data-test-experience
+                            class="item"
+                        >
+                            <span class="item__title">
+                                {{experience.position}} at {{experience.company}}
+                            </span>
+
+                            <ul>
+                                {{#each experience.achievements as |achievement|}}
+                                    <li class="item__achievement">
+                                        {{achievement}}
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+
+        <div class="results-grid__card__body__skills">
+            {{#if skills}}
+                Matched Skills:
+
+                {{join ", " (map-by "name" (sort-by "name" skills))}}
+
+            {{else}}
+                No matched skills
+
+            {{/if}}
+        </div>
+    </div>
+{{/let}}

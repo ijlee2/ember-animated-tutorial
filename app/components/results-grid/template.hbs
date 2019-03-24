@@ -1,0 +1,9 @@
+{{#let (component "results-grid/card") as |Card|}}
+    {{#each (sort-by "metadata.score:desc" "lastName" "firstName" students) as |student|}}
+        <li>
+            {{#link-to "students.student" student.id}}
+                <Card @student={{student}} />
+            {{/link-to}}
+        </li>
+    {{/each}}
+{{/let}}

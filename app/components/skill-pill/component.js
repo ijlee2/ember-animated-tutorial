@@ -12,8 +12,7 @@ export default Component.extend({
 
     click(event) {
         event.preventDefault();
-        this.onChangeHandler();
 
-        return false;
+        this.onChangeHandler();
     },
 });

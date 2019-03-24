@@ -3,9 +3,7 @@
 module.exports = {
     extends: 'recommended',
     rules: {
-        'attribute-indentation': {
-            'indentation': 4,
-        },
+        'attribute-indentation': false,
         'block-indentation': 4,
         'inline-link-to': true,
         'link-href-attributes': true,
