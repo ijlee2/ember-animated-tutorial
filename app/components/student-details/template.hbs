@@ -1,6 +1,14 @@
-<h1 data-test-name>{{student.fullName}}</h1>
+<h1
+    data-test-name
+    {{fade-up delay=50}}
+>
+    {{student.fullName}}
+</h1>
 
-<div class="student-details__section student-details__email">
+<div
+    class="student-details__section student-details__email"
+    {{fade-up delay=100}}
+>
     <h2>Email</h2>
 
     <a
@@ -12,7 +20,10 @@
     </a>
 </div>
 
-<div class="student-details__section student-details__phone">
+<div
+    class="student-details__section student-details__phone"
+    {{fade-up delay=300}}
+>
     <h2>Phone</h2>
 
     <a
@@ -24,7 +35,10 @@
     </a>
 </div>
 
-<div class="student-details__section student-details__education">
+<div
+    class="student-details__section student-details__education"
+    {{fade-up delay=500}}
+>
     <h2>Education</h2>
 
     <ul>
@@ -34,7 +48,10 @@
     </ul>
 </div>
 
-<div class="student-details__section student-details__experiences">
+<div
+    class="student-details__section student-details__experiences"
+    {{fade-up delay=700}}
+>
     <h2>Experiences</h2>
 
     <ol>
@@ -43,11 +60,15 @@
                 data-test-experience
                 class="student-details__experiences__experience"
             >
-                <h3 class="student-details__experiences__experience__title">{{experience.position}} at {{experience.company}}</h3>
+                <h3 class="student-details__experiences__experience__title">
+                    {{experience.position}} at {{experience.company}}
+                </h3>
 
                 <ul>
                     {{#each experience.achievements as |achievement|}}
-                        <li class="student-details__experiences__experience__achievement">{{achievement}}</li>
+                        <li class="student-details__experiences__experience__achievement">
+                            {{achievement}}
+                        </li>
                     {{/each}}
                 </ul>
             </li>
@@ -55,7 +76,10 @@
     </ol>
 </div>
 
-<div class="student-details__section student-details__skills">
+<div
+    class="student-details__section student-details__skills"
+    {{fade-up delay=900}}
+>
     <h2>Skills</h2>
 
     <ul>

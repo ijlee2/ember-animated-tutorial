@@ -24,10 +24,16 @@ body {
     }
 
     h2 {
+        margin-top: 0.8rem;
         margin-bottom: 0.8rem;
 
         font-size: $font-size-lg;
         font-weight: 700;
+    }
+
+    p {
+        margin-bottom: 0.5rem;
+        line-height: 2rem;
     }
 
     .my-nav {
