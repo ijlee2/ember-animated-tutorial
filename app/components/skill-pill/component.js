@@ -9,4 +9,8 @@ export default Component.extend({
     skillType: computed('skill.type', function() {
         return `skill-pill--${this.skill.type}`;
     }),
+
+    click() {
+        this.onChangeHandler();
+    },
 });

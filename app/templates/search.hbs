@@ -11,7 +11,7 @@
 
 <form class="my-form">
     <fieldset>
-        <label>Select up to {{MAX_NUM_SELECTED_SKILLS}} skills that you believe are most important</label>
+        <label>Select up to {{MAX_NUM_SELECTED_SKILLS}} skills that you believe are very important {{if selectedSkills (concat "(" selectedSkills.length " selected)")}}</label>
 
         <div class="selected-skills">
             {{#each (sort-by "type" "name" selectedSkills) as |skill|}}
