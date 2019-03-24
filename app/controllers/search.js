@@ -1,7 +1,10 @@
 import Controller from '@ember/controller';
-import { easeIn } from 'ember-animated/easings/cosine';
+
+import { parallel } from 'ember-animated';
+import { easeIn, easeOut } from 'ember-animated/easings/cosine';
 import move from 'ember-animated/motions/move';
 import { fadeIn, fadeOut } from 'ember-animated/motions/opacity';
+
 import { task } from 'ember-concurrency';
 import fetch from 'fetch';
 
@@ -20,7 +23,19 @@ export default Controller.extend({
             move(sprite, { easing: easeIn });
         });
 
-        removedSprites.forEach(fadeOut);
+        removedSprites.forEach(sprite => {
+            // sprite.endAtPixel({
+            //     x: sprite.absoluteInitialBounds.left + 60,
+            //     y: sprite.absoluteInitialBounds.top + 80,
+            // });
+
+            sprite.endTranslatedBy(60, 80);
+
+            parallel(
+                fadeOut(sprite),
+                move(sprite, { easing: easeOut })
+            );
+        });
     },
 
     searchStudents: task(function*() {
