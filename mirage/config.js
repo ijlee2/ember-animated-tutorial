@@ -138,7 +138,7 @@ export default function() {
 
         students.forEach(student => {
             // Create a score between 0 and 99
-            let relativeScore = Math.ceil(99 * (student.metadata.score - minScore) / (maxScore - minScore));
+            let relativeScore = Math.floor(99 * (student.metadata.score - minScore) / (maxScore - minScore));
             const numDigits = relativeScore.toString().length;
 
             relativeScore = `${'0'.repeat(2 - numDigits)}${relativeScore}`;

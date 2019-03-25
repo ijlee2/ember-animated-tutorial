@@ -1,23 +1,20 @@
 .my-route__students__student {
     display: grid;
-    grid-template-columns: 1fr 2fr;
     grid-gap: 1rem;
 
     .my-students {
         overflow-y: auto;
 
         .students-grid {
-            padding-right: 0.5rem;
-
             grid-template-columns: minmax(32rem, 1fr);
         }
     }
 }
 
-.media-sm,
-.media-md {
+.media-xs,
+.media-sm {
     .my-route__students__student {
-        grid-template-columns: 8rem auto;
+        grid-template-columns: 9rem auto;
 
         .my-students .students-grid {
             grid-template-columns: 1fr;
@@ -25,12 +22,33 @@
     }
 }
 
+.media-md,
 .media-lg {
     .my-route__students__student {
-        grid-template-columns: 24rem auto;
+        grid-template-columns: 25rem auto;
 
         .my-students .students-grid {
             grid-template-columns: 1fr;
+        }
+    }
+}
+
+.media-xl {
+    .my-route__students__student {
+        grid-template-columns: 33rem auto;
+
+        .my-students .students-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.media-xxl {
+    .my-route__students__student {
+        grid-template-columns: 66rem auto;
+
+        .my-students .students-grid {
+            grid-template-columns: 1fr 1fr;
         }
     }
 }
