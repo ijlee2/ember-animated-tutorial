@@ -53,10 +53,15 @@ export default function() {
                     const words = achievement.trim().split(/\s+/);
                     const highlightedWords = [];
 
-                    words.forEach(word => {
+                    words.forEach((word, index) => {
                         if (desiredSkills.includes(word.toLowerCase())) {
-                            scoreFromExperiences++;
                             isAchievementRelevant = true;
+
+                            // Consider words in the beginning to be more important. We map
+                            // the domain of relative position, [0, 1], to the range of score,
+                            // [1, 0] in a smooth manner.
+                            const relativePosition = (words.length - index) / words.length;
+                            scoreFromExperiences += 1 + Math.log10(1 - 0.9 * relativePosition);
 
                             highlightedWords.push(`<span class="highlighted">${word}</span>`);
 
