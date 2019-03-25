@@ -33,15 +33,15 @@ body {
     }
 
     button {
+        border-radius: 0.25rem;
+        padding: 1rem 2rem;
+
         background-color: $color-gray;
         color: $color-white;
         font-size: $font-size-sm;
         font-weight: 500;
         letter-spacing: 0.175rem;
         text-transform: uppercase;
-
-        border-radius: 0.25rem;
-        padding: 1rem 2rem;
 
         &:disabled {
             cursor: not-allowed;
@@ -64,15 +64,16 @@ body {
 
     p {
         margin-bottom: 0.5rem;
+
         line-height: 2rem;
     }
 
     ul.my-list {
         & > li {
+            margin-bottom: 0.4rem;
+
             line-height: 2rem;
             list-style: decimal inside;
-
-            margin-bottom: 0.4rem;
 
             &:last-of-type {
                 margin-bottom: 0;
@@ -81,20 +82,25 @@ body {
     }
 
     .my-application {
-        display: flex;
-        flex-direction: column;
         height: 100vh;
 
-        .my-nav {
-            display: flex;
-            align-items: center;
+        display: flex;
+        flex-direction: column;
 
+        .my-nav {
             height: calc(4rem - #{$line-thin});
             border-bottom: #{$line-thin} solid $color-silver;
             padding: 0 1rem;
 
+            display: flex;
+            align-items: center;
+
             a {
+                height: 100%;
                 margin-right: 1.5rem;
+
+                display: flex;
+                align-items: center;
 
                 color: $color-black;
                 font-size: $font-size-md;
@@ -116,20 +122,20 @@ body {
         }
 
         .my-main {
-            flex: 1;
-
             padding: 1rem;
             overflow-y: auto;
+
+            flex: 1;
         }
 
         .my-footer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
             height: calc(3.2rem - #{$line-thin});
             border-top: $line-thin solid $color-silver;
             padding: 0 1rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             background-color: $color-navy;
             color: $color-light-blue;
@@ -151,7 +157,6 @@ body {
 @import "components/student-details";
 
 /* Route Templates */
-@import "templates/index";
 @import "templates/search";
 @import "templates/search/results";
 @import "templates/students";

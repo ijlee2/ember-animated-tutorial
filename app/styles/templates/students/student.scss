@@ -7,9 +7,9 @@
         overflow-y: auto;
 
         .students-grid {
-            grid-template-columns: minmax(32rem, 1fr);
-
             padding-right: 0.5rem;
+
+            grid-template-columns: minmax(32rem, 1fr);
         }
     }
 }

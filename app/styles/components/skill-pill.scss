@@ -1,7 +1,13 @@
 .skill-pill {
+    min-width: fit-content;
+    margin: 0 0.25rem 0.75rem 0;
+    border-radius: 0.75rem;
+    padding: 0.33rem 1rem;
+
     cursor: pointer;
     display: inline-block;
-    min-width: fit-content;
+
+    font-size: $font-size-sm;
 
     input {
         display: none;
@@ -9,22 +15,15 @@
 
     label {
         cursor: pointer;
-
         display: flex;
         align-items: center;
 
         .material-icons {
-            font-size: $font-size-md;
             margin-right: 0.25rem;
+
+            font-size: $font-size-md;
         }
     }
-
-    margin-right: 0.25rem;
-    margin-bottom: 0.75rem;
-    border-radius: 0.75rem;
-    padding: 0.33rem 1rem;
-
-    font-size: $font-size-sm;
 
     &--backend {
         background-color: $color-amber;
