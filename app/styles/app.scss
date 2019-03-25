@@ -75,6 +75,7 @@ body {
     }
 
     input {
+        border: $line-thin solid $color-silver;
         margin-bottom: 1rem;
         padding: 0.75rem;
 
@@ -108,7 +109,7 @@ body {
 
         .my-nav {
             height: calc(4rem - #{$line-thin});
-            border-bottom: #{$line-thin} solid $color-silver;
+            border-bottom: $line-thin solid $color-silver;
             padding: 0 1rem;
 
             display: flex;
@@ -177,5 +178,6 @@ body {
 
 /* Route Templates */
 @import "templates/search";
+@import "templates/search/results";
 @import "templates/students";
 @import "templates/students/student";
