@@ -12,36 +12,38 @@
     <fieldset>
         <label>Select up to {{MAX_NUM_SELECTED_SKILLS}} skills that you believe are very important.</label>
 
-        <div class="selected-skills">
-            <span>Selected{{if selectedSkills (concat " (" selectedSkills.length ")")}}:</span>
+        <div class="container">
+            <div class="remaining-skills">
+                <span>Available:</span>
 
-            <AnimatedContainer>
-                {{#animated-each
-                    (sort-by "type" "name" selectedSkills)
-                    use=transition
-                    duration=250
+                {{#each
+                    (sort-by "type" "name" filteredRemainingSkills)
                     as |skill|
                 }}
                     <SkillPill
                         @skill={{skill}}
-                        @onChangeHandler={{action "unSelectSkill" skill}}
+                        @onChangeHandler={{action "selectSkill" skill}}
                     />
-                {{/animated-each}}
-            </AnimatedContainer>
-        </div>
+                {{/each}}
+            </div>
 
-        <div class="remaining-skills">
-            <span>Available:</span>
+            <div class="selected-skills">
+                <span>Selected{{if selectedSkills (concat " (" selectedSkills.length ")")}}:</span>
 
-            {{#each
-                (sort-by "type" "name" filteredRemainingSkills)
-                as |skill|
-            }}
-                <SkillPill
-                    @skill={{skill}}
-                    @onChangeHandler={{action "selectSkill" skill}}
-                />
-            {{/each}}
+                <AnimatedContainer>
+                    {{#animated-each
+                        (sort-by "type" "name" selectedSkills)
+                        use=transition
+                        duration=250
+                        as |skill|
+                    }}
+                        <SkillPill
+                            @skill={{skill}}
+                            @onChangeHandler={{action "unSelectSkill" skill}}
+                        />
+                    {{/animated-each}}
+                </AnimatedContainer>
+            </div>
         </div>
     </fieldset>
 
