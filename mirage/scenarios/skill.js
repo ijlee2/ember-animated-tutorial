@@ -194,7 +194,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Ember',
         type: 'frontend',
-        synonyms: ['Ember.js'],
+        synonyms: ['Ember.js', 'Ember Octane'],
     });
 
     server.create('skill', {

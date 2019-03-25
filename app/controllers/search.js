@@ -12,7 +12,7 @@ export default Controller.extend({
     init() {
         this._super(...arguments);
 
-        this.set('MAX_NUM_SELECTED_SKILLS', 10);
+        this.set('MAX_NUM_SELECTED_SKILLS', 15);
     },
 
     *transition({ insertedSprites, keptSprites, removedSprites }) {

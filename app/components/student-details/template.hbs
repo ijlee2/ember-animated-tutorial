@@ -60,13 +60,13 @@
                 data-test-experience
                 class="item"
             >
-                <h3 class="item__title">
+                <h3 data-test-title class="item__title">
                     {{experience.position}} at {{experience.company}}
                 </h3>
 
                 <ul>
                     {{#each experience.achievements as |achievement|}}
-                        <li class="item__achievement">
+                        <li data-test-achievement class="item__achievement">
                             {{achievement}}
                         </li>
                     {{/each}}
