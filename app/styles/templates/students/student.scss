@@ -13,3 +13,24 @@
         }
     }
 }
+
+.media-sm,
+.media-md {
+    .my-route__students__student {
+        grid-template-columns: 8rem auto;
+
+        .my-students .students-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.media-lg {
+    .my-route__students__student {
+        grid-template-columns: 24rem auto;
+
+        .my-students .students-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}

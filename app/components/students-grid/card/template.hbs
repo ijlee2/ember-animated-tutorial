@@ -1,14 +1,20 @@
 <div class="students-grid__card__header">
-    {{#if failedToLoadImage}}
-        <MaterialIcon @icon="person" />
+    {{#if (media "isSm" "isMd")}}
+        {{student.initials}}
 
     {{else}}
-        <img
-            data-test-image
-            src={{student.imageUrl}}
-            alt=""
-            onerror={{action "loadDefaultImage"}}
-        >
+        {{#if failedToLoadImage}}
+            <MaterialIcon @icon="person" />
+
+        {{else}}
+            <img
+                data-test-image
+                src={{student.imageUrl}}
+                alt=""
+                onerror={{action "loadDefaultImage"}}
+            >
+
+        {{/if}}
 
     {{/if}}
 </div>

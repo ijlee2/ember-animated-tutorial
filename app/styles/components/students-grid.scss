@@ -59,12 +59,13 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            
+
             color: $color-black;
 
             &__name {
                 margin-bottom: 0.5rem;
 
+                font-family: "PT Serif", serif;
                 font-size: $font-size-lg;
                 font-weight: 700;
                 letter-spacing: 0.0625rem;
@@ -94,6 +95,50 @@
             background-color: $color-light-silver;
 
             transition: all 0.1s ease-in;
+        }
+    }
+}
+
+.media-sm,
+.media-md {
+    .students-grid {
+        grid-template-columns: 1fr;
+
+        &__card {
+            $image-container-width: 100%;
+
+            &__header {
+                width: $image-container-width;
+
+                color: $color-black;
+                font-family: "PT Serif", serif;
+                font-size: $font-size-xl;
+                font-weight: 700;
+                letter-spacing: 0.125rem;
+            }
+
+            &__body {
+                display: none;
+            }
+        }
+    }
+}
+
+.media-lg {
+    .students-grid {
+        grid-template-columns: 1fr;
+
+        &__card {
+            $data-container-width: 100%;
+
+            &__header {
+                display: none;
+            }
+
+            &__body {
+                width: $data-container-width;
+                padding: 0 2rem;
+            }
         }
     }
 }

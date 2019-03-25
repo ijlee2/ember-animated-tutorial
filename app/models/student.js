@@ -32,6 +32,10 @@ export default DS.Model.extend(LoadableModel, {
         return `${this.firstName} ${this.lastName}`;
     }),
 
+    initials: computed('firstName', 'lastName', function() {
+        return `${this.firstName.charAt(0).toUpperCase()}${this.lastName.charAt(0).toUpperCase()}`;
+    }),
+
     internationalPhone: computed('phone', function() {
         let phone = this.phone.replace(/[()]/g, '').replace(/\s+/g, '-');
 
