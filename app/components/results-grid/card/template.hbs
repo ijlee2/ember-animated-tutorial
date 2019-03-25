@@ -18,6 +18,8 @@
 
     <div class="results-grid__card__body">
         <div class="section results-grid__card__body__experiences">
+            <span>Matched Experiences:</span>
+
             {{#if experiences}}
                 <ul class="my-list">
                     {{#each experiences as |experience|}}
@@ -32,7 +34,7 @@
                             <ul>
                                 {{#each experience.achievements as |achievement|}}
                                     <li class="item__achievement">
-                                        {{achievement}}
+                                        {{{achievement}}}
                                     </li>
                                 {{/each}}
                             </ul>
@@ -41,19 +43,19 @@
                 </ul>
 
             {{else}}
-                No matched experiences
+                None
 
             {{/if}}
         </div>
 
         <div class="section results-grid__card__body__skills">
-            {{#if skills}}
-                Matched Skills:
+            <span>Matched Skills:</span>
 
+            {{#if skills}}
                 {{join ", " (map-by "name" (sort-by "name" skills))}}
 
             {{else}}
-                No matched skills
+                None
 
             {{/if}}
         </div>

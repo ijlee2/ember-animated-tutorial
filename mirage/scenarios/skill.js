@@ -43,6 +43,12 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Authentication',
+        type: 'backend',
+        synonyms: ['Authorization', 'User Authentication', 'User Authorization'],
+    });
+
+    server.create('skill', {
         name: 'AutoCAD',
         type: 'miscellaneous',
     });
@@ -293,6 +299,12 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'JWT',
+        type: 'backend',
+        synonyms: ['JSON Web Token'],
+    });
+
+    server.create('skill', {
         name: 'Laravel',
         type: 'frontend',
     });
@@ -314,8 +326,20 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Linux',
+        type: 'miscellaneous',
+        synonyms: ['Linux OS'],
+    });
+
+    server.create('skill', {
         name: 'Lisp',
         type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'Mac',
+        type: 'miscellaneous',
+        synonyms: ['Mac OS'],
     });
 
     server.create('skill', {
@@ -572,6 +596,11 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Trello',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
         name: 'VB.NET',
         type: 'miscellaneous',
         synonyms: ['Visual Basic .NET'],
@@ -596,6 +625,12 @@ export default function(server) {
     server.create('skill', {
         name: 'Weebly',
         type: 'frontend',
+    });
+
+    server.create('skill', {
+        name: 'Windows',
+        type: 'miscellaneous',
+        synonyms: ['Windows OS'],
     });
 
     server.create('skill', {

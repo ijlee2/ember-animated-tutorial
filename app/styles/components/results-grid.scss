@@ -60,10 +60,10 @@
 
             &__experiences,
             &__skills {
-                .title {
-                    margin-bottom: 1rem;
+                & > span {
+                    margin-bottom: 0.8rem;
 
-                    font-size: $font-size-md;
+                    display: block;
                 }
             }
 
@@ -75,6 +75,10 @@
                         margin-left: 2rem;
 
                         font-size: $font-size-sm;
+
+                        .highlighted {
+                            background-color: $color-yellow;
+                        }
                     }
                 }
             }
