@@ -9,6 +9,6 @@ module('Integration | Component | results-grid/card', function(hooks) {
     test('it renders', async function(assert) {
         await render(hbs`{{results-grid/card}}`);
 
-        assert.equal(this.element.textContent.trim(), 'No matched skills');
+        assert.equal(this.element.textContent.trim(), '');
     });
 });
