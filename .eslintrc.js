@@ -157,7 +157,7 @@ module.exports = {
         // Mirage files
         {
             files: [
-                'mirage/mirage/factories/resume.js',
+                'mirage/**/*.js',
             ],
             rules: {
                 'max-len': 'off',

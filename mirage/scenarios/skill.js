@@ -10,6 +10,11 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Agile',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
         name: 'AJAX',
         type: 'backend',
     });
@@ -17,7 +22,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Angular',
         type: 'frontend',
-        synonyms: ['Angular2', 'Angular3', 'Angular4', 'Angular5', 'Angular6', 'Angular7'],
+        synonyms: ['Angular2', 'Angular3', 'Angular4', 'Angular5', 'Angular6', 'Angular7', 'MEAN'],
     });
 
     server.create('skill', {
@@ -140,6 +145,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Data Analysis',
         type: 'miscellaneous',
+        synonyms: ['Analytics', 'Data Analytics', 'Data Processing'],
     });
 
     server.create('skill', {
@@ -182,6 +188,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Express',
         type: 'backend',
+        synonyms: ['Express.js', 'MEAN', 'MERN'],
     });
 
     server.create('skill', {
@@ -373,7 +380,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Mongo',
         type: 'backend',
-        synonyms: ['MongoDB'],
+        synonyms: ['MongoDB', 'MEAN', 'MERN'],
     });
 
     server.create('skill', {
@@ -401,7 +408,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Node',
         type: 'backend',
-        synonyms: ['Node.js'],
+        synonyms: ['Node.js', 'MEAN', 'MERN'],
     });
 
     server.create('skill', {
@@ -472,7 +479,7 @@ export default function(server) {
     server.create('skill', {
         name: 'React',
         type: 'frontend',
-        synonyms: ['React.js'],
+        synonyms: ['React.js', 'MERN'],
     });
 
     server.create('skill', {
@@ -538,6 +545,12 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'SPA',
+        type: 'frontend',
+        synonyms: ['Single Page Application'],
+    });
+
+    server.create('skill', {
         name: 'SproutCore',
         type: 'frontend',
     });
@@ -598,6 +611,12 @@ export default function(server) {
     server.create('skill', {
         name: 'Trello',
         type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'UX',
+        type: 'frontend',
+        synonyms: ['UI/UX', 'User Experience'],
     });
 
     server.create('skill', {
