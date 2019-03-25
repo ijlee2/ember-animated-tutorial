@@ -19,11 +19,12 @@ body {
     }
 
     h2 {
-        margin-top: 0.8rem;
+        margin-top: 1rem;
         margin-bottom: 0.8rem;
 
         font-size: $font-size-lg;
         font-weight: 700;
+        letter-spacing: 0.0625rem;
     }
 
     a {
@@ -66,40 +67,79 @@ body {
         line-height: 2rem;
     }
 
-    .my-nav {
-        display: flex;
-        align-items: center;
+    ul {
+        & > li {
+            line-height: 2rem;
+            list-style: decimal inside;
 
-        height: calc(4rem - 0.075rem);
-        border-bottom: 0.075rem solid $color-silver;
-        padding: 0 1rem;
-
-        a {
-            margin-right: 1rem;
-
-            color: $color-black;
-            font-size: $font-size-md;
-
-            &.active {
-                color: $color-orange;
-            }
-
-            &:hover {
-                color: $color-orange;
-
-                transition: color 0.17s;
-            }
+            margin-bottom: 0.4rem;
 
             &:last-of-type {
-                margin-right: 0;
+                margin-bottom: 0;
             }
         }
     }
 
-    .my-main {
-        height: calc(100vh - 6rem);
-        padding: 1rem;
-        overflow-y: auto;
+    .my-application {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+
+        .my-nav {
+            display: flex;
+            align-items: center;
+
+            height: calc(4rem - 0.075rem);
+            border-bottom: 0.075rem solid $color-silver;
+            padding: 0 1rem;
+
+            a {
+                margin-right: 1.5rem;
+
+                color: $color-black;
+                font-size: $font-size-md;
+
+                &.active {
+                    color: $color-orange;
+                }
+
+                &:hover {
+                    color: $color-orange;
+
+                    transition: color 0.17s;
+                }
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .my-main {
+            flex: 1;
+
+            padding: 1rem;
+            overflow-y: auto;
+        }
+
+        .my-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: calc(3.2rem - 0.075rem);
+            border-top: 0.075rem solid $color-silver;
+            padding: 0 1rem;
+
+            background-color: $color-navy;
+            color: $color-light-blue;
+            font-size: $font-size-sm;
+
+            a {
+                color: $color-light-blue;
+                text-decoration: underline;
+            }
+        }
     }
 }
 

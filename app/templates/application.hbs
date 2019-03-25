@@ -1,17 +1,23 @@
-<nav class="my-nav">
-    {{#link-to "index"}}
-        Home
-    {{/link-to}}
+<div class="my-application">
+    <nav class="my-nav">
+        {{#link-to "index"}}
+            Home
+        {{/link-to}}
 
-    {{#link-to "students"}}
-        Students
-    {{/link-to}}
+        {{#link-to "students"}}
+            Students
+        {{/link-to}}
 
-    {{#link-to "search"}}
-        Search
-    {{/link-to}}
-</nav>
+        {{#link-to "search"}}
+            Search
+        {{/link-to}}
+    </nav>
 
-<main class="my-main {{currentRoute}}">
-    {{outlet}}
-</main>
+    <main class="my-main {{currentRoute}}">
+        {{outlet}}
+    </main>
+
+    <footer class="my-footer">
+        <span>Created by <a href="https://www.linkedin.com/in/ijlee2/" target="_blank" rel="noopener noreferrer">Isaac J. Lee</a> © 2019</span>
+    </footer>
+</div>
