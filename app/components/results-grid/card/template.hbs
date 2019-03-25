@@ -17,9 +17,9 @@
     </div>
 
     <div class="results-grid__card__body">
-        {{#if experiences}}
-            <div class="results-grid__card__body__experiences">
-                <ul>
+        <div class="section results-grid__card__body__experiences">
+            {{#if experiences}}
+                <ul class="my-list">
                     {{#each experiences as |experience|}}
                         <li
                             data-test-experience
@@ -39,10 +39,14 @@
                         </li>
                     {{/each}}
                 </ul>
-            </div>
-        {{/if}}
 
-        <div class="results-grid__card__body__skills">
+            {{else}}
+                No matched experiences
+
+            {{/if}}
+        </div>
+
+        <div class="section results-grid__card__body__skills">
             {{#if skills}}
                 Matched Skills:
 

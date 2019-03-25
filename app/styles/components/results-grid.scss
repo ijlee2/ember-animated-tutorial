@@ -38,11 +38,25 @@
 
                 color: $color-black;
                 font-size: $font-size-lg;
+                font-weight: 700;
+                letter-spacing: 0.0625rem;
             }
         }
 
         &__body {
             padding: 0.5rem 1rem 1rem 1rem;
+
+            .section {
+                margin: 1.6rem 0;
+
+                &:first-of-type {
+                    margin-top: 0.5rem;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0.5rem;
+                }
+            }
 
             &__experiences,
             &__skills {
@@ -57,9 +71,6 @@
                 .item {
                     margin-bottom: 1rem;
 
-                    line-height: 2rem;
-                    list-style: decimal inside;
-
                     &__achievement {
                         margin-left: 2rem;
 
@@ -70,7 +81,8 @@
         }
 
         &:hover {
-            background-color: $color-silver;
+            @include box-shadow(2);
+            background-color: $color-light-silver;
 
             transition: all 0.1s ease-in;
         }

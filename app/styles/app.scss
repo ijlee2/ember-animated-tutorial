@@ -54,12 +54,30 @@ body {
             cursor: pointer;
 
             &:hover {
-                background-color: $color-silver;
+                background-color: $color-light-silver;
                 color: $color-black;
 
                 transition: all 0.17s;
             }
         }
+    }
+
+    form {
+        fieldset {
+            & > label {
+                margin-bottom: 1rem;
+
+                display: inline-block;
+            }
+        }
+    }
+
+    input {
+        width: calc(100% - 1.5rem);
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+
+        font-size: $font-size-md;
     }
 
     p {

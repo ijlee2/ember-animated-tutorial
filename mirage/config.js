@@ -90,9 +90,9 @@ export default function() {
 
             if (isStudentQualified) {
                 let score = Math.floor(100 * Math.random());
-                const numDigits = Math.floor(Math.log10(score + 0.5));
+                const numDigits = score.toString().length;
 
-                score = `${'0'.repeat(1 - numDigits)}${score}`;
+                score = `${'0'.repeat(2 - numDigits)}${score}`;
 
                 accumulator.push({
                     id: student.id,

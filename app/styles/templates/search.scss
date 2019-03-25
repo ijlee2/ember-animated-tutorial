@@ -1,22 +1,8 @@
 .my-route__search {
-    .my-input {
-        width: calc(100% - 1.5rem);
-        margin-bottom: 1rem;
-        padding: 0.75rem;
-
-        font-size: $font-size-md;
-    }
-
     .my-form {
-        fieldset > label {
-            margin-bottom: 1rem;
-
-            display: inline-block;
-        }
-
         .selected-skills,
         .remaining-skills {
-            margin-bottom: 1rem;
+            margin: 0.5rem 0 1rem;
 
             & > span {
                 margin-bottom: 0.5rem;

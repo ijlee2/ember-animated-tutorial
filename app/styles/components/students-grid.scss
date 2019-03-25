@@ -91,7 +91,7 @@
 
         &:hover {
             @include box-shadow(2);
-            background-color: $color-silver;
+            background-color: $color-light-silver;
 
             transition: all 0.1s ease-in;
         }
