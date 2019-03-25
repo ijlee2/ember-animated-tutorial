@@ -1,6 +1,6 @@
 {{#let
-    student.fullName student.metadata.score student.metadata.experiences student.metadata.skills
-    as |fullName score experiences skills|
+    student.fullName student.metadata.relativeScore student.metadata.experiences student.metadata.skills
+    as |fullName relativeScore experiences skills|
 }}
     <div
         data-test-name
@@ -8,7 +8,7 @@
         title={{fullName}}
     >
         <span class="results-grid__card__header__score">
-            {{score}}
+            {{relativeScore}}
         </span>
 
         <span class="results-grid__card__header__name">
@@ -17,10 +17,10 @@
     </div>
 
     <div class="results-grid__card__body">
-        <div class="section results-grid__card__body__experiences">
-            <span>Matched Experiences:</span>
+        {{#if experiences}}
+            <div class="section results-grid__card__body__experiences">
+                <span>Matched Experiences:</span>
 
-            {{#if experiences}}
                 <ul class="my-list">
                     {{#each experiences as |experience|}}
                         <li
@@ -41,23 +41,17 @@
                         </li>
                     {{/each}}
                 </ul>
+            </div>
+        {{/if}}
 
-            {{else}}
-                None
+        {{#if skills}}
+            <div class="section results-grid__card__body__skills">
+                <span>Matched Skills:</span>
 
-            {{/if}}
-        </div>
-
-        <div class="section results-grid__card__body__skills">
-            <span>Matched Skills:</span>
-
-            {{#if skills}}
-                {{join ", " (map-by "name" (sort-by "name" skills))}}
-
-            {{else}}
-                None
-
-            {{/if}}
-        </div>
+                <div class="my-list">
+                    {{{join ", " (map-by "name" (sort-by "name" skills))}}}
+                </div>
+            </div>
+        {{/if}}
     </div>
 {{/let}}

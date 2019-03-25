@@ -82,6 +82,16 @@
                     }
                 }
             }
+
+            &__skills {
+                .my-list {
+                    font-size: $font-size-sm;
+
+                    .highlighted {
+                        background-color: $color-yellow;
+                    }
+                }
+            }
         }
 
         &:hover {

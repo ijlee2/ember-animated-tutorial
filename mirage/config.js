@@ -36,11 +36,16 @@ export default function() {
             }, []);
 
         // Find the students that meet the skills
-        const payload = schema.db.students.reduce((accumulator, student) => {
+        const minScore = 0;
+        let maxScore = 1;
+
+        const students = schema.db.students.reduce((accumulator, student) => {
             // We assume that each student has only 1 resume
             const resume = schema.db.resumes.find(student.resumeIds[0]);
 
             // Check the student's experiences
+            let scoreFromExperiences = 0;
+
             const relevantExperiences = resume.experiences.reduce((accumulator, experience) => {
                 const relevantAchievements = experience.achievements.reduce((accumulator, achievement) => {
                     let isAchievementRelevant = false;
@@ -50,6 +55,7 @@ export default function() {
 
                     words.forEach(word => {
                         if (desiredSkills.includes(word.toLowerCase())) {
+                            scoreFromExperiences++;
                             isAchievementRelevant = true;
 
                             highlightedWords.push(`<span class="highlighted">${word}</span>`);
@@ -82,9 +88,18 @@ export default function() {
             }, []);
 
             // Check the student's skills
+            let scoreFromSkills = 0;
+
             const relevantSkills = resume.skillIds.reduce((accumulator, id) => {
                 if (desiredSkillIds.includes(id)) {
-                    accumulator.push(schema.db.skills.find(id));
+                    scoreFromSkills++;
+
+                    const skill = schema.db.skills.find(id);
+
+                    accumulator.push({
+                        name: `<span class="highlighted">${skill.name}</span>`,
+                        type: skill.type,
+                    });
                 }
 
                 return accumulator;
@@ -94,10 +109,9 @@ export default function() {
             const isStudentQualified = relevantExperiences.length > 0 || relevantSkills.length > 0;
 
             if (isStudentQualified) {
-                let score = Math.floor(100 * Math.random());
-                const numDigits = score.toString().length;
+                const score = scoreFromExperiences + scoreFromSkills;
 
-                score = `${'0'.repeat(2 - numDigits)}${score}`;
+                maxScore = Math.max(score, maxScore);
 
                 accumulator.push({
                     id: student.id,
@@ -117,6 +131,16 @@ export default function() {
 
         }, []);
 
-        return payload;
+        students.forEach(student => {
+            // Create a score between 0 and 99
+            let relativeScore = Math.ceil(99 * student.metadata.score / maxScore);
+            const numDigits = relativeScore.toString().length;
+
+            relativeScore = `${'0'.repeat(2 - numDigits)}${relativeScore}`;
+
+            student.metadata.relativeScore = relativeScore;
+        });
+
+        return students;
     });
 }
