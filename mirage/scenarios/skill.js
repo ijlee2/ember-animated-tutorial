@@ -122,6 +122,12 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'CI/CD',
+        type: 'backend',
+        synonyms: ['CICD', 'Continuous Integration', 'Continuous Deployment'],
+    });
+
+    server.create('skill', {
         name: 'Communication',
         type: 'miscellaneous',
     });
@@ -160,6 +166,17 @@ export default function(server) {
 
     server.create('skill', {
         name: 'Database Design',
+        type: 'backend',
+        synonyms: ['Databases'],
+    });
+
+    server.create('skill', {
+        name: 'Django',
+        type: 'frontend',
+    });
+
+    server.create('skill', {
+        name: 'Docker',
         type: 'backend',
     });
 
@@ -237,6 +254,11 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Google Cloud Services',
+        type: 'backend',
+    });
+
+    server.create('skill', {
         name: 'Google Office Suite',
         type: 'miscellaneous',
     });
@@ -309,6 +331,12 @@ export default function(server) {
         name: 'JWT',
         type: 'backend',
         synonyms: ['JSON Web Token'],
+    });
+
+    server.create('skill', {
+        name: 'Kubernetes',
+        type: 'backend',
+        synonyms: ['K8'],
     });
 
     server.create('skill', {
@@ -391,6 +419,12 @@ export default function(server) {
     server.create('skill', {
         name: 'MySQL',
         type: 'backend',
+    });
+
+    server.create('skill', {
+        name: 'Nightwatch',
+        type: 'miscellaneous',
+        synonyms: ['Nightwatch.js'],
     });
 
     server.create('skill', {
