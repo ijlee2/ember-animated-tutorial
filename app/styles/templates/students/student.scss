@@ -1,16 +1,15 @@
 .my-route__students__student {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-gap: 1.5rem;
+    grid-gap: 1rem;
 
     .my-students {
         overflow-y: auto;
 
         .students-grid {
-            grid-template-columns: 1fr;
-            grid-gap: 1rem;
+            grid-template-columns: minmax(32rem, 1fr);
 
-            padding-right: 1rem;
+            padding-right: 0.5rem;
         }
     }
 }

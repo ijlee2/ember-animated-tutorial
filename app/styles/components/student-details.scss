@@ -1,8 +1,8 @@
 .student-details {
     overflow-y: auto;
 
-    &__section {
-        margin-bottom: 1.6rem;
+    .section {
+        margin: 1.6rem 0;
 
         &:last-of-type {
             margin-bottom: 0;
@@ -10,10 +10,7 @@
     }
 
     &__experiences {
-        &__experience {
-            line-height: 2rem;
-            list-style: decimal inside;
-
+        .item {
             margin-bottom: 1rem;
 
             &__title {
@@ -28,7 +25,7 @@
     }
 
     &__skills {
-        &__skill {
+        .item {
             display: inline-block;
 
             margin-right: 0.25rem;

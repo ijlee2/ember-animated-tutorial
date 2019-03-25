@@ -6,7 +6,7 @@
 </h1>
 
 <div
-    class="student-details__section student-details__email"
+    class="section student-details__email"
     {{fade-up id=student.id delay=50}}
 >
     <h2>Email</h2>
@@ -21,7 +21,7 @@
 </div>
 
 <div
-    class="student-details__section student-details__phone"
+    class="section student-details__phone"
     {{fade-up id=student.id delay=150}}
 >
     <h2>Phone</h2>
@@ -36,12 +36,12 @@
 </div>
 
 <div
-    class="student-details__section student-details__education"
+    class="section student-details__education"
     {{fade-up id=student.id delay=250}}
 >
     <h2>Education</h2>
 
-    <ul>
+    <ul class="my-list">
         {{#each this.resume.degrees as |degree|}}
             <li data-test-degree>{{degree}}</li>
         {{/each}}
@@ -49,24 +49,24 @@
 </div>
 
 <div
-    class="student-details__section student-details__experiences"
+    class="section student-details__experiences"
     {{fade-up id=student.id delay=350}}
 >
     <h2>Experiences</h2>
 
-    <ul>
+    <ul class="my-list">
         {{#each this.resume.experiences as |experience|}}
             <li
                 data-test-experience
-                class="student-details__experiences__experience"
+                class="item"
             >
-                <h3 class="student-details__experiences__experience__title">
+                <h3 class="item__title">
                     {{experience.position}} at {{experience.company}}
                 </h3>
 
                 <ul>
                     {{#each experience.achievements as |achievement|}}
-                        <li class="student-details__experiences__experience__achievement">
+                        <li class="item__achievement">
                             {{achievement}}
                         </li>
                     {{/each}}
@@ -77,7 +77,7 @@
 </div>
 
 <div
-    class="student-details__section student-details__skills"
+    class="section student-details__skills"
     {{fade-up id=student.id delay=450}}
 >
     <h2>Skills</h2>
@@ -86,7 +86,7 @@
         {{#each (sort-by "type" "name" this.resume.skills) as |skill|}}
             <li
                 data-test-skill
-                class="student-details__skills__skill student-details__skills__skill--{{skill.type}}"
+                class="item item--{{skill.type}}"
             >
                 {{skill.name}}
             </li>

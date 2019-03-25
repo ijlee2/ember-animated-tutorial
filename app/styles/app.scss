@@ -67,7 +67,7 @@ body {
         line-height: 2rem;
     }
 
-    ul {
+    ul.my-list {
         & > li {
             line-height: 2rem;
             list-style: decimal inside;
@@ -89,8 +89,8 @@ body {
             display: flex;
             align-items: center;
 
-            height: calc(4rem - 0.075rem);
-            border-bottom: 0.075rem solid $color-silver;
+            height: calc(4rem - #{$line-thin});
+            border-bottom: #{$line-thin} solid $color-silver;
             padding: 0 1rem;
 
             a {
@@ -127,8 +127,8 @@ body {
             align-items: center;
             justify-content: center;
 
-            height: calc(3.2rem - 0.075rem);
-            border-top: 0.075rem solid $color-silver;
+            height: calc(3.2rem - #{$line-thin});
+            border-top: $line-thin solid $color-silver;
             padding: 0 1rem;
 
             background-color: $color-navy;

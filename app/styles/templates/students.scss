@@ -5,10 +5,5 @@
 
         height: 100%;
         overflow-y: hidden;
-
-        .students-grid {
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 1.5rem;
-        }
     }
 }
