@@ -1,6 +1,8 @@
-<div class="students-grid__card__header">
+<header class="students-grid__card__header">
     {{#if (or (media "isXs") (media "isSm"))}}
-        <span class="students-grid__card__header__initials">{{student.initials}}</span>
+        <span class="students-grid__card__header__initials">
+            {{student.initials}}
+        </span>
     {{/if}}
 
     {{#if failedToLoadImage}}
@@ -15,9 +17,9 @@
         >
 
     {{/if}}
-</div>
+</header>
 
-<div class="students-grid__card__body">
+<section class="students-grid__card__body">
     <div
         data-test-name
         class="students-grid__card__body__name"
@@ -49,4 +51,4 @@
             {{student.phone}}
         </a>
     </div>
-</div>
+</section>

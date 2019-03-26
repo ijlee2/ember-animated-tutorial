@@ -3,7 +3,7 @@
     student.fullName student.metadata.relativeScore student.metadata.experiences student.metadata.skills
     as |fullName relativeScore experiences skills|
 }}
-    <div
+    <header
         data-test-name
         class="results-grid__card__header"
         title={{fullName}}
@@ -15,9 +15,9 @@
         <span class="results-grid__card__header__name">
             {{fullName}}
         </span>
-    </div>
+    </header>
 
-    <div class="results-grid__card__body">
+    <section class="results-grid__card__body">
         {{#if experiences}}
             <div class="section results-grid__card__body__experiences">
                 <span>Matched Experiences:</span>
@@ -54,5 +54,5 @@
                 </div>
             </div>
         {{/if}}
-    </div>
+    </section>
 {{/let}}

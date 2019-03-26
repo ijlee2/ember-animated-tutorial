@@ -1,15 +1,19 @@
-<h1
-    data-test-name
-    {{fade-up}}
->
-    {{student.fullName}}
-</h1>
+<header>
+    <h1
+        data-test-name
+        {{fade-up}}
+    >
+        {{student.fullName}}
+    </h1>
+</header>
 
-<div
-    class="section student-details__email"
+<section
+    class="student-details__email"
     {{fade-up id=student.id delay=50}}
 >
-    <h2>Email</h2>
+    <header>
+        <h2>Email</h2>
+    </header>
 
     <a
         data-test-email
@@ -18,13 +22,15 @@
     >
         {{student.email}}
     </a>
-</div>
+</section>
 
-<div
-    class="section student-details__phone"
+<section
+    class="student-details__phone"
     {{fade-up id=student.id delay=150}}
 >
-    <h2>Phone</h2>
+    <header>
+        <h2>Phone</h2>
+    </header>
 
     <a
         data-test-phone
@@ -33,26 +39,30 @@
     >
         {{student.phone}}
     </a>
-</div>
+</section>
 
-<div
-    class="section student-details__education"
+<section
+    class="student-details__education"
     {{fade-up id=student.id delay=250}}
 >
-    <h2>Education</h2>
+    <header>
+        <h2>Education</h2>
+    </header>
 
     <ul>
         {{#each this.resume.degrees as |degree|}}
             <li data-test-degree>{{degree}}</li>
         {{/each}}
     </ul>
-</div>
+</section>
 
-<div
-    class="section student-details__experiences"
+<section
+    class="student-details__experiences"
     {{fade-up id=student.id delay=350}}
 >
-    <h2>Experiences</h2>
+    <header>
+        <h2>Experiences</h2>
+    </header>
 
     <ul class="my-list">
         {{#each this.resume.experiences as |experience|}}
@@ -74,13 +84,15 @@
             </li>
         {{/each}}
     </ul>
-</div>
+</section>
 
-<div
-    class="section student-details__skills"
+<section
+    class="student-details__skills"
     {{fade-up id=student.id delay=450}}
 >
-    <h2>Skills</h2>
+    <header>
+        <h2>Skills</h2>
+    </header>
 
     <ul>
         {{#each (sort-by "type" "name" this.resume.skills) as |skill|}}
@@ -92,4 +104,4 @@
             </li>
         {{/each}}
     </ul>
-</div>
+</section>
