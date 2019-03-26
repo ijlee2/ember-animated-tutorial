@@ -1,5 +1,4 @@
 {
-  "name": "api",
-  "private": true,
-  "dependencies": {}
+  
+  "cacheDirectories": ["../node_modules","node_modules"]
 }
