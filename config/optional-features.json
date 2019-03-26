@@ -1,4 +1,3 @@
 {
-  // The app does not use jQuery, but ember-cli-rails-addon currently requires it
   "jquery-integration": true
 }
