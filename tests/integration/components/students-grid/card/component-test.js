@@ -23,6 +23,6 @@ module('Integration | Component | students-grid/card', function(hooks) {
             .hasText('jane.smith@example.com', 'We see the correct email.');
 
         assert.dom('[data-test-phone]', this.element)
-            .hasText('(123) 456-7890', 'We see the correct phone.');
+            .hasText('(123) 456-7890', 'We see the correct phone number.');
     });
 });

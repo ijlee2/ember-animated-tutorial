@@ -52,7 +52,7 @@
     </header>
 
     <ul>
-        {{#each this.resume.degrees as |degree|}}
+        {{#each resume.degrees as |degree|}}
             <li data-test-degree>{{degree}}</li>
         {{/each}}
     </ul>
@@ -67,7 +67,7 @@
     </header>
 
     <ul class="my-list">
-        {{#each this.resume.experiences as |experience|}}
+        {{#each resume.experiences as |experience|}}
             <li
                 data-test-experience
                 class="item"
@@ -97,7 +97,7 @@
     </header>
 
     <ul>
-        {{#each (sort-by "type" "name" this.resume.skills) as |skill|}}
+        {{#each (sort-by "type" "name" resume.skills) as |skill|}}
             <li
                 data-test-skill
                 class="item item--{{skill.type}}"

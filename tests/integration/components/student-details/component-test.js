@@ -55,7 +55,7 @@ module('Integration | Component | student-details', function(hooks) {
             ],
         });
 
-        await render(hbs`<StudentDetails @student={{this.student}} />`);
+        await render(hbs`<StudentDetails @student={{student}} />`);
 
 
         // Check personal information
@@ -66,7 +66,7 @@ module('Integration | Component | student-details', function(hooks) {
             .hasText('jane.smith@example.com', 'We see the correct email.');
 
         assert.dom('[data-test-phone]', this.element)
-            .hasText('(123) 456-7890', 'We see the correct phone.');
+            .hasText('(123) 456-7890', 'We see the correct phone number.');
 
 
         // Check education
