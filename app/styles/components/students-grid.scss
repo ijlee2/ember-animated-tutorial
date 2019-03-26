@@ -17,15 +17,18 @@
         border-radius: 0.25rem;
 
         cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: grid;
+        grid-template-areas:
+            "header name"
+            "header email"
+            "header phone";
+        grid-template-rows: 1.5fr 1fr 1fr;
+        grid-template-columns: 25% 75%;
 
         &__header {
             $image-width: 6rem;
 
-            width: $image-container-width;
-            height: 100%;
+            grid-area: header;
 
             display: flex;
             align-items: center;
@@ -52,18 +55,19 @@
         }
 
         &__body {
-            width: calc(#{$data-container-width} - 1.75rem);
-            height: 100%;
-            padding: 0 1rem 0 0.75rem;
+            &__name,
+            &__email,
+            &__phone {
+                padding: 0 1rem 0 0.75rem;
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+                display: flex;
+                align-items: center;
 
-            color: $color-black;
+                color: $color-black;
+            }
 
             &__name {
-                margin-bottom: 0.5rem;
+                grid-area: name;
 
                 font-family: "PT Serif", serif;
                 font-size: $font-size-lg;
@@ -72,9 +76,6 @@
             }
 
             &__email, &__phone {
-                display: flex;
-                align-items: center;
-
                 .material-icons {
                     opacity: 0.87;
                     margin-right: 0.5rem;
@@ -86,7 +87,13 @@
             }
 
             &__email {
-                margin-bottom: 0.25rem;
+                grid-area: email;
+                margin-bottom: 0.5rem;
+            }
+
+            &__phone {
+                grid-area: phone;
+                margin-bottom: 0.5rem;
             }
         }
 
@@ -105,9 +112,13 @@
         grid-template-columns: repeat(3, minmax(8rem, 1fr));
 
         &__card {
+            grid-template-areas:
+                "header";
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+
             &__header {
                 position: relative;
-                width: 100%;
 
                 &__initials {
                     position: absolute;
@@ -123,7 +134,11 @@
             }
 
             &__body {
-                display: none;
+                &__name,
+                &__email,
+                &__phone {
+                    display: none;
+                }
             }
         }
     }
@@ -141,13 +156,23 @@
         grid-template-columns: repeat(2, minmax(24rem, 1fr));
 
         &__card {
+            grid-template-areas:
+                "name"
+                "email"
+                "phone";
+            grid-template-rows: 1.5fr 1fr 1fr;
+            grid-template-columns: 1fr;
+
             &__header {
                 display: none;
             }
 
             &__body {
-                width: 100%;
-                padding: 0 2rem;
+                &__name,
+                &__email,
+                &__phone {
+                    padding: 0 1rem;
+                }
             }
         }
     }

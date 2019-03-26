@@ -19,36 +19,34 @@
     {{/if}}
 </header>
 
-<section class="students-grid__card__body">
-    <div
-        data-test-name
-        class="students-grid__card__body__name"
-        title={{student.fullName}}
+<section
+    data-test-name
+    class="students-grid__card__body__name"
+    title={{student.fullName}}
+>
+    {{student.fullName}}
+</section>
+
+<section class="students-grid__card__body__email">
+    <MaterialIcon @icon="email" />
+
+    <a
+        data-test-email
+        href="mailto:{{student.email}}"
+        title={{student.email}}
     >
-        {{student.fullName}}
-    </div>
+        {{student.email}}
+    </a>
+</section>
 
-    <div class="students-grid__card__body__email">
-        <MaterialIcon @icon="email" />
+<section class="students-grid__card__body__phone">
+    <MaterialIcon @icon="phone" />
 
-        <a
-            data-test-email
-            href="mailto:{{student.email}}"
-            title={{student.email}}
-        >
-            {{student.email}}
-        </a>
-    </div>
-
-    <div class="students-grid__card__body__phone">
-        <MaterialIcon @icon="phone" />
-
-        <a
-            data-test-phone
-            href="tel:{{student.internationalPhone}}"
-            title={{student.phone}}
-        >
-            {{student.phone}}
-        </a>
-    </div>
+    <a
+        data-test-phone
+        href="tel:{{student.internationalPhone}}"
+        title={{student.phone}}
+    >
+        {{student.phone}}
+    </a>
 </section>
