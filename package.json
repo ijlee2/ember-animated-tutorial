@@ -18,6 +18,7 @@
         "test": "ember test"
     },
     "devDependencies": {
+        "@ember/jquery": "^0.6.0",
         "@ember/optional-features": "^0.7.0",
         "broccoli-asset-rev": "^3.0.0",
         "ember-ajax": "^5.0.0",
@@ -31,6 +32,7 @@
         "ember-cli-htmlbars-inline-precompile": "^2.1.0",
         "ember-cli-inject-live-reload": "^2.0.1",
         "ember-cli-mirage": "^0.4.15",
+        "ember-cli-rails-addon": "~> 0.10.0",
         "ember-cli-sass": "^10.0.0",
         "ember-cli-sri": "^2.1.1",
         "ember-cli-template-lint": "^0.7.6",
