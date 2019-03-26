@@ -64,14 +64,18 @@
                 .item {
                     margin-bottom: 1rem;
 
+                    &__title,
                     &__achievement {
-                        margin-left: 2rem;
-
-                        font-size: $font-size-sm;
-
                         .highlighted {
                             background-color: $color-yellow;
                         }
+                    }
+
+                    &__achievement {
+                        list-style: disc inside;
+                        margin-left: 2rem;
+
+                        font-size: $font-size-sm;
                     }
                 }
             }

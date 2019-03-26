@@ -1,13 +1,13 @@
 export default [
     {
-        position: 'Adjunct Professor',
+        title: 'Adjunct Professor',
         company: 'KA',
         achievements: [
             'Developed lessons and led at least one class each semester',
         ],
     },
     {
-        position: 'Application Developer',
+        title: 'Application Developer',
         company: 'ST',
         achievements: [
             'Builds enterprise software to improve manufacturing processes',
@@ -16,7 +16,7 @@ export default [
         ],
     },
     {
-        position: 'Application Engineer',
+        title: 'Application Engineer',
         company: '3D',
         achievements: [
             'Provided on-site and offsite training in object oriented programming, Python, and Geomagic API for clients and partners',
@@ -24,7 +24,7 @@ export default [
         ],
     },
     {
-        position: 'Assistant Manager',
+        title: 'Assistant Manager',
         company: 'GA',
         achievements: [
             'Ensured successful completion of events, including birthdays, corporate events and festivals',
@@ -33,7 +33,7 @@ export default [
         ],
     },
     {
-        position: 'Associate Instructor',
+        title: 'Associate Instructor',
         company: 'IN',
         achievements: [
             'Designed, revised, and implemented innovative proficiency-oriented curriculua for German language classes',
@@ -42,7 +42,7 @@ export default [
         ],
     },
     {
-        position: 'Associate Software Engineer',
+        title: 'Associate Software Engineer',
         company: 'NE',
         achievements: [
             'Developed software tools in Python to process raw transit data for ingestion into the prediction system',
@@ -50,7 +50,7 @@ export default [
         ],
     },
     {
-        position: 'Backend Developer',
+        title: 'Backend Developer',
         company: 'CH',
         achievements: [
             'Engineered the database through Sequelize, the database was configured to update on user login',
@@ -59,7 +59,7 @@ export default [
         ],
     },
     {
-        position: 'Backend Developer',
+        title: 'Backend Developer',
         company: 'CO',
         achievements: [
             'Employed Google Web APIs to retrieve election information, verify addresses, and provide map to polling location',
@@ -67,21 +67,21 @@ export default [
         ],
     },
     {
-        position: 'Backend Developer',
+        title: 'Backend Developer',
         company: 'JU',
         achievements: [
             'Created a database that handles users and authenticates them through login information and secure http-only cookies',
         ],
     },
     {
-        position: 'Backend Developer',
+        title: 'Backend Developer',
         company: 'ST',
         achievements: [
             'Used Swing and AWT in Java to create a program capable of telling robust stories through story scripts',
         ],
     },
     {
-        position: 'CAD Drafter',
+        title: 'CAD Drafter',
         company: 'AD',
         achievements: [
             'Mastered v8i Spatial, spatialNET, AutoCAD, and Microstation to design HFC/Broadband networks',
@@ -89,7 +89,7 @@ export default [
         ],
     },
     {
-        position: 'Court and Calendar Researcher',
+        title: 'Court and Calendar Researcher',
         company: 'PA',
         achievements: [
             'Manages workflow for litigation across 11 domestic offices ensuring deadlines are always met, preventing malpractice',
@@ -99,14 +99,14 @@ export default [
         ],
     },
     {
-        position: 'Customer Relations Specialist',
+        title: 'Customer Relations Specialist',
         company: 'SI',
         achievements: [
             'Helped customers use our app, tracked money, and reported bugs that anyone might run into',
         ],
     },
     {
-        position: 'Customer Support Engineer',
+        title: 'Customer Support Engineer',
         company: 'CI',
         achievements: [
             'Resolved complex problems daily and complete root cause analyses for a variety of Data Center issues',
@@ -116,7 +116,7 @@ export default [
         ],
     },
     {
-        position: 'Developer',
+        title: 'Developer',
         company: 'AR',
         achievements: [
             'Worked as one of the key developers on a blockchain project',
@@ -126,14 +126,14 @@ export default [
         ],
     },
     {
-        position: 'Developer',
+        title: 'Developer',
         company: 'DA',
         achievements: [
             'I actively work to maintain, update, and enhance our web app to fulfill business needs and to acommodate our clientele',
         ],
     },
     {
-        position: 'Development Intern',
+        title: 'Development Intern',
         company: 'UN',
         achievements: [
             'Worked on a full-stack JavaScript app for quick video captioning (React, Sass, Node, and Express)',
@@ -142,14 +142,14 @@ export default [
         ],
     },
     {
-        position: 'Digital Media Developer',
+        title: 'Digital Media Developer',
         company: 'AM',
         achievements: [
             'Developed a variety of web, disk-based, and mobile content, with a focus on mini-sites that supplemented textbooks',
         ],
     },
     {
-        position: 'Ember Developer',
+        title: 'Ember Developer',
         company: 'SO',
         achievements: [
             'Worked primarily with Ember.js with a remote team',
@@ -159,7 +159,7 @@ export default [
         ],
     },
     {
-        position: 'EMR Specialist',
+        title: 'EMR Specialist',
         company: 'AU',
         achievements: [
             'Provides support through monthly rounding and check-ins with 7 clinics',
@@ -167,7 +167,7 @@ export default [
         ],
     },
     {
-        position: 'Engineering Technician',
+        title: 'Engineering Technician',
         company: 'SA',
         achievements: [
             'Process technician in a fast-paced manufacturing atmosphere',
@@ -176,7 +176,7 @@ export default [
         ],
     },
     {
-        position: 'Fine Wine Specialist',
+        title: 'Fine Wine Specialist',
         company: 'GA',
         achievements: [
             'Coordinated entire wine inventory',
@@ -185,7 +185,7 @@ export default [
         ],
     },
     {
-        position: 'Freelancer',
+        title: 'Freelancer',
         company: 'FR',
         achievements: [
             'Worked on projects as diverse as animated videos, city websites, brochures, and wedding photoshoots',
@@ -193,14 +193,14 @@ export default [
         ],
     },
     {
-        position: 'Freelance Web Developer',
+        title: 'Freelance Web Developer',
         company: 'FR',
         achievements: [
             'Creating an application with React and Authorization that will store events and email reminders specifically for those who compete in rodeos across the country',
         ],
     },
     {
-        position: 'Freelance Web Developer',
+        title: 'Freelance Web Developer',
         company: 'FR',
         achievements: [
             'Created a single page outdoor activities website using HTML, CSS, Bootstrap, Vanilla',
@@ -208,14 +208,14 @@ export default [
         ],
     },
     {
-        position: 'Frontend Developer',
+        title: 'Frontend Developer',
         company: 'GR',
         achievements: [
             'Developed front-end page using Materialize & integrated Google Maps API to interact with Firebase',
         ],
     },
     {
-        position: 'Frontend Developer',
+        title: 'Frontend Developer',
         company: 'GR',
         achievements: [
             'Codeveloped front-end of project using Handlebars.js and Semantic-UI to connect to MySQL',
@@ -224,7 +224,7 @@ export default [
         ],
     },
     {
-        position: 'Frontend Developer',
+        title: 'Frontend Developer',
         company: 'JA',
         achievements: [
             'Collaborate with two front-end developers on developing an application for the National Science Foundation using Ember.js, Sass, and Bootstrap',
@@ -234,7 +234,7 @@ export default [
         ],
     },
     {
-        position: 'Frontend Developer',
+        title: 'Frontend Developer',
         company: 'MO',
         achievements: [
             'Lead developer for all custom WordPress site development',
@@ -244,7 +244,7 @@ export default [
         ],
     },
     {
-        position: 'Frontend Developer Manager',
+        title: 'Frontend Developer Manager',
         company: 'CL',
         achievements: [
             'Developed DNN, WordPress, and static websites using HTML, CSS, JavaScript/jQuery, and SQL',
@@ -254,7 +254,7 @@ export default [
         ],
     },
     {
-        position: 'Frontend Interactive Developer',
+        title: 'Frontend Interactive Developer',
         company: 'SA',
         achievements: [
             'Develop emails and landing pages from Sketch, Photoshop, or Invision files with pixel perfect accuracy',
@@ -263,7 +263,7 @@ export default [
         ],
     },
     {
-        position: 'Frontend Software Engineer',
+        title: 'Frontend Software Engineer',
         company: 'PA',
         achievements: [
             'Build up a robust, scalable front-end infrastructure that supports our developers and enhances our product for customers',
@@ -271,7 +271,7 @@ export default [
         ],
     },
     {
-        position: 'Full Stack Developer',
+        title: 'Full Stack Developer',
         company: 'CA',
         achievements: [
             'Build and connect various Swagger API\'s to an Angular application',
@@ -279,7 +279,7 @@ export default [
         ],
     },
     {
-        position: 'Full Stack Developer',
+        title: 'Full Stack Developer',
         company: 'IN',
         achievements: [
             'Utilizing a variety of tools and technologies to develop and expand web operations including Django, Python, C++, React, JS, Foundation, jQuery, AJAX, Apache, CentOS, MySQL, PostgreSQL, and AWS',
@@ -290,7 +290,7 @@ export default [
         ],
     },
     {
-        position: 'Full Stack Developer',
+        title: 'Full Stack Developer',
         company: 'KH',
         achievements: [
             'Transitioned the product from a vanilla server-rendered Ruby on Rails app to an Ember front-end served by a Rails API',
@@ -298,7 +298,7 @@ export default [
         ],
     },
     {
-        position: 'Full Stack Developer',
+        title: 'Full Stack Developer',
         company: 'NO',
         achievements: [
             'Demonstrates MERN full stack application: React Frontend. Node / Express Backend. MongoDB',
@@ -308,7 +308,7 @@ export default [
         ],
     },
     {
-        position: 'Full Stack Developer',
+        title: 'Full Stack Developer',
         company: 'RE',
         achievements: [
             'Engineered the database through MongoDB, the database was configured to store a user session',
@@ -316,21 +316,21 @@ export default [
         ],
     },
     {
-        position: 'Full Stack Developer',
+        title: 'Full Stack Developer',
         company: 'ST',
         achievements: [
             'Responsible for large swaths of the product ranging from database work, routing, and web page management',
         ],
     },
     {
-        position: 'Full Stack Developer',
+        title: 'Full Stack Developer',
         company: 'TH',
         achievements: [
             'Building amazing scalable applications in Ruby, Rails, JavaScript, HTML, CSS and Pixie Dust',
         ],
     },
     {
-        position: 'Full Stack Web Developer',
+        title: 'Full Stack Web Developer',
         company: 'PS',
         achievements: [
             'Collaborated with product owners and designers to create a cohesive online magazine experience',
@@ -340,7 +340,7 @@ export default [
         ],
     },
     {
-        position: 'HR Specialist',
+        title: 'HR Specialist',
         company: 'TA',
         achievements: [
             'Assisted Head of People Operations with HR projects',
@@ -350,7 +350,7 @@ export default [
         ],
     },
     {
-        position: 'Implementation Consultant',
+        title: 'Implementation Consultant',
         company: 'FA',
         achievements: [
             'Team lead of the site\'s nine-person Production Support team',
@@ -361,7 +361,7 @@ export default [
         ],
     },
     {
-        position: 'Independent Research',
+        title: 'Independent Research',
         company: 'TE',
         achievements: [
             'Self-guided research and development of a novel technology',
@@ -369,7 +369,7 @@ export default [
         ],
     },
     {
-        position: 'IT Consultant',
+        title: 'IT Consultant',
         company: 'FC',
         achievements: [
             'Managed various servers\' hardware & OS including installation, maintenance and backup',
@@ -378,7 +378,7 @@ export default [
         ],
     },
     {
-        position: 'IT Manager',
+        title: 'IT Manager',
         company: 'VA',
         achievements: [
             'Installed and maintained all hardware and software for internal departments',
@@ -387,7 +387,7 @@ export default [
         ],
     },
     {
-        position: 'IT Support Technician',
+        title: 'IT Support Technician',
         company: 'UN',
         achievements: [
             'Provided IT support to staff and students in an academic setting',
@@ -395,7 +395,7 @@ export default [
         ],
     },
     {
-        position: 'Java Application Support',
+        title: 'Java Application Support',
         company: 'AC',
         achievements: [
             'Helped produce 100% accurate tax reports for the IRS and the New York Stock Exchange',
@@ -403,7 +403,7 @@ export default [
         ],
     },
     {
-        position: 'Java Developer',
+        title: 'Java Developer',
         company: 'HE',
         achievements: [
             'Expanded Social Sign On functionality to enable customers to sign in using Facebook, Twitter, Google, Yahoo, or LinkedIn credentials and to support multiple countries and languages',
@@ -412,7 +412,7 @@ export default [
         ],
     },
     {
-        position: 'Junior Full Stack Web Developer',
+        title: 'Junior Full Stack Web Developer',
         company: 'TH',
         achievements: [
             'Developed full-stack web applications for clients in the real estate and legal services industries, using Sailsjs, a Nodejs framework',
@@ -421,7 +421,7 @@ export default [
         ],
     },
     {
-        position: 'Junior QA Engineer',
+        title: 'Junior QA Engineer',
         company: 'SK',
         achievements: [
             'Write acceptance, unit, and integration tests in Ember.js',
@@ -431,7 +431,7 @@ export default [
         ],
     },
     {
-        position: 'Member Order Specialist',
+        title: 'Member Order Specialist',
         company: 'SA',
         achievements: [
             'Streamlined processes necessary to fill business\'s order demands on a daily basis',
@@ -439,7 +439,7 @@ export default [
         ],
     },
     {
-        position: 'Network & Systems Administrator',
+        title: 'Network & Systems Administrator',
         company: 'BO',
         achievements: [
             'Completed a technological overhaul of Texas\' largest independent bookstore',
@@ -447,7 +447,7 @@ export default [
         ],
     },
     {
-        position: 'Orientation Advisor',
+        title: 'Orientation Advisor',
         company: 'TH',
         achievements: [
             'Guided incoming freshman college students through orientation procedures and events',
@@ -455,7 +455,7 @@ export default [
         ],
     },
     {
-        position: 'Pharmacy Technician',
+        title: 'Pharmacy Technician',
         company: 'WA',
         achievements: [
             'Received medication orders, measuring quantities, mixing ingredients, packaging medication, and updating records',
@@ -463,7 +463,7 @@ export default [
         ],
     },
     {
-        position: 'Production Manager',
+        title: 'Production Manager',
         company: 'VA',
         achievements: [
             'Implemented daily production schedules to meet order demands and maintain appropriate inventory levels',
@@ -471,7 +471,7 @@ export default [
         ],
     },
     {
-        position: 'Production Support',
+        title: 'Production Support',
         company: 'NE',
         achievements: [
             'Built new refund request process for taxpayers on the portal',
@@ -479,7 +479,7 @@ export default [
         ],
     },
     {
-        position: 'Production Support Lead',
+        title: 'Production Support Lead',
         company: 'MY',
         achievements: [
             'Responsible for building modernized e-File back-end processing each tax season',
@@ -489,7 +489,7 @@ export default [
         ],
     },
     {
-        position: 'Professional Tutor',
+        title: 'Professional Tutor',
         company: 'RE',
         achievements: [
             'Delivered high-quality, individualized instruction in test preparation, high school math, and languages (German, Latin, Chinese)',
@@ -497,7 +497,7 @@ export default [
         ],
     },
     {
-        position: 'Project Manager',
+        title: 'Project Manager',
         company: 'SI',
         achievements: [
             'Managed teams of front-end and back-end developers to create and maintain custom content management systems for our clients',
@@ -506,7 +506,7 @@ export default [
         ],
     },
     {
-        position: 'Research Engineer',
+        title: 'Research Engineer',
         company: 'ST',
         achievements: [
             'Researcher and lead designer on successful Oculus Rift research study evaluating potential applications of Virtual Reality Technology within Industrial Psychology',
@@ -515,7 +515,7 @@ export default [
         ],
     },
     {
-        position: 'Resident Hall Council Vice President',
+        title: 'Resident Hall Council Vice President',
         company: 'TH',
         achievements: [
             'Coordinated all events for student and Resident Assistant organizations, providing funding, approving events and programming proposed by students and RAs',
@@ -523,7 +523,7 @@ export default [
         ],
     },
     {
-        position: 'Senior Frontend Engineer',
+        title: 'Senior Frontend Engineer',
         company: 'KH',
         achievements: [
             'Focus mainly on client side development using EmberJS and working with our UX Designer to implement the new web UI based on Google\'s Material Design Spec',
@@ -531,7 +531,7 @@ export default [
         ],
     },
     {
-        position: 'Senior Product Development Engineer',
+        title: 'Senior Product Development Engineer',
         company: 'AD',
         achievements: [
             'Drove unit test development and enhancements to reduce software defect rates',
@@ -541,28 +541,28 @@ export default [
         ],
     },
     {
-        position: 'Senior Software Engineer',
+        title: 'Senior Software Engineer',
         company: 'SK',
         achievements: [
             'Full-stack web development using Rails, React/Redux, and Ember',
         ],
     },
     {
-        position: 'Software Developer',
+        title: 'Software Developer',
         company: 'KH',
         achievements: [
             'Worked with a small team of developers to build a rich single page application using Ember, D3, Rails, and Postgres',
         ],
     },
     {
-        position: 'Software Developer',
+        title: 'Software Developer',
         company: 'IN',
         achievements: [
             'Worked with Rails and Ember to deliver new experiences for students and teachers in the education tech space',
         ],
     },
     {
-        position: 'Software Engineer',
+        title: 'Software Engineer',
         company: 'KU',
         achievements: [
             'Developed and deployed C# .NET integrations with embedded factory systems. SQL-heavy development and cutting edge front-end frameworks supported workers in time-sensitive operations',
@@ -571,14 +571,14 @@ export default [
         ],
     },
     {
-        position: 'Software Engineer',
+        title: 'Software Engineer',
         company: 'TH',
         achievements: [
             'Worked with clients and coworkers to deliver excellent UX in Ember.js, train teams on continuous delivery with Ember, and host Ember applications in production',
         ],
     },
     {
-        position: 'Software Engineer',
+        title: 'Software Engineer',
         company: 'TH',
         achievements: [
             'Set-up and configure Concourse CI/CD pipeline for continuous automation testings on B2C sites to catch functional defects',
@@ -587,7 +587,7 @@ export default [
         ],
     },
     {
-        position: 'Teaching Assistant',
+        title: 'Teaching Assistant',
         company: 'UN',
         achievements: [
             'Lectured, graded, and tutored for undergraduate level mechanical engineering classes',
@@ -595,7 +595,7 @@ export default [
         ],
     },
     {
-        position: 'Team Lead',
+        title: 'Team Lead',
         company: 'RI',
         achievements: [
             'Demonstrates the use of HTML, CSS and JavaScript. Firebase persistence',
@@ -604,7 +604,7 @@ export default [
         ],
     },
     {
-        position: 'Tech Lead',
+        title: 'Tech Lead',
         company: 'CO',
         achievements: [
             'Wrote HTML templates, configured domains, and set up API integrations for mass emails',
@@ -617,7 +617,7 @@ export default [
         ],
     },
     {
-        position: 'Technical Support Manager',
+        title: 'Technical Support Manager',
         company: 'AL',
         achievements: [
             'Oversaw technical support team and software training resources',
@@ -625,7 +625,7 @@ export default [
         ],
     },
     {
-        position: 'Technical Staff Assistant',
+        title: 'Technical Staff Assistant',
         company: 'AP',
         achievements: [
             'Managed the design, documentation, assembly and implementation of multi-million dollar Navy defense projects',
@@ -636,7 +636,7 @@ export default [
         ],
     },
     {
-        position: 'Technical Staff Associate',
+        title: 'Technical Staff Associate',
         company: 'AP',
         achievements: [
             'Served as technical lead for three multi-million dollar Navy defense projects',
@@ -645,7 +645,7 @@ export default [
         ],
     },
     {
-        position: 'Undergraduate Research Assistant',
+        title: 'Undergraduate Research Assistant',
         company: 'TE',
         achievements: [
             'Worked under a graduate student in an internationally diverse group',
@@ -653,7 +653,7 @@ export default [
         ],
     },
     {
-        position: 'Web Application Developer',
+        title: 'Web Application Developer',
         company: 'RI',
         achievements: [
             'Responsible for all of the business\'s public-facing web sites',
@@ -661,7 +661,7 @@ export default [
         ],
     },
     {
-        position: 'Web Developer',
+        title: 'Web Developer',
         company: 'AG',
         achievements: [
             'Built B2B web-based marketing tools using Python, Django, jQuery, JS, HTML, CSS, MySQL, Apache, and Bootstrap',
@@ -670,7 +670,7 @@ export default [
         ],
     },
     {
-        position: 'Web/Mobile Developer',
+        title: 'Web/Mobile Developer',
         company: 'LU',
         achievements: [
             'Developed both web & mobile application front-ends using React & React Native',
@@ -678,7 +678,7 @@ export default [
         ],
     },
     {
-        position: 'Website Management Intern',
+        title: 'Website Management Intern',
         company: 'TH',
         achievements: [
             'Researched effective screen readers and pitched a cost-benefit analysis for issues found on the website',

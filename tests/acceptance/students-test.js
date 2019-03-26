@@ -1,4 +1,4 @@
-import { click, currentURL, visit } from '@ember/test-helpers';
+import { click, currentURL, settled, visit } from '@ember/test-helpers';
 import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 import { setupApplicationTest } from 'ember-qunit';
 import { module, test } from 'qunit';
@@ -38,6 +38,7 @@ module('Acceptance | students', function(hooks) {
         const fullName = `${student.firstName} ${student.lastName}`;
 
         await click(this.element.querySelector(`[data-test-card="${fullName}"]`));
+        await settled();
 
         assert.strictEqual(
             currentURL(),
@@ -87,6 +88,7 @@ module('Acceptance | students', function(hooks) {
         let fullName = `${student.firstName} ${student.lastName}`;
 
         await click(this.element.querySelector(`[data-test-card="${fullName}"]`));
+        await settled();
 
         assert.strictEqual(
             currentURL(),
@@ -103,6 +105,7 @@ module('Acceptance | students', function(hooks) {
         fullName = `${student.firstName} ${student.lastName}`;
 
         await click(this.element.querySelector(`[data-test-card="${fullName}"]`));
+        await settled();
 
         assert.strictEqual(
             currentURL(),

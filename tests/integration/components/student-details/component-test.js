@@ -21,7 +21,7 @@ module('Integration | Component | student-details', function(hooks) {
 
                     experiences: [
                         {
-                            position: 'Lead Frontend Developer',
+                            title: 'Lead Frontend Developer',
                             company: 'Ember',
                             achievements: [
                                 'Created Ember Octane',

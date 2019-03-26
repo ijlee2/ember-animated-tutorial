@@ -47,6 +47,23 @@ export default function() {
             let scoreFromExperiences = 0;
 
             const relevantExperiences = resume.experiences.reduce((accumulator, experience) => {
+                // Check the title
+                let isTitleRelevant = false;
+
+                const title = experience.title.split(/\s+/).map(word => {
+                    if (desiredSkills.includes(word.toLowerCase())) {
+                        isTitleRelevant = true;
+
+                        scoreFromExperiences++;
+
+                        return `<span class="highlighted">${word}</span>`;
+                    }
+
+                    return word;
+
+                }).join(' ');
+
+                // Check the achievements
                 const relevantAchievements = experience.achievements.reduce((accumulator, achievement) => {
                     let isAchievementRelevant = false;
 
@@ -82,10 +99,18 @@ export default function() {
                 // Check if the experience is relevant
                 if (relevantAchievements.length > 0) {
                     accumulator.push({
-                        position: experience.position,
+                        title,
                         company: experience.company,
                         achievements: relevantAchievements,
                     });
+
+                } else if (isTitleRelevant) {
+                    accumulator.push({
+                        title,
+                        company: experience.company,
+                        achievements: experience.achievements,
+                    });
+
                 }
 
                 return accumulator;
@@ -111,11 +136,10 @@ export default function() {
 
             }, []);
 
-            const isStudentQualified = relevantExperiences.length > 0 || relevantSkills.length > 0;
+            // Check if the student is qualified
+            const score = scoreFromExperiences + scoreFromSkills;
 
-            if (isStudentQualified) {
-                const score = scoreFromExperiences + scoreFromSkills;
-
+            if (score > 0) {
                 maxScore = Math.max(score, maxScore);
 
                 accumulator.push({

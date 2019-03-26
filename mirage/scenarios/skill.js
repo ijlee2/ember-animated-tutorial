@@ -76,6 +76,12 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Backend',
+        type: 'backend',
+        synonyms: ['Back End'],
+    });
+
+    server.create('skill', {
         name: 'BASIC',
         type: 'backend',
     });
@@ -233,6 +239,17 @@ export default function(server) {
         name: 'Foundation',
         type: 'frontend',
         synonyms: ['Foundation6'],
+    });
+
+    server.create('skill', {
+        name: 'Frontend',
+        type: 'frontend',
+        synonyms: ['Front End'],
+    });
+
+    server.create('skill', {
+        name: 'Full Stack',
+        type: 'miscellaneous',
     });
 
     server.create('skill', {
@@ -406,6 +423,11 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Mobile',
+        type: 'miscellaneous',
+    });
+
+    server.create('skill', {
         name: 'Mongo',
         type: 'backend',
         synonyms: ['MongoDB', 'MEAN', 'MERN'],
@@ -492,6 +514,12 @@ export default function(server) {
     server.create('skill', {
         name: 'Public Speaking',
         type: 'miscellaneous',
+    });
+
+    server.create('skill', {
+        name: 'QA',
+        type: 'miscellaneous',
+        synonyms: ['Quality Assurance'],
     });
 
     server.create('skill', {
