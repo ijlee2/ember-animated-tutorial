@@ -31,12 +31,13 @@ module('Acceptance | students', function(hooks) {
         assert.dom('[data-test-card]', this.element)
             .exists({ count: 10 }, 'We see 10 students');
 
-
         // Select the first student
         const student = this.student;
         const resume = this.resume;
         const fullName = `${student.firstName} ${student.lastName}`;
 
+        // Because faker.js creates URLs to actual images, we use settled()
+        // to wait for the profile image to be displayed.
         await click(this.element.querySelector(`[data-test-card="${fullName}"]`));
         await settled();
 
@@ -46,7 +47,7 @@ module('Acceptance | students', function(hooks) {
             'We can visit the 1st student page.'
         );
 
-
+        // Check the details
         const detailsPage = this.element.querySelector('[data-test-details]');
 
         assert.dom('[data-test-name]', detailsPage)
@@ -82,7 +83,6 @@ module('Acceptance | students', function(hooks) {
     test('We can find another student', async function(assert) {
         await visit('/students');
 
-
         // Select the first student
         let student = this.student;
         let fullName = `${student.firstName} ${student.lastName}`;
@@ -98,7 +98,6 @@ module('Acceptance | students', function(hooks) {
 
         assert.dom('[data-test-name]', this.element.querySelector('[data-test-details]'))
             .hasText(fullName, 'We see the correct name.');
-
 
         // Select the second student
         student = server.db.students[1];
@@ -130,7 +129,6 @@ module('Acceptance | students', function(hooks) {
         assert.dom('[data-test-card]', this.element)
             .exists({ count: 10 }, 'We see 10 students');
 
-
         await click('[data-test-link="Home"]');
 
         assert.strictEqual(
@@ -141,7 +139,6 @@ module('Acceptance | students', function(hooks) {
 
         assert.dom('[data-test-card]', this.element)
             .doesNotExist('We see 0 students');
-
 
         await visit('/students');
 

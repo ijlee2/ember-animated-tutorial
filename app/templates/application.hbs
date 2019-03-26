@@ -1,21 +1,23 @@
 <div class="my-application {{media "classNames"}}">
-    <nav
-        data-test-nav="Main navigation"
-        class="my-nav"
-        aria-label="Main navigation"
-    >
-        {{#link-to "index" data-test-link="Home"}}
-            Home
-        {{/link-to}}
+    <header>
+        <nav
+            data-test-nav="Main navigation"
+            class="my-nav"
+            aria-label="Main navigation"
+        >
+            {{#link-to "index" data-test-link="Home"}}
+                Home
+            {{/link-to}}
 
-        {{#link-to "students" data-test-link="Students"}}
-            Students
-        {{/link-to}}
+            {{#link-to "students" data-test-link="Students"}}
+                Students
+            {{/link-to}}
 
-        {{#link-to "search" data-test-link="Search"}}
-            Search
-        {{/link-to}}
-    </nav>
+            {{#link-to "search" data-test-link="Search"}}
+                Search
+            {{/link-to}}
+        </nav>
+    </header>
 
     <main class="my-main {{currentRoute}}">
         {{outlet}}
