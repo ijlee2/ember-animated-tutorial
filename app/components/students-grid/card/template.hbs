@@ -5,18 +5,7 @@
         </span>
     {{/if}}
 
-    {{#if failedToLoadImage}}
-        <MaterialIcon @icon="person" />
-
-    {{else}}
-        <img
-            data-test-image
-            src={{student.imageUrl}}
-            alt=""
-            onerror={{action "loadDefaultImage"}}
-        >
-
-    {{/if}}
+    <ProfileImage @imageUrl={{student.imageUrl}} />
 </header>
 
 <section

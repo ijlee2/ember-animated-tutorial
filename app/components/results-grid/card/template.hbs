@@ -8,51 +8,49 @@
         class="results-grid__card__header"
         title={{fullName}}
     >
-        <span class="results-grid__card__header__score">
-            {{relativeScore}}
-        </span>
-
         <span class="results-grid__card__header__name">
             {{fullName}}
         </span>
+
+        <span class="results-grid__card__header__score">
+            {{relativeScore}}
+        </span>
     </header>
 
-    <section class="results-grid__card__body">
-        {{#if experiences}}
-            <div class="section results-grid__card__body__experiences">
-                <span>Matched Experiences:</span>
+    {{#if experiences}}
+        <section class="results-grid__card__body__experiences">
+            <span>Matched Experiences:</span>
 
-                <ul class="my-list">
-                    {{#each experiences as |experience|}}
-                        <li
-                            data-test-experience
-                            class="item"
-                        >
-                            <span class="item__title">
-                                {{experience.position}} at {{experience.company}}
-                            </span>
+            <ul class="my-list">
+                {{#each experiences as |experience|}}
+                    <li
+                        data-test-experience
+                        class="item"
+                    >
+                        <span class="item__title">
+                            {{experience.position}} at {{experience.company}}
+                        </span>
 
-                            <ul>
-                                {{#each experience.achievements as |achievement|}}
-                                    <li class="item__achievement">
-                                        {{{achievement}}}
-                                    </li>
-                                {{/each}}
-                            </ul>
-                        </li>
-                    {{/each}}
-                </ul>
+                        <ul>
+                            {{#each experience.achievements as |achievement|}}
+                                <li class="item__achievement">
+                                    {{{achievement}}}
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                {{/each}}
+            </ul>
+        </section>
+    {{/if}}
+
+    {{#if skills}}
+        <section class="section results-grid__card__body__skills">
+            <span>Matched Skills:</span>
+
+            <div class="my-list">
+                {{{join ", " (map-by "name" (sort-by "name" skills))}}}
             </div>
-        {{/if}}
-
-        {{#if skills}}
-            <div class="section results-grid__card__body__skills">
-                <span>Matched Skills:</span>
-
-                <div class="my-list">
-                    {{{join ", " (map-by "name" (sort-by "name" skills))}}}
-                </div>
-            </div>
-        {{/if}}
-    </section>
+        </section>
+    {{/if}}
 {{/let}}

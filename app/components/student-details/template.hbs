@@ -1,11 +1,13 @@
-<header>
-    <h1
-        data-test-name
-        {{fade-up}}
-    >
-        {{student.fullName}}
-    </h1>
+<header {{fade-up id=student.id}}>
+    <h1 data-test-name>{{student.fullName}}</h1>
 </header>
+
+<section
+    class="student-details__profile-image"
+    {{fade-up id=student.id}}
+>
+    <ProfileImage @imageUrl={{student.imageUrl}} />
+</section>
 
 <section
     class="student-details__email"

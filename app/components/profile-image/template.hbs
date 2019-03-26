@@ -1,0 +1,12 @@
+{{#if failedToLoadImage}}
+    <MaterialIcon @icon="person" />
+
+{{else}}
+    <img
+        data-test-image
+        src={{imageUrl}}
+        alt=""
+        onerror={{action "loadDefaultImage"}}
+    >
+
+{{/if}}
