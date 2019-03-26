@@ -51,7 +51,6 @@ module.exports = {
                 'after': true,
             },
         ],
-        'ember/no-observers': 0,
         'import/no-extraneous-dependencies': false,
         'import/no-unresolved': false,
         'indent': [

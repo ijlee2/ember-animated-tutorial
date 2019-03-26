@@ -6,7 +6,7 @@
     class="student-details__profile-image"
     {{fade-up id=student.id}}
 >
-    <ProfileImage @imageUrl={{student.imageUrl}} />
+    <ProfileImage @imageUrl={{student.imageUrl}} @altText={{student.fullName}} />
 </section>
 
 <section
