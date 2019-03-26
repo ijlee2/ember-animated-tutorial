@@ -1,8 +1,8 @@
 {
     "author": "Isaac J. Lee",
     "name": "ember-animated-tutorial",
-    "description": "Tutorial for Ember-Animated and Ember-Data-Storefront addons",
-    "version": "0.0.0",
+    "description": "Tutorial for Ember Animated and Ember Data Storefront",
+    "version": "1.0.0",
     "private": true,
     "repository": "https://github.com/ijlee2/ember-animated-tutorial/",
     "license": "MIT",

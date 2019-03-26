@@ -1,4 +1,4 @@
-# Ember-Animated Tutorial
+# Ember Animated Tutorial
 
 This is the code companion to my [Animation and Predictable Data Loading in Ember](https://crunchingnumbers.live/), presented at the Ember ATX Meetup on 3/28/2019.
 
