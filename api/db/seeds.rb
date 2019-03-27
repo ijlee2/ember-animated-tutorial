@@ -8,7 +8,127 @@
 require 'faker'
 
 
-# Create resumes
+# Create students
+students = []
+
+30.times do
+    first_name = Faker::Name.first_name
+    last_name = Faker::Name.last_name
+
+    area_code = Faker::Number.leading_zero_number(3)
+    number1 = Faker::Number.leading_zero_number(3)
+    number2 = Faker::Number.leading_zero_number(4)
+
+    students << Student.create!(
+        first_name: first_name,
+        last_name: last_name,
+        email: Faker::Internet.email("#{first_name} #{last_name}", '_'),
+        phone: "(#{area_code}) #{number1}-#{number2}",
+        image_url: Faker::Avatar.image
+    )
+end
+
+
+# Create a resume for each student
+resumes = []
+
+students.each do |student|
+    resumes << Resume.create!(
+        student_id: student.id
+    )
+end
+
+
+# Create a degree for each resume
+allDegrees = [
+    'BA, Advertising',
+    'BA, American Studies',
+    'BA, Anthropology',
+    'BA, Architecture',
+    'BA, Art',
+    'BA, Art History',
+    'BA, Asian Studies',
+    'BA, Business',
+    'BA, Chinese',
+    'BA, Communication',
+    'BA, Computer Science',
+    'BA, English',
+    'BA, European Studies',
+    'BA, French',
+    'BA, German',
+    'BA, Government',
+    'BA, History',
+    'BA, Humanities',
+    'BA, International Business',
+    'BA, Journalism',
+    'BA, Latin American Studies',
+    'BA, Linguistics',
+    'BA, Management',
+    'BA, Marketing',
+    'BA, Mathematics',
+    'BA, Music',
+    'BA, Nursing',
+    'BA, Philosophy',
+    'BA, Photography',
+    'BA, Physics',
+    'BA, Political Science',
+    'BA, Psychology',
+    'BA, Public Relations',
+    'BA, Sociology',
+    'BA, Social Work',
+    'BA, Theatre Studies',
+    'BS, Accounting',
+    'BS, Aerospace Engineering',
+    'BS, Architectural Engineering',
+    'BS, Astronomy',
+    'BS, Biochemistry',
+    'BS, Biology',
+    'BS, Biomedical Engineering',
+    'BS, Chemical Engineering',
+    'BS, Chemistry',
+    'BS, Civil Engineering',
+    'BS, Computer Science',
+    'BS, Economics',
+    'BS, Electrical and Computer Engineering',
+    'BS, Geological Sciences',
+    'BS, Human Development and Family Services',
+    'BS, Finance',
+    'BS, Information and Computer Science',
+    'BS, Kinesiology',
+    'BS, Mathematics',
+    'BS, Mechanical Engineering',
+    'BS, Neuroscience',
+    'BS, Petroleum Engineering',
+    'BS, Physics',
+    'BS, Pre-Pharmacy',
+    'BS, Statistics',
+    'BS, Supply Chain Management',
+    'Certificate, Full Stack Web Development',
+    'Certificate, Project Management Professional',
+    'MA, Architecture',
+    'MA, Educational Psychology',
+    'MA, German',
+    'MA, Psychology',
+    'MA, Public Affairs',
+    'MS, Accounting',
+    'MS, Aerospace Engineering',
+    'MS, Business Administration',
+    'MS, Civil Engineering',
+    'MS, Finance',
+    'MS, Information Studies',
+    'MS, Mathematics',
+    'MS, Mechanical Engineering',
+    'MS, Statistics',
+    'PhD, Computer Science',
+    'PhD, Mathematics'
+]
+
+resumes.each do |resume|
+    Degree.create!(
+        name: allDegrees.sample,
+        resume_id: resume.id
+    )
+end
 
 
 # Create skills
@@ -744,21 +864,4 @@ Skill.create!(
 )
 
 
-# Create students
-3.times do
-    first_name = Faker::Name.first_name
-    last_name = Faker::Name.last_name
-
-    area_code = Faker::Number.leading_zero_number(3)
-    number1 = Faker::Number.leading_zero_number(3)
-    number2 = Faker::Number.leading_zero_number(4)
-
-    Student.create!(
-        first_name: first_name,
-        last_name: last_name,
-        email: Faker::Internet.email("#{first_name} #{last_name}", '_'),
-        phone: "(#{area_code}) #{number1}-#{number2}",
-        image_url: Faker::Avatar.image
-    )
-end
 =end

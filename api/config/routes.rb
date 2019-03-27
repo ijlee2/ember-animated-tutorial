@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   resources :skills
   resources :resumes
-  resources :achievements
   resources :experiences
   resources :degrees
   resources :students

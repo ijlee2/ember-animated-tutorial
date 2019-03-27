@@ -15,16 +15,7 @@ ActiveRecord::Schema.define(version: 2019_03_26_225006) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "achievements", force: :cascade do |t|
-    t.string "description"
-    t.bigint "experience_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["experience_id"], name: "index_achievements_on_experience_id"
-  end
-
   create_table "degrees", force: :cascade do |t|
-    t.string "level"
     t.string "name"
     t.bigint "resume_id"
     t.datetime "created_at", null: false
@@ -35,6 +26,7 @@ ActiveRecord::Schema.define(version: 2019_03_26_225006) do
   create_table "experiences", force: :cascade do |t|
     t.string "title"
     t.string "company"
+    t.string "achievements", default: [], array: true
     t.bigint "resume_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -42,7 +34,6 @@ ActiveRecord::Schema.define(version: 2019_03_26_225006) do
   end
 
   create_table "resumes", force: :cascade do |t|
-    t.string "skills", default: [], array: true
     t.bigint "student_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -69,7 +60,6 @@ ActiveRecord::Schema.define(version: 2019_03_26_225006) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "achievements", "experiences"
   add_foreign_key "degrees", "resumes"
   add_foreign_key "experiences", "resumes"
   add_foreign_key "resumes", "students"
