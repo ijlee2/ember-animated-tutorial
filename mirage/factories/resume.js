@@ -6,12 +6,10 @@ const getRandomNumber = (pdf) => {
     let sum = 0;
 
     for (let i = 0; i < pdf.length; i++) {
-        const { value, probability } = pdf[i];
-
-        sum += probability;
+        sum += pdf[i].probability;
 
         if (randomValue < sum) {
-            return value;
+            return pdf[i].value;
         }
     }
 };

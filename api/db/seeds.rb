@@ -39,7 +39,20 @@ students.each do |student|
 end
 
 
-# Assign a degree, some experiences, and some skills to each resume
+# Create contents for each resume
+def get_random_number(pdf)
+    randomValue = rand()
+    sum = 0
+
+    for i in 0...pdf.size do
+        sum += pdf[i][:probability]
+
+        if (randomValue < sum)
+            return pdf[i][:value]
+        end
+    end
+end
+
 allDegrees = [
     'BA, Advertising',
     'BA, American Studies',
@@ -1413,18 +1426,48 @@ allSkills = [
 ]
 
 resumes.each do |resume|
+    # Assign degrees
     Degree.create!(
         name: allDegrees.sample,
         resume_id: resume.id
     )
 
-    experience = allExperiences.sample
-    experience['resume_id'] = resume.id
+    # Assign experiences
+    numExperiences = get_random_number([
+        { value: 1, probability: 0.10 },
+        { value: 2, probability: 0.20 },
+        { value: 3, probability: 0.25 },
+        { value: 4, probability: 0.35 },
+        { value: 5, probability: 0.10 }
+    ])
 
-    Experience.create!(experience)
+    experiences = allExperiences.sample(numExperiences)
 
-    skill = allSkills.sample
-    skill['resume_id'] = resume.id
+    experiences.each do |experience|
+        experience['resume_id'] = resume.id
 
-    Skill.create!(skill)
+        Experience.create!(experience)
+    end
+
+    # Assign skills
+    numSkills = get_random_number([
+        { value: 3, probability: 0.05 },
+        { value: 4, probability: 0.05 },
+        { value: 5, probability: 0.10 },
+        { value: 6, probability: 0.15 },
+        { value: 7, probability: 0.15 },
+        { value: 8, probability: 0.20 },
+        { value: 9, probability: 0.10 },
+        { value: 10, probability: 0.10 },
+        { value: 11, probability: 0.05 },
+        { value: 12, probability: 0.05 }
+    ])
+
+    skills = allSkills.sample(numSkills)
+
+    skills.each do |skill|
+        skill['resume_id'] = resume.id
+
+        Skill.create!(skill)
+    end
 end
