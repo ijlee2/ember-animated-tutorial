@@ -101,10 +101,10 @@
         </header>
 
         <ul>
-            {{#each (sort-by "type" "name" resume.skills) as |skill|}}
+            {{#each (sort-by "category" "name" resume.skills) as |skill|}}
                 <li
                     data-test-skill
-                    class="item item--{{skill.type}}"
+                    class="item item--{{skill.category}}"
                 >
                     {{skill.name}}
                 </li>

@@ -4,10 +4,10 @@ import { computed } from '@ember/object';
 export default Component.extend({
     'data-test-pill': true,
     classNames: ['skill-pill'],
-    classNameBindings: ['skillType'],
+    classNameBindings: ['skillCategory'],
 
-    skillType: computed('skill.type', function() {
-        return `skill-pill--${this.skill.type}`;
+    skillCategory: computed('skill.category', function() {
+        return `skill-pill--${this.skill.category}`;
     }),
 
     click(event) {

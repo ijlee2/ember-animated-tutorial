@@ -2,6 +2,8 @@ import { click, currentURL, settled, visit } from '@ember/test-helpers';
 import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 import { setupApplicationTest } from 'ember-qunit';
 import { module, test } from 'qunit';
+
+import createExperiences from 'ember-animated-tutorial/mirage/scenarios/experience';
 import createSkills from 'ember-animated-tutorial/mirage/scenarios/skill';
 
 module('Acceptance | students', function(hooks) {
@@ -9,6 +11,7 @@ module('Acceptance | students', function(hooks) {
     setupMirage(hooks);
 
     hooks.beforeEach(function() {
+        createExperiences(server);
         createSkills(server);
 
         // Create students
@@ -73,7 +76,7 @@ module('Acceptance | students', function(hooks) {
             .exists({ count: resume.degrees.length }, 'We see the correct number of degrees.');
 
         assert.dom('[data-test-experience]', detailsPage)
-            .exists({ count: resume.experiences.length }, 'We see the correct number of experiences.');
+            .exists({ count: resume.experienceIds.length }, 'We see the correct number of experiences.');
 
         assert.dom('[data-test-skill]', detailsPage)
             .exists({ count: resume.skillIds.length }, 'We see the correct number of skills.');

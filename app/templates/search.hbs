@@ -17,7 +17,7 @@
                 <span>Available:</span>
 
                 {{#each
-                    (sort-by "type" "name" filteredRemainingSkills)
+                    (sort-by "category" "name" filteredRemainingSkills)
                     as |skill|
                 }}
                     <SkillPill
@@ -32,7 +32,7 @@
 
                 <AnimatedContainer>
                     {{#animated-each
-                        (sort-by "type" "name" selectedSkills)
+                        (sort-by "category" "name" selectedSkills)
                         use=transition
                         duration=250
                         as |skill|

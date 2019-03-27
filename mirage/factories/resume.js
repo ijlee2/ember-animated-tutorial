@@ -1,6 +1,5 @@
 import { Factory } from 'ember-cli-mirage';
 import allDegrees from '../scenarios/degree';
-import allExperiences from '../scenarios/experience';
 
 // We assume that the probabilities add up to 1
 const getRandomNumber = (pdf) => {
@@ -27,46 +26,6 @@ export default Factory.extend({
         ];
     },
 
-    experiences() {
-        const numExperiences = getRandomNumber([
-            {
-                value: 1,
-                probability: 0.10,
-            },
-            {
-                value: 2,
-                probability: 0.20,
-            },
-            {
-                value: 3,
-                probability: 0.25,
-            },
-            {
-                value: 4,
-                probability: 0.35,
-            },
-            {
-                value: 5,
-                probability: 0.10,
-            },
-        ]);
-        const experiences = [];
-
-        let usedIndices = [];
-
-        while (experiences.length < numExperiences) {
-            const index = Math.floor(allExperiences.length * Math.random());
-
-            if (!usedIndices.includes(index)) {
-                experiences.push(allExperiences[index]);
-
-                usedIndices.push(index);
-            }
-        }
-
-        return experiences;
-    },
-
 
     /*************************************************************************************
 
@@ -74,52 +33,46 @@ export default Factory.extend({
 
     *************************************************************************************/
     afterCreate(resume, server) {
+        // Assign experiences
+        const availableExperienceIds = server.db.experiences.mapBy('id');
+
+        const numExperiences = getRandomNumber([
+            { value: 1, probability: 0.10 },
+            { value: 2, probability: 0.20 },
+            { value: 3, probability: 0.25 },
+            { value: 4, probability: 0.35 },
+            { value: 5, probability: 0.10 },
+        ]);
+
+        const experienceIds = [];
+
+        while (experienceIds.length < numExperiences) {
+            const index = Math.floor(availableExperienceIds.length * Math.random());
+            const id = availableExperienceIds[index];
+
+            if (!experienceIds.includes(id)) {
+                experienceIds.push(id);
+            }
+        }
+
+        resume.experienceIds = experienceIds;
+
+        // Assign skills
         const availableSkillIds = server.db.skills.mapBy('id');
 
         const numSkills = getRandomNumber([
-            {
-                value: 3,
-                probability: 0.05,
-            },
-            {
-                value: 4,
-                probability: 0.05,
-            },
-            {
-                value: 5,
-                probability: 0.10,
-            },
-            {
-                value: 6,
-                probability: 0.15,
-            },
-            {
-                value: 7,
-                probability: 0.15,
-            },
-            {
-                value: 8,
-                probability: 0.20,
-            },
-            {
-                value: 9,
-                probability: 0.10,
-            },
-            {
-                value: 10,
-                probability: 0.10,
-            },
-            {
-                value: 11,
-                probability: 0.05,
-            },
-            {
-                value: 12,
-                probability: 0.05,
-            },
+            { value: 3, probability: 0.05 },
+            { value: 4, probability: 0.05 },
+            { value: 5, probability: 0.10 },
+            { value: 6, probability: 0.15 },
+            { value: 7, probability: 0.15 },
+            { value: 8, probability: 0.20 },
+            { value: 9, probability: 0.10 },
+            { value: 10, probability: 0.10 },
+            { value: 11, probability: 0.05 },
+            { value: 12, probability: 0.05 },
         ]);
 
-        // Assign skills to the resume
         const skillIds = [];
 
         while (skillIds.length < numSkills) {

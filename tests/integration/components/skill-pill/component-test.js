@@ -13,7 +13,7 @@ module('Integration | Component | skill-pill', function(hooks) {
             skill: {
                 id: '1',
                 name: 'JavaScript',
-                type: 'frontend',
+                category: 'frontend',
                 isSelected: false,
             },
 

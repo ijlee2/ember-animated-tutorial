@@ -33,21 +33,21 @@ module('Integration | Component | student-details', function(hooks) {
                     skills: [
                         {
                             name: 'Ember',
-                            type: 'frontend',
+                            category: 'frontend',
                             synonyms: ['Ember.js'],
                         },
                         {
                             name: 'Glimmer',
-                            type: 'frontend',
+                            category: 'frontend',
                             synonyms: ['Glimmer.js'],
                         },
                         {
                             name: 'Leadership',
-                            type: 'miscellaneous',
+                            category: 'miscellaneous',
                         },
                         {
                             name: 'Rails',
-                            type: 'backend',
+                            category: 'backend',
                             synonyms: ['Ruby on Rails'],
                         },
                     ],

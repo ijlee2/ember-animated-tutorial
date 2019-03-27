@@ -46,7 +46,9 @@ export default function() {
             // Check the student's experiences
             let scoreFromExperiences = 0;
 
-            const relevantExperiences = resume.experiences.reduce((accumulator, experience) => {
+            const relevantExperiences = resume.experienceIds.reduce((accumulator, experienceId) => {
+                const experience = schema.db.experiences.find(experienceId);
+
                 // Check the title
                 let isTitleRelevant = false;
 
@@ -128,7 +130,7 @@ export default function() {
 
                     accumulator.push({
                         name: `<span class="highlighted">${skill.name}</span>`,
-                        type: skill.type,
+                        category: skill.category,
                     });
                 }
 

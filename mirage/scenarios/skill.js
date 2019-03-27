@@ -1,731 +1,731 @@
 export default function(server) {
     server.create('skill', {
         name: 'ActionScript',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Adobe Creative Suite',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Agile',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'AJAX',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'Angular',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['Angular2', 'Angular3', 'Angular4', 'Angular5', 'Angular6', 'Angular7', 'MEAN'],
     });
 
     server.create('skill', {
         name: 'AngularJS',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'AI',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['A.I.', 'Artificial Intelligence'],
     });
 
     server.create('skill', {
         name: 'ASP.NET',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['ASP'],
     });
 
     server.create('skill', {
         name: 'Aurelia',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'Authentication',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['Authorization', 'User Authentication', 'User Authorization'],
     });
 
     server.create('skill', {
         name: 'AutoCAD',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'AWS',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['Amazon Web Services'],
     });
 
     server.create('skill', {
         name: 'Axios',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'Backbone',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['Backbone.js'],
     });
 
     server.create('skill', {
         name: 'Backend',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['Back End'],
     });
 
     server.create('skill', {
         name: 'BASIC',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'Big Data',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Blockchain',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Bootstrap',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['Bootstrap3', 'Bootstrap4'],
     });
 
     server.create('skill', {
         name: 'Broccoli',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Bulma',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'C',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'Chai',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Cheerio',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'CI/CD',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['CICD', 'Continuous Integration', 'Continuous Deployment'],
     });
 
     server.create('skill', {
         name: 'Communication',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'CSS',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['CSS3', 'CSS Flexbox', 'CSS Grid', 'Flexbox', 'Grid'],
     });
 
     server.create('skill', {
         name: 'C#',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'C++',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'Data Analysis',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['Analytics', 'Data Analytics', 'Data Processing'],
     });
 
     server.create('skill', {
         name: 'Data Mining',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Data Visualization',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Database Design',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['Databases'],
     });
 
     server.create('skill', {
         name: 'Django',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'Docker',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'D3',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['D3.js'],
     });
 
     server.create('skill', {
         name: 'Elixir',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'Ember',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['Ember.js', 'Ember Octane'],
     });
 
     server.create('skill', {
         name: 'Enzyme',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Express',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['Express.js', 'MEAN', 'MERN'],
     });
 
     server.create('skill', {
         name: 'FEA',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['Finite Element Analysis'],
     });
 
     server.create('skill', {
         name: 'Firebase',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'Flask',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'Fortran',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'Foundation',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['Foundation6'],
     });
 
     server.create('skill', {
         name: 'Frontend',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['Front End'],
     });
 
     server.create('skill', {
         name: 'Full Stack',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Git',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['GitHub'],
     });
 
     server.create('skill', {
         name: 'Glimmer',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['Glimmer.js'],
     });
 
     server.create('skill', {
         name: 'Go',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['Golang'],
     });
 
     server.create('skill', {
         name: 'Google Cloud Services',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'Google Office Suite',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'GraphQL',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'Handlebars',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['Handlebars.js'],
     });
 
     server.create('skill', {
         name: 'Haskell',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Heroku',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'HTML',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['HTML5'],
     });
 
     server.create('skill', {
         name: 'Java',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'JavaScript',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['ES6', 'ES7', 'ES8', 'ES2017', 'ES2018', 'ES2019'],
     });
 
     server.create('skill', {
         name: 'Jest',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Jira',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'JSP',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'jQuery',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'JSON:API',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['JSON API'],
     });
 
     server.create('skill', {
         name: 'JWT',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['JSON Web Token'],
     });
 
     server.create('skill', {
         name: 'Kubernetes',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['K8'],
     });
 
     server.create('skill', {
         name: 'Laravel',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'LaTeX',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['TeX'],
     });
 
     server.create('skill', {
         name: 'Leadership',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Less',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'Linux',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['Linux OS'],
     });
 
     server.create('skill', {
         name: 'Lisp',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Mac',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['Mac OS'],
     });
 
     server.create('skill', {
         name: 'Markdown',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Materialize',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['Material UI'],
     });
 
     server.create('skill', {
         name: 'Matlab',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'Microsoft Suite',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['Microsoft Excel', 'Microsoft Outlook', 'Microsoft PowerPoint', 'Microsoft Word'],
     });
 
     server.create('skill', {
         name: 'ML',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['Machine Learning'],
     });
 
     server.create('skill', {
         name: 'Mobile',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Mongo',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['MongoDB', 'MEAN', 'MERN'],
     });
 
     server.create('skill', {
         name: 'Mongoose',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'MySQL',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'Nightwatch',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['Nightwatch.js'],
     });
 
     server.create('skill', {
         name: 'NLG',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['Natural Language Generation'],
     });
 
     server.create('skill', {
         name: 'NLP',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['Natural Language Processing'],
     });
 
     server.create('skill', {
         name: 'Node',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['Node.js', 'MEAN', 'MERN'],
     });
 
     server.create('skill', {
         name: 'Objective-C',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Perl',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'PHP',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'PL/SQL',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'Polymer',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['Polymer.js'],
     });
 
     server.create('skill', {
         name: 'Postgres',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['PostgreSQL'],
     });
 
     server.create('skill', {
         name: 'Preact',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['Preact.js'],
     });
 
     server.create('skill', {
         name: 'Python',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['Python3'],
     });
 
     server.create('skill', {
         name: 'Public Speaking',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'QA',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['Quality Assurance'],
     });
 
     server.create('skill', {
         name: 'QUnit',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'R',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'Rails',
-        type: 'backend',
+        category: 'backend',
         synonyms: ['Ruby on Rails'],
     });
 
     server.create('skill', {
         name: 'React',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['React.js', 'MERN'],
     });
 
     server.create('skill', {
         name: 'React Native',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'Redux',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'Responsive Design',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['Responsive Web Design'],
     });
 
     server.create('skill', {
         name: 'REST',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'Rhinoceros',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['Rhino', 'Rhino 3D', 'Rhinoceros 3D'],
     });
 
     server.create('skill', {
         name: 'Ruby',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'SAS',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'Sass',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'Scala',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Selenium',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Sequelize',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'SolidWorks',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'SPA',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['Single Page Application'],
     });
 
     server.create('skill', {
         name: 'SproutCore',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'SQL',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'SQLite',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'Squarespace',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'Svelte',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'SVN',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['Subversion'],
     });
 
     server.create('skill', {
         name: 'Swift',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Tableau',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Teaching',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['Mentoring'],
     });
 
     server.create('skill', {
         name: 'Team Building',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'Three.js',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['3JS'],
     });
 
     server.create('skill', {
         name: 'Trello',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'UX',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['UI/UX', 'User Experience'],
     });
 
     server.create('skill', {
         name: 'VB.NET',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['Visual Basic .NET'],
     });
 
     server.create('skill', {
         name: 'Vue',
-        type: 'frontend',
+        category: 'frontend',
         synonyms: ['Vue.js'],
     });
 
     server.create('skill', {
         name: 'Webpack',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
     });
 
     server.create('skill', {
         name: 'WebGL',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'Weebly',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'Windows',
-        type: 'miscellaneous',
+        category: 'miscellaneous',
         synonyms: ['Windows OS'],
     });
 
     server.create('skill', {
         name: 'Wix',
-        type: 'frontend',
+        category: 'frontend',
     });
 
     server.create('skill', {
         name: 'WordPress',
-        type: 'backend',
+        category: 'backend',
     });
 
     server.create('skill', {
         name: 'XML',
-        type: 'backend',
+        category: 'backend',
     });
 }

@@ -18,7 +18,7 @@ export default Route.extend({
                 return EmberObject.create({
                     id: skill.id,
                     name: skill.name,
-                    type: skill.type,
+                    category: skill.category,
                     synonyms: (skill.synonyms || []).map(synonym => {
                         return (synonym || '').trim().toLowerCase();
                     }),
