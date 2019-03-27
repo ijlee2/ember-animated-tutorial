@@ -12,7 +12,7 @@ class ExperiencesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create experience" do
     assert_difference('Experience.count') do
-      post experiences_url, params: { experience: { company: @experience.company, resume_id: @experience.resume_id, title: @experience.title } }, as: :json
+      post experiences_url, params: { experience: { achievements: @experience.achievements, company: @experience.company, resume_id: @experience.resume_id, title: @experience.title } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class ExperiencesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update experience" do
-    patch experience_url(@experience), params: { experience: { company: @experience.company, resume_id: @experience.resume_id, title: @experience.title } }, as: :json
+    patch experience_url(@experience), params: { experience: { achievements: @experience.achievements, company: @experience.company, resume_id: @experience.resume_id, title: @experience.title } }, as: :json
     assert_response 200
   end
 

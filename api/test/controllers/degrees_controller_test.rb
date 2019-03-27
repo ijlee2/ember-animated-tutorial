@@ -12,7 +12,7 @@ class DegreesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create degree" do
     assert_difference('Degree.count') do
-      post degrees_url, params: { degree: { name: @degree.name, resume_id: @degree.resume_id, type: @degree.type } }, as: :json
+      post degrees_url, params: { degree: { name: @degree.name, resume_id: @degree.resume_id } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class DegreesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update degree" do
-    patch degree_url(@degree), params: { degree: { name: @degree.name, resume_id: @degree.resume_id, type: @degree.type } }, as: :json
+    patch degree_url(@degree), params: { degree: { name: @degree.name, resume_id: @degree.resume_id } }, as: :json
     assert_response 200
   end
 

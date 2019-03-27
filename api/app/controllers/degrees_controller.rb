@@ -46,6 +46,6 @@ class DegreesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def degree_params
-      params.require(:degree).permit(:type, :name, :resume_id)
+      params.require(:degree).permit(:name, :resume_id)
     end
 end

@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  type: 
+  category: MyString
   synonyms: MyString
   resume: one
 
 two:
   name: MyString
-  type: 
+  category: MyString
   synonyms: MyString
   resume: two

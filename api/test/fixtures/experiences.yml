@@ -3,9 +3,11 @@
 one:
   title: MyString
   company: MyString
+  achievements: MyString
   resume: one
 
 two:
   title: MyString
   company: MyString
+  achievements: MyString
   resume: two

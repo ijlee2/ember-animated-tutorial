@@ -1,3 +1,3 @@
 class Student < ApplicationRecord
-  has_many :resumes
+    has_many :resumes
 end

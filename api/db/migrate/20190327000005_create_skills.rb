@@ -3,7 +3,7 @@ class CreateSkills < ActiveRecord::Migration[5.2]
     create_table :skills do |t|
       t.string :name
       t.string :category
-      t.string :synonyms, array: true, default: []
+      t.string :synonyms
       t.references :resume, foreign_key: true
 
       t.timestamps
