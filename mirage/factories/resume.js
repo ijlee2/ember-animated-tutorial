@@ -1,5 +1,4 @@
 import { Factory } from 'ember-cli-mirage';
-import allDegrees from '../scenarios/degree';
 
 // We assume that the probabilities add up to 1
 const getRandomNumber = (pdf) => {
@@ -18,21 +17,19 @@ const getRandomNumber = (pdf) => {
 };
 
 export default Factory.extend({
-    degrees() {
-        const index = Math.floor(allDegrees.length * Math.random());
-
-        return [
-            allDegrees[index],
-        ];
-    },
-
-
     /*************************************************************************************
 
         Model relationships
 
     *************************************************************************************/
     afterCreate(resume, server) {
+        // Assign degrees
+        const availableDegreeIds = server.db.degrees.mapBy('id');
+
+        resume.degreeIds = [
+            availableDegreeIds[Math.floor(availableDegreeIds.length * Math.random())],
+        ];
+
         // Assign experiences
         const availableExperienceIds = server.db.experiences.mapBy('id');
 

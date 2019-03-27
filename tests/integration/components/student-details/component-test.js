@@ -15,8 +15,12 @@ module('Integration | Component | student-details', function(hooks) {
             resumes: [
                 {
                     degrees: [
-                        'MS, Computer Science',
-                        'BS, Mathematics',
+                        {
+                            name: 'MS, Computer Science',
+                        },
+                        {
+                            name: 'BS, Mathematics',
+                        },
                     ],
 
                     experiences: [

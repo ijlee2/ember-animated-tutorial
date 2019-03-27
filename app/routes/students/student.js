@@ -3,7 +3,7 @@ import Route from '@ember/routing/route';
 export default Route.extend({
     model(params) {
         return this.store.loadRecord('student', params.id, {
-            include: 'resumes.experiences,resumes.skills',
+            include: 'resumes.degrees,resumes.experiences,resumes.skills',
         });
     },
 

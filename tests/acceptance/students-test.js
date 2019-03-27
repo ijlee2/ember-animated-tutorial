@@ -3,6 +3,7 @@ import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 import { setupApplicationTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
+import createDegrees from 'ember-animated-tutorial/mirage/scenarios/degree';
 import createExperiences from 'ember-animated-tutorial/mirage/scenarios/experience';
 import createSkills from 'ember-animated-tutorial/mirage/scenarios/skill';
 
@@ -11,11 +12,12 @@ module('Acceptance | students', function(hooks) {
     setupMirage(hooks);
 
     hooks.beforeEach(function() {
+        createDegrees(server);
         createExperiences(server);
         createSkills(server);
 
         // Create students
-        server.createList('student', 10);
+        server.createList('student', 5);
 
         this.set('student', server.db.students[0]);
         this.set('resume', server.db.resumes.find(this.student.resumeIds[0]));
@@ -32,7 +34,7 @@ module('Acceptance | students', function(hooks) {
         );
 
         assert.dom('[data-test-card]', this.element)
-            .exists({ count: 10 }, 'We see 10 students');
+            .exists({ count: 5 }, 'We see 5 students');
 
         // Select the first student
         const student = this.student;
@@ -73,7 +75,7 @@ module('Acceptance | students', function(hooks) {
             .hasText(student.phone, 'We see the correct phone number.');
 
         assert.dom('[data-test-degree]', detailsPage)
-            .exists({ count: resume.degrees.length }, 'We see the correct number of degrees.');
+            .exists({ count: resume.degreeIds.length }, 'We see the correct number of degrees.');
 
         assert.dom('[data-test-experience]', detailsPage)
             .exists({ count: resume.experienceIds.length }, 'We see the correct number of experiences.');
@@ -130,7 +132,7 @@ module('Acceptance | students', function(hooks) {
         );
 
         assert.dom('[data-test-card]', this.element)
-            .exists({ count: 10 }, 'We see 10 students');
+            .exists({ count: 5 }, 'We see 5 students');
 
         await click('[data-test-link="Home"]');
 
@@ -152,6 +154,6 @@ module('Acceptance | students', function(hooks) {
         );
 
         assert.dom('[data-test-card]', this.element)
-            .exists({ count: 10 }, 'We see 10 students');
+            .exists({ count: 5 }, 'We see 5 students');
     });
 });
