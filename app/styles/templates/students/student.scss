@@ -11,6 +11,16 @@
     }
 }
 
+.media-xxs{
+    .my-route__students__student {
+        grid-template-columns: 7rem auto;
+
+        .my-students .students-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
 .media-xs,
 .media-sm {
     .my-route__students__student {

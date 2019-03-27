@@ -41,3 +41,13 @@
         }
     }
 }
+
+.media-xxs,
+.media-xs {
+    .my-route__search .my-form fieldset .container {
+        height: calc(100% - 4.1rem);
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}

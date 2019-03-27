@@ -19,3 +19,8 @@ $font-size-sm: 0.8rem;
 $font-size-xs: 0.391rem;
 
 $line-thin: 0.075rem;
+
+$mobile-font-size-xl: calc(14/16 * #{$font-size-xl});
+$mobile-font-size-lg: calc(14/16 * #{$font-size-lg});
+$mobile-font-size-md: calc(14/16 * #{$font-size-md});
+$mobile-font-size-sm: calc(14/16 * #{$font-size-sm});

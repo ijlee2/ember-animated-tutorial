@@ -53,3 +53,12 @@
         }
     }
 }
+
+.media-xxs {
+    .student-details {
+        &__experiences .my-list .item__achievement,
+        &__skills .item {
+            font-size: $mobile-font-size-sm;
+        }
+    }
+}

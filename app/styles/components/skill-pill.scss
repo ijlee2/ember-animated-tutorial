@@ -49,3 +49,9 @@
         margin-right: 0;
     }
 }
+
+.media-xxs {
+    .skill-pill {
+        font-size: $mobile-font-size-sm;
+    }
+}

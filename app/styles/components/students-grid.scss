@@ -83,10 +83,11 @@
     }
 }
 
+.media-xxs,
 .media-xs,
 .media-sm {
     .students-grid {
-        grid-template-columns: repeat(3, minmax(8rem, 1fr));
+        grid-template-columns: repeat(3, minmax(6rem, 1fr));
 
         &__card {
             grid-template-areas:
@@ -118,6 +119,26 @@
                 }
             }
         }
+    }
+}
+
+.media-xxs {
+    .students-grid {
+        &__card {
+            height: 6rem;
+
+            &__header {
+                &__initials {
+                    font-size: calc(6/8 * #{$mobile-font-size-xl});
+                }
+            }
+        }
+    }
+}
+
+.media-xs {
+    .students-grid {
+        grid-template-columns: repeat(3, minmax(8rem, 1fr));
     }
 }
 

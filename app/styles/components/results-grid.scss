@@ -102,10 +102,34 @@
     }
 }
 
+.media-xxs,
 .media-xs,
 .media-sm {
     .results-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+.media-xxs {
+    .results-grid {
+        &__card {
+            &__header {
+                &__name {
+                    font-size: $mobile-font-size-lg;
+                }
+
+                &__score {
+                    font-size: $mobile-font-size-xl;
+                }
+            }
+
+            &__body {
+                &__experiences .item__achievement,
+                &__skills .my-list {
+                    font-size: $mobile-font-size-sm;
+                }
+            }
+        }
     }
 }
 

@@ -67,7 +67,7 @@ body {
     form {
         fieldset {
             & > label {
-                height: 2rem;
+                margin-bottom: 1rem;
 
                 display: flex;
                 align-items: center;
@@ -166,6 +166,36 @@ body {
                 color: $color-light-blue;
                 text-decoration: underline;
             }
+        }
+    }
+}
+
+body {
+    .media-xxs {
+        font-size: 14px;
+
+        h1 {
+            font-size: $mobile-font-size-xl;
+        }
+
+        h2 {
+            font-size: $mobile-font-size-lg;
+        }
+
+        button {
+            font-size: $mobile-font-size-sm;
+        }
+
+        input {
+            font-size: $mobile-font-size-md;
+        }
+
+        .my-nav a {
+            font-size: $mobile-font-size-md;
+        }
+
+        .my-footer {
+            font-size: $mobile-font-size-sm;
         }
     }
 }

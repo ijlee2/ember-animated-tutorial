@@ -8,7 +8,8 @@
 // xxl >= (2 * 1rem) + (4 * 32rem + 3 * 1rem + 1rem) = 2224px
 //
 export default {
-    xs: '(max-width: 607px)',
+    xxs: '(max-width: 463px)',
+    xs: '(min-width: 464px) and (max-width: 607px)',
     sm: '(min-width: 608px) and (max-width: 831px)',
     md: '(min-width: 832px) and (max-width: 1231px)',
     lg: '(min-width: 1232px) and (max-width: 1679px)',
