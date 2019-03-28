@@ -11,7 +11,7 @@ require 'faker'
 # Create students
 students = []
 
-30.times do
+50.times do
     first_name = Faker::Name.first_name
     last_name = Faker::Name.last_name
 
@@ -19,12 +19,15 @@ students = []
     number1 = Faker::Number.leading_zero_number(3)
     number2 = Faker::Number.leading_zero_number(4)
 
+    # Create an image 80% of the time
+    image_url = rand() >= 0.2 ? Faker::Avatar.image : ''
+
     students << Student.create!(
         first_name: first_name,
         last_name: last_name,
         email: Faker::Internet.email("#{first_name} #{last_name}", '_'),
         phone: "(#{area_code}) #{number1}-#{number2}",
-        image_url: Faker::Avatar.image
+        image_url: image_url
     )
 end
 
