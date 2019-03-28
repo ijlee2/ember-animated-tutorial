@@ -5,12 +5,18 @@ class StudentsController < ApplicationController
     def index
         @students = Student.all
 
-        render json: @students
+        # render json: @students
+        render json: StudentSerializer.new(@students).serialized_json
     end
 
     # GET /students/1
     def show
-        render json: @student
+        # render json: @student, include: [:resumes]
+        render json: StudentSerializer.new(
+            @student,
+            include: [:resumes, :'resumes.degrees', :'resumes.experiences', :'resumes.skills']
+        )
+        .serialized_json
     end
 
     # POST /students

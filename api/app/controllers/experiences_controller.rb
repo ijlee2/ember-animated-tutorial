@@ -5,12 +5,12 @@ class ExperiencesController < ApplicationController
     def index
         @experiences = Experience.all
 
-        render json: @experiences
+        render json: ResumeSerializer.new(@experiences).serialized_json
     end
 
     # GET /experiences/1
     def show
-        render json: @experience
+        render json: ResumeSerializer.new(@experience).serialized_json
     end
 
     # POST /experiences

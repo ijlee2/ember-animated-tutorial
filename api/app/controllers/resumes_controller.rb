@@ -5,12 +5,21 @@ class ResumesController < ApplicationController
     def index
         @resumes = Resume.all
 
-        render json: @resumes
+        # render json: @resumes
+        render json: ResumeSerializer.new(@resumes).serialized_json
     end
 
     # GET /resumes/1
     def show
-        render json: @resume
+        # render json: @resume, include: [:degrees, :experiences, :skills]
+        render json: ResumeSerializer.new(
+            @resume,
+            include: [
+                :degrees,
+                :experiences,
+                :skills
+            ]
+        ).serialized_json
     end
 
     # POST /resumes

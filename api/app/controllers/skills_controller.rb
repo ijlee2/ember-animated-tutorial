@@ -5,12 +5,12 @@ class SkillsController < ApplicationController
     def index
         @skills = Skill.all
 
-        render json: @skills
+        render json: ResumeSerializer.new(@skills).serialized_json
     end
 
     # GET /skills/1
     def show
-        render json: @skill
+        render json: ResumeSerializer.new(@skill).serialized_json
     end
 
     # POST /skills

@@ -33,7 +33,10 @@ export default DS.Model.extend(LoadableModel, {
     }),
 
     initials: computed('firstName', 'lastName', function() {
-        return `${this.firstName.charAt(0).toUpperCase()}${this.lastName.charAt(0).toUpperCase()}`;
+        const firstNameInitial = (this.firstName || '').charAt(0).toUpperCase();
+        const lastNameInitial = (this.lastName || '').charAt(0).toUpperCase();
+
+        return `${firstNameInitial}${lastNameInitial}`;
     }),
 
     internationalPhone: computed('phone', function() {
