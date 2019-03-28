@@ -5,12 +5,12 @@ class DegreesController < ApplicationController
     def index
         @degrees = Degree.all
 
-        render json: ResumeSerializer.new(@degrees).serialized_json
+        render json: DegreeSerializer.new(@degrees).serialized_json
     end
 
     # GET /degrees/1
     def show
-        render json: ResumeSerializer.new(@degree).serialized_json
+        render json: DegreeSerializer.new(@degree).serialized_json
     end
 
     # POST /degrees
