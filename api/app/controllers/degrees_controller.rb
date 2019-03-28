@@ -13,6 +13,7 @@ class DegreesController < ApplicationController
         render json: DegreeSerializer.new(@degree).serialized_json
     end
 
+=begin
     # POST /degrees
     def create
         @degree = Degree.new(degree_params)
@@ -37,6 +38,7 @@ class DegreesController < ApplicationController
     def destroy
         @degree.destroy
     end
+=end
 
     private
         # Use callbacks to share common setup or constraints between actions.

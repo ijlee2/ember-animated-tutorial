@@ -19,6 +19,7 @@ class StudentsController < ApplicationController
         .serialized_json
     end
 
+=begin
     # POST /students
     def create
         @student = Student.new(student_params)
@@ -43,6 +44,7 @@ class StudentsController < ApplicationController
     def destroy
         @student.destroy
     end
+=end
 
     private
         # Use callbacks to share common setup or constraints between actions.

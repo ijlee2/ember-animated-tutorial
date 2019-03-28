@@ -13,6 +13,7 @@ class SkillsController < ApplicationController
         render json: SkillSerializer.new(@skill).serialized_json
     end
 
+=begin
     # POST /skills
     def create
         @skill = Skill.new(skill_params)
@@ -37,6 +38,7 @@ class SkillsController < ApplicationController
     def destroy
         @skill.destroy
     end
+=end
 
     private
         # Use callbacks to share common setup or constraints between actions.

@@ -22,6 +22,7 @@ class ResumesController < ApplicationController
         ).serialized_json
     end
 
+=begin
     # POST /resumes
     def create
         @resume = Resume.new(resume_params)
@@ -46,6 +47,7 @@ class ResumesController < ApplicationController
     def destroy
         @resume.destroy
     end
+=end
 
     private
         # Use callbacks to share common setup or constraints between actions.

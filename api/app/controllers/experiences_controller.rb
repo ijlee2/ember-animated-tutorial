@@ -13,6 +13,7 @@ class ExperiencesController < ApplicationController
         render json: ExperienceSerializer.new(@experience).serialized_json
     end
 
+=begin
     # POST /experiences
     def create
         @experience = Experience.new(experience_params)
@@ -37,6 +38,7 @@ class ExperiencesController < ApplicationController
     def destroy
         @experience.destroy
     end
+=end
 
     private
         # Use callbacks to share common setup or constraints between actions.
