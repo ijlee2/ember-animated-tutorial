@@ -11,8 +11,8 @@ export default function() {
         https://www.ember-cli-mirage.com/docs/advanced/shorthands
     */
 
-    this.get('/students');
-    this.get('/students/:id');
+    this.get('/students', { timing: 1000 });
+    this.get('/students/:id', { timing: 1000 });
 
     this.get('/skills');
 
