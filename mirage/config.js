@@ -12,7 +12,7 @@ export default function() {
     */
 
     this.get('/students', { timing: 1000 });
-    this.get('/students/:id', { timing: 1000 });
+    this.get('/students/:id', { timing: 500 });
 
     this.get('/skills');
 

@@ -6,10 +6,4 @@ export default Route.extend({
             include: 'resumes.degrees,resumes.experiences,resumes.skills',
         });
     },
-
-    setupController(controller, model) {
-        this._super(controller, model);
-
-        controller.set('allStudents', this.store.peekAll('student'));
-    },
 });

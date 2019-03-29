@@ -8,6 +8,7 @@ export default Controller.extend({
     currentRoute: computed('router.currentRouteName', function() {
         const currentRouteName = (this.router.currentRouteName || '')
             .replace(/\.index/g, '')
+            .replace(/_loading/g, '')
             .replace(/\./g, '__');
 
         return `my-route__${currentRouteName}`;
