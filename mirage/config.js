@@ -11,10 +11,10 @@ export default function() {
         https://www.ember-cli-mirage.com/docs/advanced/shorthands
     */
 
-    this.get('/students', { timing: 1000 });
+    this.get('/students', { timing: 500 });
     this.get('/students/:id', { timing: 500 });
 
-    this.get('/skills');
+    this.get('/skills', { timing: 500 });
 
     this.get('/search', (schema, request) => {
         const desiredSkillIds = request.queryParams.skillIds.split(',');

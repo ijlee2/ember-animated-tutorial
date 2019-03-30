@@ -56,8 +56,13 @@
         </header>
 
         <ul>
-            {{#each resume.degrees as |degree|}}
-                <li data-test-degree>{{degree.name}}</li>
+            {{#each (sort-by "name" resume.degrees) as |degree|}}
+                <li
+                    data-test-degree
+                    class="item"
+                >
+                    {{degree.name}}
+                </li>
             {{/each}}
         </ul>
     </section>

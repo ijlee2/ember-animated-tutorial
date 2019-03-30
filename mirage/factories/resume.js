@@ -14,6 +14,24 @@ const getRandomNumber = (pdf) => {
     }
 };
 
+// allIds is an array of strings (can be numbers)
+const sampleWithoutRepetition = (allIds, numSamples) => {
+    const sampledIds = [];
+
+    if (numSamples <= allIds.length) {
+        while (sampledIds.length < numSamples) {
+            const index = Math.floor(allIds.length * Math.random());
+            const id = allIds[index];
+
+            if (!sampledIds.includes(id)) {
+                sampledIds.push(id);
+            }
+        }
+    }
+
+    return sampledIds;
+};
+
 export default Factory.extend({
     /*************************************************************************************
 
@@ -22,14 +40,18 @@ export default Factory.extend({
     *************************************************************************************/
     afterCreate(resume, server) {
         // Assign degrees
-        const availableDegreeIds = server.db.degrees.mapBy('id');
+        const allDegreeIds = server.db.degrees.mapBy('id');
 
-        resume.degreeIds = [
-            availableDegreeIds[Math.floor(availableDegreeIds.length * Math.random())],
-        ];
+        const numDegrees = getRandomNumber([
+            { value: 1, probability: 0.65 },
+            { value: 2, probability: 0.25 },
+            { value: 3, probability: 0.10 },
+        ]);
+
+        resume.degreeIds = sampleWithoutRepetition(allDegreeIds, numDegrees);
 
         // Assign experiences
-        const availableExperienceIds = server.db.experiences.mapBy('id');
+        const allExperienceIds = server.db.experiences.mapBy('id');
 
         const numExperiences = getRandomNumber([
             { value: 1, probability: 0.10 },
@@ -39,21 +61,10 @@ export default Factory.extend({
             { value: 5, probability: 0.10 },
         ]);
 
-        const experienceIds = [];
-
-        while (experienceIds.length < numExperiences) {
-            const index = Math.floor(availableExperienceIds.length * Math.random());
-            const id = availableExperienceIds[index];
-
-            if (!experienceIds.includes(id)) {
-                experienceIds.push(id);
-            }
-        }
-
-        resume.experienceIds = experienceIds;
+        resume.experienceIds = sampleWithoutRepetition(allExperienceIds, numExperiences);
 
         // Assign skills
-        const availableSkillIds = server.db.skills.mapBy('id');
+        const allSkillIds = server.db.skills.mapBy('id');
 
         const numSkills = getRandomNumber([
             { value: 3, probability: 0.05 },
@@ -68,18 +79,7 @@ export default Factory.extend({
             { value: 12, probability: 0.05 },
         ]);
 
-        const skillIds = [];
-
-        while (skillIds.length < numSkills) {
-            const index = Math.floor(availableSkillIds.length * Math.random());
-            const id = availableSkillIds[index];
-
-            if (!skillIds.includes(id)) {
-                skillIds.push(id);
-            }
-        }
-
-        resume.skillIds = skillIds;
+        resume.skillIds = sampleWithoutRepetition(allSkillIds, numSkills);
 
         // Save skills
         resume.save();

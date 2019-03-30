@@ -9,6 +9,16 @@
         }
     }
 
+    &__education {
+        .item {
+            margin-bottom: 1rem;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     &__experiences {
         .item {
             margin-bottom: 1rem;
@@ -20,6 +30,10 @@
             &__achievement {
                 list-style: disc inside;
                 margin-left: 2rem;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
             }
         }
     }

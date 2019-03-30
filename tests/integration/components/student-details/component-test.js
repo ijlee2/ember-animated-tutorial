@@ -79,10 +79,10 @@ module('Integration | Component | student-details', function(hooks) {
         assert.strictEqual(degrees.length, 2, 'We see 2 degrees.');
 
         assert.dom(degrees[0])
-            .hasText('MS, Computer Science', 'We see the correct 1st degree.');
+            .hasText('BS, Mathematics', 'We see the correct 1st degree.');
 
         assert.dom(degrees[1])
-            .hasText('BS, Mathematics', 'We see the correct 2nd degree.');
+            .hasText('MS, Computer Science', 'We see the correct 2nd degree.');
 
 
         // Check experiences
