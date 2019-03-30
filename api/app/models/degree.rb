@@ -1,3 +1,3 @@
 class Degree < ApplicationRecord
-    belongs_to :resume, optional: true
+    has_and_belongs_to_many :resumes
 end

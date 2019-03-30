@@ -12,7 +12,7 @@ class SkillsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create skill" do
     assert_difference('Skill.count') do
-      post skills_url, params: { skill: { category: @skill.category, name: @skill.name, resume_id: @skill.resume_id, synonyms: @skill.synonyms } }, as: :json
+      post skills_url, params: { skill: { category: @skill.category, name: @skill.name, synonyms: @skill.synonyms } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class SkillsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update skill" do
-    patch skill_url(@skill), params: { skill: { category: @skill.category, name: @skill.name, resume_id: @skill.resume_id, synonyms: @skill.synonyms } }, as: :json
+    patch skill_url(@skill), params: { skill: { category: @skill.category, name: @skill.name, synonyms: @skill.synonyms } }, as: :json
     assert_response 200
   end
 

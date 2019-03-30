@@ -2,8 +2,6 @@
 
 one:
   name: MyString
-  resume: one
 
 two:
   name: MyString
-  resume: two

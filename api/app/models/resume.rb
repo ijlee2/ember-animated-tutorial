@@ -1,6 +1,6 @@
 class Resume < ApplicationRecord
     belongs_to :student
-    has_many :degrees
+    has_and_belongs_to_many :degrees
     has_many :experiences
-    has_many :skills
+    has_and_belongs_to_many :skills
 end

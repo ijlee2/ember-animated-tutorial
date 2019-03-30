@@ -58,244 +58,244 @@ end
 
 allDegrees = [
     {
-        name: 'BA, Advertising',
+        name: 'BA, Advertising'
     },
     {
-        name: 'BA, American Studies',
+        name: 'BA, American Studies'
     },
     {
-        name: 'BA, Anthropology',
+        name: 'BA, Anthropology'
     },
     {
-        name: 'BA, Architecture',
+        name: 'BA, Architecture'
     },
     {
-        name: 'BA, Art',
+        name: 'BA, Art'
     },
     {
-        name: 'BA, Art History',
+        name: 'BA, Art History'
     },
     {
-        name: 'BA, Asian Studies',
+        name: 'BA, Asian Studies'
     },
     {
-        name: 'BA, Business',
+        name: 'BA, Business'
     },
     {
-        name: 'BA, Chinese',
+        name: 'BA, Chinese'
     },
     {
-        name: 'BA, Communication',
+        name: 'BA, Communication'
     },
     {
-        name: 'BA, Computer Science',
+        name: 'BA, Computer Science'
     },
     {
-        name: 'BA, English',
+        name: 'BA, English'
     },
     {
-        name: 'BA, European Studies',
+        name: 'BA, European Studies'
     },
     {
-        name: 'BA, French',
+        name: 'BA, French'
     },
     {
-        name: 'BA, German',
+        name: 'BA, German'
     },
     {
-        name: 'BA, Government',
+        name: 'BA, Government'
     },
     {
-        name: 'BA, History',
+        name: 'BA, History'
     },
     {
-        name: 'BA, Humanities',
+        name: 'BA, Humanities'
     },
     {
-        name: 'BA, International Business',
+        name: 'BA, International Business'
     },
     {
-        name: 'BA, Journalism',
+        name: 'BA, Journalism'
     },
     {
-        name: 'BA, Latin American Studies',
+        name: 'BA, Latin American Studies'
     },
     {
-        name: 'BA, Linguistics',
+        name: 'BA, Linguistics'
     },
     {
-        name: 'BA, Management',
+        name: 'BA, Management'
     },
     {
-        name: 'BA, Marketing',
+        name: 'BA, Marketing'
     },
     {
-        name: 'BA, Mathematics',
+        name: 'BA, Mathematics'
     },
     {
-        name: 'BA, Music',
+        name: 'BA, Music'
     },
     {
-        name: 'BA, Nursing',
+        name: 'BA, Nursing'
     },
     {
-        name: 'BA, Philosophy',
+        name: 'BA, Philosophy'
     },
     {
-        name: 'BA, Photography',
+        name: 'BA, Photography'
     },
     {
-        name: 'BA, Physics',
+        name: 'BA, Physics'
     },
     {
-        name: 'BA, Political Science',
+        name: 'BA, Political Science'
     },
     {
-        name: 'BA, Psychology',
+        name: 'BA, Psychology'
     },
     {
-        name: 'BA, Public Relations',
+        name: 'BA, Public Relations'
     },
     {
-        name: 'BA, Sociology',
+        name: 'BA, Sociology'
     },
     {
-        name: 'BA, Social Work',
+        name: 'BA, Social Work'
     },
     {
-        name: 'BA, Theatre Studies',
+        name: 'BA, Theatre Studies'
     },
     {
-        name: 'BS, Accounting',
+        name: 'BS, Accounting'
     },
     {
-        name: 'BS, Aerospace Engineering',
+        name: 'BS, Aerospace Engineering'
     },
     {
-        name: 'BS, Architectural Engineering',
+        name: 'BS, Architectural Engineering'
     },
     {
-        name: 'BS, Astronomy',
+        name: 'BS, Astronomy'
     },
     {
-        name: 'BS, Biochemistry',
+        name: 'BS, Biochemistry'
     },
     {
-        name: 'BS, Biology',
+        name: 'BS, Biology'
     },
     {
-        name: 'BS, Biomedical Engineering',
+        name: 'BS, Biomedical Engineering'
     },
     {
-        name: 'BS, Chemical Engineering',
+        name: 'BS, Chemical Engineering'
     },
     {
-        name: 'BS, Chemistry',
+        name: 'BS, Chemistry'
     },
     {
-        name: 'BS, Civil Engineering',
+        name: 'BS, Civil Engineering'
     },
     {
-        name: 'BS, Computer Science',
+        name: 'BS, Computer Science'
     },
     {
-        name: 'BS, Economics',
+        name: 'BS, Economics'
     },
     {
-        name: 'BS, Electrical and Computer Engineering',
+        name: 'BS, Electrical and Computer Engineering'
     },
     {
-        name: 'BS, Geological Sciences',
+        name: 'BS, Geological Sciences'
     },
     {
-        name: 'BS, Human Development and Family Services',
+        name: 'BS, Human Development and Family Services'
     },
     {
-        name: 'BS, Finance',
+        name: 'BS, Finance'
     },
     {
-        name: 'BS, Information and Computer Science',
+        name: 'BS, Information and Computer Science'
     },
     {
-        name: 'BS, Kinesiology',
+        name: 'BS, Kinesiology'
     },
     {
-        name: 'BS, Mathematics',
+        name: 'BS, Mathematics'
     },
     {
-        name: 'BS, Mechanical Engineering',
+        name: 'BS, Mechanical Engineering'
     },
     {
-        name: 'BS, Neuroscience',
+        name: 'BS, Neuroscience'
     },
     {
-        name: 'BS, Petroleum Engineering',
+        name: 'BS, Petroleum Engineering'
     },
     {
-        name: 'BS, Physics',
+        name: 'BS, Physics'
     },
     {
-        name: 'BS, Pre-Pharmacy',
+        name: 'BS, Pre-Pharmacy'
     },
     {
-        name: 'BS, Statistics',
+        name: 'BS, Statistics'
     },
     {
-        name: 'BS, Supply Chain Management',
+        name: 'BS, Supply Chain Management'
     },
     {
-        name: 'Certificate, Full Stack Web Development',
+        name: 'Certificate, Full Stack Web Development'
     },
     {
-        name: 'Certificate, Project Management Professional',
+        name: 'Certificate, Project Management Professional'
     },
     {
-        name: 'MA, Architecture',
+        name: 'MA, Architecture'
     },
     {
-        name: 'MA, Educational Psychology',
+        name: 'MA, Educational Psychology'
     },
     {
-        name: 'MA, German',
+        name: 'MA, German'
     },
     {
-        name: 'MA, Psychology',
+        name: 'MA, Psychology'
     },
     {
-        name: 'MA, Public Affairs',
+        name: 'MA, Public Affairs'
     },
     {
-        name: 'MS, Accounting',
+        name: 'MS, Accounting'
     },
     {
-        name: 'MS, Aerospace Engineering',
+        name: 'MS, Aerospace Engineering'
     },
     {
-        name: 'MS, Business Administration',
+        name: 'MS, Business Administration'
     },
     {
-        name: 'MS, Civil Engineering',
+        name: 'MS, Civil Engineering'
     },
     {
-        name: 'MS, Finance',
+        name: 'MS, Finance'
     },
     {
-        name: 'MS, Information Studies',
+        name: 'MS, Information Studies'
     },
     {
-        name: 'MS, Mathematics',
+        name: 'MS, Mathematics'
     },
     {
-        name: 'MS, Mechanical Engineering',
+        name: 'MS, Mechanical Engineering'
     },
     {
-        name: 'MS, Statistics',
+        name: 'MS, Statistics'
     },
     {
-        name: 'PhD, Computer Science',
+        name: 'PhD, Computer Science'
     },
     {
-        name: 'PhD, Mathematics',
+        name: 'PhD, Mathematics'
     }
 ]
 
@@ -1598,7 +1598,17 @@ end
 
 resumes.each do |resume|
     # Assign degrees
-    resume.degrees = [Degree.all.sample]
+    numDegrees = get_random_number([
+        { value: 1, probability: 0.65 },
+        { value: 2, probability: 0.25 },
+        { value: 3, probability: 0.10 }
+    ])
+
+    degrees = Degree.all.sample(numDegrees)
+
+    degrees.each do |degree|
+        resume.degrees << degree
+    end
 
     # Assign experiences
     numExperiences = get_random_number([
