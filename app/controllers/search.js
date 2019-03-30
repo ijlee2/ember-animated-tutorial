@@ -54,30 +54,35 @@ export default Controller.extend({
 
     }).drop(),
 
+    doesSkillMatchQuery(skill, query) {
+        const name = skill.name.toLowerCase();
+
+        if (name.includes(query)) {
+            return true;
+        }
+
+        let synonymFound = false;
+
+        skill.synonyms.forEach(synonym => {
+            if (synonym.includes(query)) {
+                synonymFound = true;
+
+                return;
+            }
+        });
+
+        return synonymFound;
+    },
+
     actions: {
         searchSkills() {
             const query = (this.query || '').trim().toLowerCase();
 
             if (query) {
-                this.set('filteredRemainingSkills', this.remainingSkills.filter(skill => {
-                    const name = (skill.name || '').trim().toLowerCase();
-
-                    if (name.includes(query)) {
-                        return true;
-                    }
-
-                    let synonymFound = false;
-
-                    skill.synonyms.forEach(synonym => {
-                        if (synonym.includes(query)) {
-                            synonymFound = true;
-
-                            return;
-                        }
-                    });
-
-                    return synonymFound;
-                }));
+                this.set(
+                    'filteredRemainingSkills',
+                    this.remainingSkills.filter(skill => this.doesSkillMatchQuery(skill, query))
+                );
 
             } else {
                 this.set('filteredRemainingSkills', this.remainingSkills);
@@ -91,7 +96,12 @@ export default Controller.extend({
             // With animation on, the user can click on a skill multiple times.
             // We ensure that the state is correct by checking for uniqueness.
             if (!this.filteredRemainingSkills.includes(skill)) {
-                this.filteredRemainingSkills.pushObject(skill);
+                // Check if the skill is relevant to the query
+                const query = (this.query || '').trim().toLowerCase();
+
+                if (this.doesSkillMatchQuery(skill, query)) {
+                    this.filteredRemainingSkills.pushObject(skill);
+                }
             }
 
             if (!this.remainingSkills.includes(skill)) {
