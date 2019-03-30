@@ -22,12 +22,13 @@ export default function(server) {
     server.create('skill', {
         name: 'Angular',
         category: 'frontend',
-        synonyms: ['Angular2', 'Angular3', 'Angular4', 'Angular5', 'Angular6', 'Angular7', 'MEAN'],
+        synonyms: ['Angular2', 'Angular3', 'Angular4', 'Angular5', 'Angular6', 'Angular7', 'JavaScript', 'MEAN'],
     });
 
     server.create('skill', {
         name: 'AngularJS',
         category: 'frontend',
+        synonyms: ['JavaScript'],
     });
 
     server.create('skill', {
@@ -70,9 +71,15 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Azure',
+        category: 'backend',
+        synonyms: ['Microsoft Azure'],
+    });
+
+    server.create('skill', {
         name: 'Backbone',
         category: 'frontend',
-        synonyms: ['Backbone.js'],
+        synonyms: ['Backbone.js', 'JavaScript'],
     });
 
     server.create('skill', {
@@ -189,7 +196,7 @@ export default function(server) {
     server.create('skill', {
         name: 'D3',
         category: 'frontend',
-        synonyms: ['D3.js'],
+        synonyms: ['D3.js', 'JavaScript'],
     });
 
     server.create('skill', {
@@ -200,7 +207,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Ember',
         category: 'frontend',
-        synonyms: ['Ember.js', 'Ember Octane'],
+        synonyms: ['Ember.js', 'Ember Octane', 'JavaScript'],
     });
 
     server.create('skill', {
@@ -261,7 +268,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Glimmer',
         category: 'frontend',
-        synonyms: ['Glimmer.js'],
+        synonyms: ['Glimmer.js', 'JavaScript'],
     });
 
     server.create('skill', {
@@ -375,6 +382,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Less',
         category: 'frontend',
+        synonyms: ['CSS'],
     });
 
     server.create('skill', {
@@ -395,6 +403,11 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'Management',
+        category: 'miscellaneous',
+    });
+
+    server.create('skill', {
         name: 'Markdown',
         category: 'miscellaneous',
     });
@@ -402,7 +415,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Materialize',
         category: 'frontend',
-        synonyms: ['Material UI'],
+        synonyms: ['MaterialCSS', 'Material UI'],
     });
 
     server.create('skill', {
@@ -436,11 +449,19 @@ export default function(server) {
     server.create('skill', {
         name: 'Mongoose',
         category: 'backend',
+        synonyms: ['ORM'],
     });
 
     server.create('skill', {
         name: 'MySQL',
         category: 'backend',
+        synonyms: ['SQL'],
+    });
+
+    server.create('skill', {
+        name: 'Nearley',
+        category: 'miscellaneous',
+        synonyms: ['Nearley.js'],
     });
 
     server.create('skill', {
@@ -473,6 +494,12 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'ORM',
+        category: 'backend',
+        synonyms: ['Object-Relational Mapping'],
+    });
+
+    server.create('skill', {
         name: 'Perl',
         category: 'backend',
     });
@@ -485,24 +512,25 @@ export default function(server) {
     server.create('skill', {
         name: 'PL/SQL',
         category: 'backend',
+        synonyms: ['SQL'],
     });
 
     server.create('skill', {
         name: 'Polymer',
         category: 'frontend',
-        synonyms: ['Polymer.js'],
+        synonyms: ['JavaScript', 'Polymer.js'],
     });
 
     server.create('skill', {
         name: 'Postgres',
         category: 'backend',
-        synonyms: ['PostgreSQL'],
+        synonyms: ['PostgreSQL', 'SQL'],
     });
 
     server.create('skill', {
         name: 'Preact',
         category: 'frontend',
-        synonyms: ['Preact.js'],
+        synonyms: ['JavaScript', 'Preact.js'],
     });
 
     server.create('skill', {
@@ -541,7 +569,7 @@ export default function(server) {
     server.create('skill', {
         name: 'React',
         category: 'frontend',
-        synonyms: ['React.js', 'MERN'],
+        synonyms: ['JavaScript', 'React.js', 'MERN'],
     });
 
     server.create('skill', {
@@ -584,6 +612,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Sass',
         category: 'frontend',
+        synonyms: ['CSS'],
     });
 
     server.create('skill', {
@@ -599,6 +628,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Sequelize',
         category: 'backend',
+        synonyms: ['ORM'],
     });
 
     server.create('skill', {
@@ -625,6 +655,7 @@ export default function(server) {
     server.create('skill', {
         name: 'SQLite',
         category: 'backend',
+        synonyms: ['SQL'],
     });
 
     server.create('skill', {
@@ -635,6 +666,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Svelte',
         category: 'frontend',
+        synonyms: ['JavaScript'],
     });
 
     server.create('skill', {
@@ -665,9 +697,15 @@ export default function(server) {
     });
 
     server.create('skill', {
+        name: 'TDD',
+        category: 'miscellaneous',
+        synonyms: ['Testing', 'Test Driven Development', 'Test-Driven Development'],
+    });
+
+    server.create('skill', {
         name: 'Three.js',
         category: 'frontend',
-        synonyms: ['3JS'],
+        synonyms: ['3JS', 'JavaScript'],
     });
 
     server.create('skill', {
@@ -690,7 +728,7 @@ export default function(server) {
     server.create('skill', {
         name: 'Vue',
         category: 'frontend',
-        synonyms: ['Vue.js'],
+        synonyms: ['JavaScript', 'Vue.js'],
     });
 
     server.create('skill', {
