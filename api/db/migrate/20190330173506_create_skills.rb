@@ -4,6 +4,7 @@ class CreateSkills < ActiveRecord::Migration[5.2]
             t.string :name
             t.string :category
             t.string :synonyms, array: true, default: []
+            t.references :resume, type: :uuid, foreign_key: true
 
             t.timestamps
         end

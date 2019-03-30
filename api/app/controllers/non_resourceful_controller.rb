@@ -1,7 +1,7 @@
 class NonResourcefulController < ApplicationController
     # GET /search (queryParams: sid)
     def search
-        desiredSkillIds = params[:sid].split(',');
+        desiredSkillIds = params[:skillIds].split(',');
 
         # Find the skills that the students must meet
         desiredSkills = Skill.find(desiredSkillIds)
@@ -45,7 +45,7 @@ class NonResourcefulController < ApplicationController
 
                     end
 
-                }.join (' ')
+                }.join(' ')
 
                 # Check the achievements
                 relevantAchievements = experience.achievements.reduce([]) { |accumulator, achievement|

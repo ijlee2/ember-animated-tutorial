@@ -1010,11 +1010,12 @@ allSkills = [
     {
         name: 'Angular',
         category: 'frontend',
-        synonyms: ['Angular2', 'Angular3', 'Angular4', 'Angular5', 'Angular6', 'Angular7', 'MEAN']
+        synonyms: ['Angular2', 'Angular3', 'Angular4', 'Angular5', 'Angular6', 'Angular7', 'JavaScript', 'MEAN']
     },
     {
         name: 'AngularJS',
-        category: 'frontend'
+        category: 'frontend',
+        synonyms: ['JavaScript']
     },
     {
         name: 'AI',
@@ -1049,9 +1050,14 @@ allSkills = [
         category: 'frontend'
     },
     {
+        name: 'Azure',
+        category: 'backend',
+        synonyms: ['Microsoft Azure']
+    },
+    {
         name: 'Backbone',
         category: 'frontend',
-        synonyms: ['Backbone.js']
+        synonyms: ['Backbone.js', 'JavaScript']
     },
     {
         name: 'Backend',
@@ -1146,7 +1152,7 @@ allSkills = [
     {
         name: 'D3',
         category: 'frontend',
-        synonyms: ['D3.js']
+        synonyms: ['D3.js', 'JavaScript']
     },
     {
         name: 'Elixir',
@@ -1155,7 +1161,7 @@ allSkills = [
     {
         name: 'Ember',
         category: 'frontend',
-        synonyms: ['Ember.js', 'Ember Octane']
+        synonyms: ['Ember.js', 'Ember Octane', 'JavaScript']
     },
     {
         name: 'Enzyme',
@@ -1205,7 +1211,7 @@ allSkills = [
     {
         name: 'Glimmer',
         category: 'frontend',
-        synonyms: ['Glimmer.js']
+        synonyms: ['Glimmer.js', 'JavaScript']
     },
     {
         name: 'Go',
@@ -1297,7 +1303,8 @@ allSkills = [
     },
     {
         name: 'Less',
-        category: 'frontend'
+        category: 'frontend',
+        synonyms: ['CSS']
     },
     {
         name: 'Linux',
@@ -1314,13 +1321,17 @@ allSkills = [
         synonyms: ['Mac OS']
     },
     {
+        name: 'Management',
+        category: 'miscellaneous'
+    },
+    {
         name: 'Markdown',
         category: 'miscellaneous'
     },
     {
         name: 'Materialize',
         category: 'frontend',
-        synonyms: ['Material UI']
+        synonyms: ['MaterialCSS', 'Material UI']
     },
     {
         name: 'Matlab',
@@ -1347,11 +1358,18 @@ allSkills = [
     },
     {
         name: 'Mongoose',
-        category: 'backend'
+        category: 'backend',
+        synonyms: ['ORM']
     },
     {
         name: 'MySQL',
-        category: 'backend'
+        category: 'backend',
+        synonyms: ['SQL']
+    },
+    {
+        name: 'Nearley',
+        category: 'miscellaneous',
+        synonyms: ['Nearley.js']
     },
     {
         name: 'Nightwatch',
@@ -1378,6 +1396,11 @@ allSkills = [
         category: 'miscellaneous'
     },
     {
+        name: 'ORM',
+        category: 'backend',
+        synonyms: ['Object-Relational Mapping']
+    },
+    {
         name: 'Perl',
         category: 'backend'
     },
@@ -1387,22 +1410,23 @@ allSkills = [
     },
     {
         name: 'PL/SQL',
-        category: 'backend'
+        category: 'backend',
+        synonyms: ['SQL']
     },
     {
         name: 'Polymer',
         category: 'frontend',
-        synonyms: ['Polymer.js']
+        synonyms: ['JavaScript', 'Polymer.js']
     },
     {
         name: 'Postgres',
         category: 'backend',
-        synonyms: ['PostgreSQL']
+        synonyms: ['PostgreSQL', 'SQL']
     },
     {
         name: 'Preact',
         category: 'frontend',
-        synonyms: ['Preact.js']
+        synonyms: ['JavaScript', 'Preact.js']
     },
     {
         name: 'Python',
@@ -1434,7 +1458,7 @@ allSkills = [
     {
         name: 'React',
         category: 'frontend',
-        synonyms: ['React.js', 'MERN']
+        synonyms: ['JavaScript', 'React.js', 'MERN']
     },
     {
         name: 'React Native',
@@ -1468,7 +1492,8 @@ allSkills = [
     },
     {
         name: 'Sass',
-        category: 'frontend'
+        category: 'frontend',
+        synonyms: ['CSS']
     },
     {
         name: 'Scala',
@@ -1480,7 +1505,8 @@ allSkills = [
     },
     {
         name: 'Sequelize',
-        category: 'backend'
+        category: 'backend',
+        synonyms: ['ORM']
     },
     {
         name: 'SolidWorks',
@@ -1501,7 +1527,8 @@ allSkills = [
     },
     {
         name: 'SQLite',
-        category: 'backend'
+        category: 'backend',
+        synonyms: ['SQL']
     },
     {
         name: 'Squarespace',
@@ -1509,7 +1536,8 @@ allSkills = [
     },
     {
         name: 'Svelte',
-        category: 'frontend'
+        category: 'frontend',
+        synonyms: ['JavaScript']
     },
     {
         name: 'SVN',
@@ -1534,9 +1562,14 @@ allSkills = [
         category: 'miscellaneous'
     },
     {
+        name: 'TDD',
+        category: 'miscellaneous',
+        synonyms: ['Testing', 'Test Driven Development', 'Test-Driven Development']
+    },
+    {
         name: 'Three.js',
         category: 'frontend',
-        synonyms: ['3JS']
+        synonyms: ['3JS', 'JavaScript']
     },
     {
         name: 'Trello',
@@ -1555,7 +1588,7 @@ allSkills = [
     {
         name: 'Vue',
         category: 'frontend',
-        synonyms: ['Vue.js']
+        synonyms: ['JavaScript', 'Vue.js']
     },
     {
         name: 'Webpack',
@@ -1584,7 +1617,7 @@ allSkills = [
     },
     {
         name: 'XML',
-        category: 'backend'
+        category: 'backend',
     }
 ]
 

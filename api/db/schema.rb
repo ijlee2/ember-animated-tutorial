@@ -18,8 +18,10 @@ ActiveRecord::Schema.define(version: 2019_03_30_173507) do
 
   create_table "degrees", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "name"
+    t.uuid "resume_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["resume_id"], name: "index_degrees_on_resume_id"
   end
 
   create_table "degrees_resumes", id: false, force: :cascade do |t|
@@ -53,8 +55,10 @@ ActiveRecord::Schema.define(version: 2019_03_30_173507) do
     t.string "name"
     t.string "category"
     t.string "synonyms", default: [], array: true
+    t.uuid "resume_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["resume_id"], name: "index_skills_on_resume_id"
   end
 
   create_table "students", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -67,6 +71,8 @@ ActiveRecord::Schema.define(version: 2019_03_30_173507) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "degrees", "resumes"
   add_foreign_key "experiences", "resumes"
   add_foreign_key "resumes", "students"
+  add_foreign_key "skills", "resumes"
 end
