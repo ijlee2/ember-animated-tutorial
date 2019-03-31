@@ -4,11 +4,15 @@ This is the code companion to my [Animation and Predictable Data Loading in Embe
 
 ## How to Run
 
+### Option 1
+
 You can run the app as is. Ember Mirage will create random data each time.
 
 1. Do `npm install`.
 
 2. Run `ember s`, then visit `localhost:4200`.
+
+### Option 2
 
 You can also run the app on a local Postgres server (you need this for step-1d).
 
@@ -35,8 +39,9 @@ This will create two databases, `ember-animated-tutorial-development` and `ember
 
 4. Run `rails s`, then visit `localhost:3000`.
 
-You can check how the project should look after each step, by running `git checkout` and specifying the branch name:
+## Branches
 
+You can check a starter code by running `git checkout <branch name>`:
 
 | Branch name | Added features                            |
 | ----------- | ----------------------------------------- |
