@@ -2,6 +2,17 @@
     "author": "Isaac J. Lee",
     "name": "ember-animated-tutorial",
     "description": "Tutorial for Ember Animated and Ember Data Storefront",
+    "keywords": [
+        "Ember",
+        "Ember.js",
+        "Ember Animated",
+        "Ember CLI Mirage",
+        "Ember Data Storefront",
+        "Ember OO Modifiers",
+        "Fast JSON API",
+        "Rails",
+        "Ruby on Rails"
+    ],
     "version": "1.0.0",
     "private": true,
     "repository": "https://github.com/ijlee2/ember-animated-tutorial/",
