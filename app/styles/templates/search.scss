@@ -25,7 +25,7 @@
                 grid-template-columns: 1fr 1fr;
                 grid-gap: 1rem;
 
-                .remaining-skills,
+                .available-skills,
                 .selected-skills {
                     overflow-y: auto;
                     border: $line-thin solid $color-silver;

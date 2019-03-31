@@ -3,19 +3,11 @@ import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 import { setupApplicationTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
-import createDegrees from 'ember-animated-tutorial/mirage/scenarios/degree';
-import createExperiences from 'ember-animated-tutorial/mirage/scenarios/experience';
-import createSkills from 'ember-animated-tutorial/mirage/scenarios/skill';
-
 module('Acceptance | students', function(hooks) {
     setupApplicationTest(hooks);
     setupMirage(hooks);
 
     hooks.beforeEach(function() {
-        createDegrees(server);
-        createExperiences(server);
-        createSkills(server);
-
         // Create students
         server.createList('student', 5);
 

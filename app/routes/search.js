@@ -14,7 +14,7 @@ export default Route.extend({
 
             selectedSkills: [],
 
-            remainingSkills: model.map(skill => {
+            availableSkills: model.map(skill => {
                 return EmberObject.create({
                     id: skill.id,
                     name: skill.name,
@@ -27,6 +27,6 @@ export default Route.extend({
             }),
         });
 
-        controller.set('filteredRemainingSkills', controller.remainingSkills);
+        controller.set('filteredAvailableSkills', controller.availableSkills);
     },
 });

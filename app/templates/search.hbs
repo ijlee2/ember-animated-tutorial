@@ -1,6 +1,7 @@
 <h1>Search</h1>
 
 {{input
+    data-test-input="Search Skills"
     id="search-skills"
     value=query
     autofocus=true
@@ -13,11 +14,11 @@
         <label>Select up to {{MAX_NUM_SELECTED_SKILLS}} skills that you believe are very important.</label>
 
         <div class="container">
-            <div class="remaining-skills">
+            <div data-test-available-skills class="available-skills">
                 <span>Available:</span>
 
                 {{#each
-                    (sort-by "category" "name" filteredRemainingSkills)
+                    (sort-by "category" "name" filteredAvailableSkills)
                     as |skill|
                 }}
                     <SkillPill
@@ -27,7 +28,7 @@
                 {{/each}}
             </div>
 
-            <div class="selected-skills">
+            <div data-test-selected-skills class="selected-skills">
                 <span>Selected{{if selectedSkills (concat " (" selectedSkills.length ")")}}:</span>
 
                 <AnimatedContainer>
@@ -47,5 +48,11 @@
         </div>
     </fieldset>
 
-    <button type="submit" disabled={{eq selectedSkills.length 0}}>Submit</button>
+    <button
+        data-test-button="Submit"
+        type="submit"
+        disabled={{eq selectedSkills.length 0}}
+    >
+        Submit
+    </button>
 </form>

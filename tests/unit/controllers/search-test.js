@@ -11,7 +11,7 @@ module('Unit | Controller | search', function(hooks) {
         controller.setProperties({
             query: '',
             selectedSkills: [],
-            remainingSkills: [
+            availableSkills: [
                 EmberObject.create({
                     id: '1',
                     name: 'ActionScript',
@@ -46,7 +46,7 @@ module('Unit | Controller | search', function(hooks) {
             ],
         });
 
-        controller.set('filteredRemainingSkills', controller.remainingSkills);
+        controller.set('filteredAvailableSkills', controller.availableSkills);
 
         assert.strictEqual(
             controller.selectedSkills.length,
@@ -55,20 +55,20 @@ module('Unit | Controller | search', function(hooks) {
         );
 
         assert.strictEqual(
-            controller.remainingSkills.length,
+            controller.availableSkills.length,
             4,
-            'We see 4 remaining skills.'
+            'We see 4 available skills.'
         );
 
         assert.strictEqual(
-            controller.filteredRemainingSkills.length,
+            controller.filteredAvailableSkills.length,
             4,
-            'We see 4 filtered remaining skills.'
+            'We see 4 filtered available skills.'
         );
     });
 
 
-    test('We can search the remaining skills', function(assert) {
+    test('We can search the available skills', function(assert) {
         let controller = this.owner.lookup('controller:search');
 
         // Do a search for the query 'java'
@@ -76,9 +76,9 @@ module('Unit | Controller | search', function(hooks) {
         controller.send('searchSkills');
 
         assert.deepEqual(
-            controller.filteredRemainingSkills.mapBy('name'),
+            controller.filteredAvailableSkills.mapBy('name'),
             ['Java', 'JavaScript'],
-            'We see the correct remaining skills.'
+            'We see the correct available skills.'
         );
 
         // Do a search for the query 'script'
@@ -86,9 +86,9 @@ module('Unit | Controller | search', function(hooks) {
         controller.send('searchSkills');
 
         assert.deepEqual(
-            controller.filteredRemainingSkills.mapBy('name'),
+            controller.filteredAvailableSkills.mapBy('name'),
             ['ActionScript', 'JavaScript'],
-            'We see the correct remaining skills.'
+            'We see the correct available skills.'
         );
 
         // Do a search for the query '123'
@@ -96,9 +96,9 @@ module('Unit | Controller | search', function(hooks) {
         controller.send('searchSkills');
 
         assert.deepEqual(
-            controller.filteredRemainingSkills.mapBy('name'),
+            controller.filteredAvailableSkills.mapBy('name'),
             [],
-            'We see the correct remaining skills.'
+            'We see the correct available skills.'
         );
 
         // Do a search for the empty query
@@ -106,9 +106,9 @@ module('Unit | Controller | search', function(hooks) {
         controller.send('searchSkills');
 
         assert.deepEqual(
-            controller.filteredRemainingSkills.mapBy('name'),
+            controller.filteredAvailableSkills.mapBy('name'),
             ['ActionScript', 'Ember', 'Java', 'JavaScript'],
-            'We see the correct remaining skills.'
+            'We see the correct available skills.'
         );
     });
 
@@ -117,7 +117,7 @@ module('Unit | Controller | search', function(hooks) {
         let controller = this.owner.lookup('controller:search');
 
         // Select a skill
-        controller.send('selectSkill', controller.remainingSkills.objectAt(1));
+        controller.send('selectSkill', controller.availableSkills.objectAt(1));
 
         assert.deepEqual(
             controller.selectedSkills.mapBy('name'),
@@ -126,19 +126,19 @@ module('Unit | Controller | search', function(hooks) {
         );
 
         assert.deepEqual(
-            controller.remainingSkills.mapBy('name'),
+            controller.availableSkills.mapBy('name'),
             ['ActionScript', 'Java', 'JavaScript'],
-            'We see the correct remaining skills.'
+            'We see the correct available skills.'
         );
 
         assert.deepEqual(
-            controller.filteredRemainingSkills.mapBy('name'),
+            controller.filteredAvailableSkills.mapBy('name'),
             ['ActionScript', 'Java', 'JavaScript'],
-            'We see the correct filtered remaining skills.'
+            'We see the correct filtered available skills.'
         );
 
         // Select another skill
-        controller.send('selectSkill', controller.remainingSkills.objectAt(2));
+        controller.send('selectSkill', controller.availableSkills.objectAt(2));
 
         assert.deepEqual(
             controller.selectedSkills.mapBy('name'),
@@ -147,15 +147,15 @@ module('Unit | Controller | search', function(hooks) {
         );
 
         assert.deepEqual(
-            controller.remainingSkills.mapBy('name'),
+            controller.availableSkills.mapBy('name'),
             ['ActionScript', 'Java'],
-            'We see the correct remaining skills.'
+            'We see the correct available skills.'
         );
 
         assert.deepEqual(
-            controller.filteredRemainingSkills.mapBy('name'),
+            controller.filteredAvailableSkills.mapBy('name'),
             ['ActionScript', 'Java'],
-            'We see the correct filtered remaining skills.'
+            'We see the correct filtered available skills.'
         );
 
         // Unselect a skill
@@ -168,15 +168,15 @@ module('Unit | Controller | search', function(hooks) {
         );
 
         assert.deepEqual(
-            controller.remainingSkills.mapBy('name'),
+            controller.availableSkills.mapBy('name'),
             ['ActionScript', 'Java', 'Ember'],
-            'We see the correct remaining skills.'
+            'We see the correct available skills.'
         );
 
         assert.deepEqual(
-            controller.filteredRemainingSkills.mapBy('name'),
+            controller.filteredAvailableSkills.mapBy('name'),
             ['ActionScript', 'Java', 'Ember'],
-            'We see the correct filtered remaining skills.'
+            'We see the correct filtered available skills.'
         );
 
         // Unselect another skill
@@ -189,15 +189,15 @@ module('Unit | Controller | search', function(hooks) {
         );
 
         assert.deepEqual(
-            controller.remainingSkills.mapBy('name'),
+            controller.availableSkills.mapBy('name'),
             ['ActionScript', 'Java', 'Ember', 'JavaScript'],
-            'We see the correct remaining skills.'
+            'We see the correct available skills.'
         );
 
         assert.deepEqual(
-            controller.filteredRemainingSkills.mapBy('name'),
+            controller.filteredAvailableSkills.mapBy('name'),
             ['ActionScript', 'Java', 'Ember', 'JavaScript'],
-            'We see the correct filtered remaining skills.'
+            'We see the correct filtered available skills.'
         );
     });
 });

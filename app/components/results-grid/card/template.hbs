@@ -3,16 +3,12 @@
     student.fullName student.metadata.relativeScore student.metadata.experiences student.metadata.skills
     as |fullName relativeScore experiences skills|
 }}
-    <header
-        data-test-name
-        class="results-grid__card__header"
-        title={{fullName}}
-    >
-        <span class="results-grid__card__header__name">
+    <header class="results-grid__card__header" title={{fullName}}>
+        <span data-test-name class="results-grid__card__header__name">
             {{fullName}}
         </span>
 
-        <span class="results-grid__card__header__score">
+        <span data-test-score class="results-grid__card__header__score">
             {{relativeScore}}
         </span>
     </header>

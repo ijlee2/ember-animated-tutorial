@@ -80,12 +80,12 @@ export default Controller.extend({
 
             if (query) {
                 this.set(
-                    'filteredRemainingSkills',
-                    this.remainingSkills.filter(skill => this.doesSkillMatchQuery(skill, query))
+                    'filteredAvailableSkills',
+                    this.availableSkills.filter(skill => this.doesSkillMatchQuery(skill, query))
                 );
 
             } else {
-                this.set('filteredRemainingSkills', this.remainingSkills);
+                this.set('filteredAvailableSkills', this.availableSkills);
 
             }
         },
@@ -95,17 +95,17 @@ export default Controller.extend({
 
             // With animation on, the user can click on a skill multiple times.
             // We ensure that the state is correct by checking for uniqueness.
-            if (!this.filteredRemainingSkills.includes(skill)) {
+            if (!this.filteredAvailableSkills.includes(skill)) {
                 // Check if the skill is relevant to the query
                 const query = (this.query || '').trim().toLowerCase();
 
                 if (this.doesSkillMatchQuery(skill, query)) {
-                    this.filteredRemainingSkills.pushObject(skill);
+                    this.filteredAvailableSkills.pushObject(skill);
                 }
             }
 
-            if (!this.remainingSkills.includes(skill)) {
-                this.remainingSkills.pushObject(skill);
+            if (!this.availableSkills.includes(skill)) {
+                this.availableSkills.pushObject(skill);
             }
 
             this.selectedSkills.removeObject(skill);
@@ -119,8 +119,8 @@ export default Controller.extend({
                     this.selectedSkills.pushObject(skill);
                 }
 
-                this.filteredRemainingSkills.removeObject(skill);
-                this.remainingSkills.removeObject(skill);
+                this.filteredAvailableSkills.removeObject(skill);
+                this.availableSkills.removeObject(skill);
             }
         },
     },

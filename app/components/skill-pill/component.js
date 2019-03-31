@@ -1,8 +1,9 @@
 import Component from '@ember/component';
 import { computed } from '@ember/object';
+import { readOnly } from '@ember/object/computed';
 
 export default Component.extend({
-    'data-test-pill': true,
+    'data-test-pill': readOnly('skill.name'),
     classNames: ['skill-pill'],
     classNameBindings: ['skillCategory'],
 
@@ -10,9 +11,7 @@ export default Component.extend({
         return `skill-pill--${this.skill.category}`;
     }),
 
-    click(event) {
-        event.preventDefault();
-
+    click() {
         this.onChangeHandler();
     },
 });
