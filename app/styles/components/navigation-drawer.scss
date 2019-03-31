@@ -18,10 +18,6 @@
 
         position: relative;
 
-        &.active {
-            color: $color-orange;
-        }
-
         .highlighted {
             position: absolute;
             width: calc(100% + 1.25rem);
