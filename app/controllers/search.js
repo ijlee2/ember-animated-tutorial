@@ -39,6 +39,19 @@ export default Controller.extend({
                 move(sprite, { easing: easeOut })
             );
         });
+
+        /* We can also stagger animations
+        yield Promise.all(
+            removedSprites.map(sprite => {
+                sprite.endTranslatedBy(60, 80);
+
+                parallel(
+                    fadeOut(sprite),
+                    move(sprite, { easing: easeOut })
+                );
+            })
+        );
+        */
     },
 
     searchStudents: task(function*() {
