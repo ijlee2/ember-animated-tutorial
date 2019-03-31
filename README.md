@@ -33,7 +33,7 @@ if (environment === 'development') {
 
 3. In terminal, go to `/api` folder.
 ```
-rake db:create db:migrate db:seed`
+rake db:create db:migrate db:seed
 ```
 This will create two databases, `ember-animated-tutorial-development` and `ember-animated-tutorial-test`. If you need to delete them, you can type `rake db:drop`.
 
