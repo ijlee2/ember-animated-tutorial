@@ -7,6 +7,7 @@ This is the code companion to my [Animation and Predictable Data Loading in Embe
 You can run the app as is. Ember Mirage will create random data each time.
 
 1. Do `npm install`.
+
 2. Run `ember s`, then visit `localhost:4200`.
 
 You can also run the app on a local Postgres server (you need this for step-1d).
@@ -16,6 +17,7 @@ You can also run the app on a local Postgres server (you need this for step-1d).
 export POSTGRES_USERNAME=<your username>
 export POSTGRES_PASSWORD=<your password>
 ```
+
 2. In `/config/environment.js`, please edit the `ember-cli-mirage` option under development environment.
 ```
 if (environment === 'development') {
@@ -24,7 +26,13 @@ if (environment === 'development') {
     };
 }
 ```
-3. In terminal, go to `/api` folder, then type `rake db:create db:migrate db:seed`.
+
+3. In terminal, go to `/api` folder.
+```
+rake db:create db:migrate db:seed`
+```
+This will create two databases, `ember-animated-tutorial-development` and `ember-animated-tutorial-test`. If you need to delete them, you can type `rake db:drop`.
+
 4. Run `rails s`, then visit `localhost:3000`.
 
 You can check how the project should look after each step, by running `git checkout` and specifying the branch name:
