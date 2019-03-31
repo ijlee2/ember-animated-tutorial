@@ -108,40 +108,6 @@ body {
         display: flex;
         flex-direction: column;
 
-        .my-nav {
-            height: calc(4rem - #{$line-thin});
-            border-bottom: $line-thin solid $color-silver;
-            padding: 0 1rem;
-
-            display: flex;
-            align-items: center;
-
-            a {
-                height: 100%;
-                margin-right: 2rem;
-
-                display: flex;
-                align-items: center;
-
-                color: $color-black;
-                font-size: $font-size-md;
-
-                &.active {
-                    color: $color-orange;
-                }
-
-                &:hover {
-                    color: $color-orange;
-
-                    transition: color 0.17s;
-                }
-
-                &:last-of-type {
-                    margin-right: 0;
-                }
-            }
-        }
-
         .my-main {
             padding: 1rem;
             overflow-y: auto;
@@ -203,6 +169,7 @@ body {
 /* Components */
 @import "components/loading";
 @import "components/material-icon";
+@import "components/navigation-drawer";
 @import "components/profile-image";
 @import "components/results-grid";
 @import "components/skill-pill";

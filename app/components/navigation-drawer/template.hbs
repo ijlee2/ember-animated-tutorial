@@ -1,0 +1,17 @@
+{{#each navItems as |navItem|}}
+    {{#link-to navItem.route data-test-link=navItem.label}}
+        <span data-test-label>{{navItem.label}}</span>
+
+        {{#animated-if
+            (eq currentParentRoute navItem.route)
+            use=transition
+            group="navItems"
+            duration=250
+        }}
+            <div class="highlighted">
+                <div class="highlighted__handle"></div>
+                <div class="highlighted__body"></div>
+            </div>
+        {{/animated-if}}
+    {{/link-to}}
+{{/each}}

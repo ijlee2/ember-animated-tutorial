@@ -1,22 +1,13 @@
 <div class="my-application {{media "classNames"}}">
     <header>
-        <nav
-            data-test-nav="Main Navigation"
-            class="my-nav"
-            aria-label="Main navigation"
-        >
-            {{#link-to "index" data-test-link="Home"}}
-                Home
-            {{/link-to}}
-
-            {{#link-to "students" data-test-link="Students"}}
-                Students
-            {{/link-to}}
-
-            {{#link-to "search" data-test-link="Search"}}
-                Search
-            {{/link-to}}
-        </nav>
+        <NavigationDrawer
+            @name="Main Navigation"
+            @navItems={{array
+                (hash route="index" label="Home")
+                (hash route="students" label="Students")
+                (hash route="search" label="Search")
+            }}
+        />
     </header>
 
     <main class="my-main {{currentRoute}}">
