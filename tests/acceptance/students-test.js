@@ -3,11 +3,19 @@ import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 import { setupApplicationTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
+import createDegrees from 'ember-animated-tutorial/mirage/scenarios/degree';
+import createExperiences from 'ember-animated-tutorial/mirage/scenarios/experience';
+import createSkills from 'ember-animated-tutorial/mirage/scenarios/skill';
+
 module('Acceptance | students', function(hooks) {
     setupApplicationTest(hooks);
     setupMirage(hooks);
 
     hooks.beforeEach(function() {
+        createDegrees(server);
+        createExperiences(server);
+        createSkills(server);
+
         // Create students
         server.createList('student', 5);
 
@@ -26,7 +34,7 @@ module('Acceptance | students', function(hooks) {
         );
 
         assert.dom('[data-test-card]', this.element)
-            .exists({ count: 5 }, 'We see 5 students');
+            .exists({ count: 5 }, 'We see 5 students.');
 
         // Select the first student
         const student = this.student;
@@ -124,7 +132,7 @@ module('Acceptance | students', function(hooks) {
         );
 
         assert.dom('[data-test-card]', this.element)
-            .exists({ count: 5 }, 'We see 5 students');
+            .exists({ count: 5 }, 'We see 5 students.');
 
         await click('[data-test-link="Home"]');
 
@@ -135,7 +143,7 @@ module('Acceptance | students', function(hooks) {
         );
 
         assert.dom('[data-test-card]', this.element)
-            .doesNotExist('We see 0 students');
+            .doesNotExist('We see 0 students.');
 
         await visit('/students');
 
@@ -146,6 +154,6 @@ module('Acceptance | students', function(hooks) {
         );
 
         assert.dom('[data-test-card]', this.element)
-            .exists({ count: 5 }, 'We see 5 students');
+            .exists({ count: 5 }, 'We see 5 students.');
     });
 });
