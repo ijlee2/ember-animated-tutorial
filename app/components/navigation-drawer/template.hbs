@@ -3,7 +3,7 @@
         <span data-test-label>{{navItem.label}}</span>
 
         {{#animated-if
-            (eq currentParentRoute navItem.route)
+            (eq navItem.route currentParentRoute)
             use=transition
             group="navItems"
             duration=250
