@@ -2,18 +2,20 @@
     student.id student.fullName student.email student.phone student.imageUrl
     as |id fullName email phone imageUrl|
 }}
-    <header>
+    <header {{fade-up id=id}}>
         <h1 data-test-name>{{fullName}}</h1>
     </header>
 
     <section
         class="student-details__profile-image"
+        {{fade-up id=id}}
     >
         <ProfileImage @imageUrl={{imageUrl}} @altText={{fullName}} />
     </section>
 
     <section
         class="student-details__email"
+        {{fade-up id=id delay=50}}
     >
         <header>
             <h2>Email</h2>
@@ -30,6 +32,7 @@
 
     <section
         class="student-details__phone"
+        {{fade-up id=id delay=150}}
     >
         <header>
             <h2>Phone</h2>
@@ -46,6 +49,7 @@
 
     <section
         class="student-details__education"
+        {{fade-up id=id delay=250}}
     >
         <header>
             <h2>Education</h2>
@@ -65,6 +69,7 @@
 
     <section
         class="student-details__experiences"
+        {{fade-up id=id delay=350}}
     >
         <header>
             <h2>Experiences</h2>
@@ -94,6 +99,7 @@
 
     <section
         class="student-details__skills"
+        {{fade-up id=id delay=450}}
     >
         <header>
             <h2>Skills</h2>
