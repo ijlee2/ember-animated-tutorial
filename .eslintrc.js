@@ -84,6 +84,7 @@ module.exports = {
                 ignoreRegExpLiterals: true,
             },
         ],
+        'no-console': 0,
         'no-mixed-spaces-and-tabs': ['error'],
         'no-multi-spaces': [
             'error', {

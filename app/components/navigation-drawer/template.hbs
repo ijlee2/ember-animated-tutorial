@@ -2,16 +2,11 @@
     {{#link-to navItem.route data-test-link=navItem.label}}
         <span data-test-label>{{navItem.label}}</span>
 
-        {{#animated-if
-            (eq navItem.route currentParentRoute)
-            use=transition
-            group="navItems"
-            duration=250
-        }}
+        {{#if (eq navItem.route currentParentRoute)}}
             <div class="highlighted" aria-hidden="true">
                 <div class="highlighted__handle"></div>
                 <div class="highlighted__body"></div>
             </div>
-        {{/animated-if}}
+        {{/if}}
     {{/link-to}}
 {{/each}}

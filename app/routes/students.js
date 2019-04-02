@@ -2,6 +2,8 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
     model() {
-        return this.store.loadRecords('student');
+        console.log('Load all students');
+
+        return this.store.findAll('student');
     },
 });
