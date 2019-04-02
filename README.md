@@ -1,6 +1,6 @@
 # Ember Animated Tutorial
 
-This is the code companion to my [Animation and Predictable Data Loading in Ember](https://crunchingnumbers.live/), presented at the Ember ATX Meetup on 3/28/2019.
+This is the code companion to my [Animation and Predictable Data Loading in Ember](https://crunchingnumbers.live/2019/04/02/animation-and-predictable-data-loading-in-ember/), presented at the Ember ATX Meetup on 3/28/2019.
 
 ## How to Run
 
@@ -43,12 +43,12 @@ This will create two databases, `ember-animated-tutorial-development` and `ember
 
 You can check a starter code by running `git checkout <branch name>`:
 
-| Branch name | Added features                            |
-| ----------- | ----------------------------------------- |
-| step-1a     | Starter for {{link-to}} bug               |
-| step-1b     | Starter for findRecord bug                |
-| step-1c     | Starter for findAll bug                   |
-| step-1d     | Starter for (n + 1) query bug             |
-| step-2a     | Starter for animation with modifier       |
-| step-2b     | Starter for animation with Ember Animated |
-| master      | Completed                                 |
+| Branch name | Added features                                |
+| ----------- | --------------------------------------------- |
+| step-1a     | Starter for {{link-to}} bug                   |
+| step-1b     | Starter for findRecord bug                    |
+| step-1c     | Starter for findAll bug                       |
+| step-1d     | Starter for (n + 1) query bug                 |
+| step-2a     | Starter for animation with Web Animations API |
+| step-2b     | Starter for animation with Ember Animated     |
+| master      | Completed                                     |
