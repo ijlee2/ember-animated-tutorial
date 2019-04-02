@@ -13,8 +13,8 @@ class ResumesController < ApplicationController
     def show
         # render json: @resume, include: [:degrees, :experiences, :skills]
         render json: ResumeSerializer.new(
-            @resume,
-            include: [:degrees, :experiences, :skills]
+            @resume
+            #include: [:degrees, :experiences, :skills]
         ).serialized_json
     end
 

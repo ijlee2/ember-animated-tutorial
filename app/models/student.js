@@ -20,7 +20,7 @@ export default DS.Model.extend(LoadableModel, {
         Model relationships
 
     *************************************************************************************/
-    resumes: DS.hasMany('resume', { async: false }),
+    resumes: DS.hasMany('resume', { async: true }),
 
 
     /*************************************************************************************

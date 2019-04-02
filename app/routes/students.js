@@ -4,6 +4,6 @@ export default Route.extend({
     model() {
         console.log('Load all students');
 
-        return this.store.findAll('student');
+        return this.store.loadRecords('student');
     },
 });
